@@ -105,7 +105,7 @@ If you have your own TensorFlow model you can easily import and deploy it on the
 * [Inference App](https://www.youtube.com/watch?v=GZZ9Qn0uKTo&index=10&list=PLkzo92owKnVzGkWq8Ge2q1lOWeYcBoK0q)
 
 
-#### Tools and Samples
+### Tools and Samples
 * [SAP Leonardo Machine Learning Experience Demo App](https://leo-mlp-demo-solutionexper-v3.cfapps.eu10.hana.ondemand.com/#/)
 <br/>This is a public sapui5 demo app for experiencing SAP Leonardo Machine Learning, including Topic Detection, Face Detection etc. 
 * [A tooling spaui5 app for retraining the SAP Leonardo Machine Learning Service](https://blogs.sap.com/2018/10/15/ui5-app-for-the-sap-leonardo-machine-learning-service/)

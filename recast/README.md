@@ -15,5 +15,3 @@ Userful resources:
     * [SAP SMB Recast Bot](https://github.com/B1SA/smb-recast-bot): 
     <br/>This is a sample virtual assistant serving the executive about the executive-level analytics question through conversation, powered by [SAP Conversational AI](https://recast.ai/)(formerly as recast.ai) for SAP Business One and SAP Business ByDesign systems.
 * [API References](https://recast.ai/docs/api-reference/)
-
-
