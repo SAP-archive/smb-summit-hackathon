@@ -1,0 +1,11 @@
+---
+applications:
+- name: cfdestinations18
+  memory: 128m
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+services:
+    - cachedb    
+    - destination-demo-lite
+    - xsuaa-demo
+    - connectivity-demo-lite

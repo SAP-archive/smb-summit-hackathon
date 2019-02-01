@@ -1,0 +1,11 @@
+applications:
+- name: b1leo
+  memory: 64m
+  instances: 1
+buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+env:
+    B1_SLPORT_ENV: 50001
+    B1_SLPATH_ENV: "/b1s/v1/"
+    B1_USER_ENV: "manager"
+    B1_PASS_ENV: "1234"
+    B1_COMP_ENV: "SBODEMOUS"

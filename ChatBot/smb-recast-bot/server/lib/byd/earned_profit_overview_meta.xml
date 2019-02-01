@@ -1,0 +1,166 @@
+<EntityType Name="RPFINPRFU30_Q0004QueryResult" sap:semantics="aggregate" sap:label="Earned Profit Overview for Dashboard"
+				xmlns:sap="http://www.sap.com/Protocols/SAPData">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="CACCPERIOD" Type="Edm.Int64" Nullable="true" sap:label="Accounting Period ID" sap:aggregation-role="dimension" sap:filterable="true"/>
+				<Property Name="CACCYEARPER" Type="Edm.Int64" Nullable="true" sap:label="Accounting Period/Year ID" sap:aggregation-role="dimension" sap:filterable="true" sap:super-ordinate="CFISCVARNT"/>
+				<Property Name="CCALMONTH" Type="Edm.String" Nullable="true" MaxLength="7" sap:label="Calendar Year/Month ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TCALMONTH"/>
+				<Property Name="CCALWEEK" Type="Edm.String" Nullable="true" MaxLength="8" sap:label="Calendar Year/Week ID" sap:aggregation-role="dimension" sap:filterable="true"/>
+				<Property Name="CCMSCHEMA" Type="Edm.String" Nullable="true" MaxLength="4" sap:label="Contribution Margin Scheme ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TCMSCHEMA"/>
+				<Property Name="CCOMPANY" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Company ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TCOMPANY"/>
+				<Property Name="CCOMPCURR" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Company Currency ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TCOMPCURR"/>
+				<Property Name="CCOSTCTR" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Cost Center ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TCOSTCTR"/>
+				<Property Name="CCOUNTRY" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Country ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TCOUNTRY"/>
+				<Property Name="CCRMBYGRCD" Type="Edm.String" Nullable="true" MaxLength="2" sap:label="Customer Group ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TCRMBYGRCD"/>
+				<Property Name="CCRMDOCID" Type="Edm.String" Nullable="true" MaxLength="100" sap:label="Sales Document ID ID" sap:aggregation-role="dimension" sap:filterable="true"/>
+				<Property Name="CCRMDOCTP" Type="Edm.String" Nullable="true" MaxLength="15" sap:label="Sales Document Type ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TCRMDOCTP"/>
+				<Property Name="CCUSTOMER" Type="Edm.String" Nullable="true" MaxLength="10" sap:label="Customer ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TCUSTOMER"/>
+				<Property Name="CDISTRCHN" Type="Edm.String" Nullable="true" MaxLength="2" sap:label="Distribution Channel ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TDISTRCHN"/>
+				<Property Name="CFISCYEAR" Type="Edm.Int64" Nullable="true" sap:label="Fiscal Year ID" sap:aggregation-role="dimension" sap:filterable="true" sap:super-ordinate="CFISCVARNT"/>
+				<Property Name="CGLACCT" Type="Edm.String" Nullable="true" MaxLength="10" sap:label="G/L Account ID" sap:aggregation-role="dimension" sap:filterable="true" sap:super-ordinate="CCHOFACCT" sap:text="TGLACCT"/>
+				<Property Name="CPRODCATG" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Product Category ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TPRODCATG"/>
+				<Property Name="CPRODUCT" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Product ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TPRODUCT"/>
+				<Property Name="CPROFITCTR" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Profit Center ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TPROFITCTR"/>
+				<Property Name="CPROFLINE" Type="Edm.String" Nullable="true" MaxLength="10" sap:label="Profitability Line ID" sap:aggregation-role="dimension" sap:filterable="true" sap:super-ordinate="CCMSCHEMA" sap:text="TPROFLINE"/>
+				<Property Name="CPROGRAM" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Program ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TPROGRAM"/>
+				<Property Name="CPROJECT" Type="Edm.String" Nullable="true" MaxLength="24" sap:label="Project ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TPROJECT"/>
+				<Property Name="CREGION" Type="Edm.String" Nullable="true" MaxLength="6" sap:label="Region ID" sap:aggregation-role="dimension" sap:filterable="true" sap:super-ordinate="CCOUNTRY" sap:text="TREGION"/>
+				<Property Name="CSALESUNIT" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Sales Unit ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TSALESUNIT"/>
+				<Property Name="CSEGMENT" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Segment ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TSEGMENT"/>
+				<Property Name="CSETOFBKS" Type="Edm.String" Nullable="true" MaxLength="4" sap:label="Set of Books ID" sap:aggregation-role="dimension" sap:filterable="true" sap:text="TSETOFBKS"/>
+				<Property Name="CSREXCTM" Type="Edm.String" Nullable="true" MaxLength="20" sap:label="Service Execution Team ID" sap:aggregation-role="dimension" sap:filterable="true" sap:filter-restriction="multi-value" sap:text="TSREXCTM"/>
+				<Property Name="FCAMT_CM1_CAL" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Gross Profit Formatted"/>
+				<Property Name="FCAMT_CM1_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Gross Profit Formatted"/>
+				<Property Name="FCAMT_CM1_DEV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Variance Formatted"/>
+				<Property Name="FCAMT_CM1_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Gross Profit Formatted"/>
+				<Property Name="FCAMT_CM2_CAL" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Operating Profit Formatted"/>
+				<Property Name="FCAMT_CM2_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Operating Profit Formatted"/>
+				<Property Name="FCAMT_CM2_DEV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Variance Formatted"/>
+				<Property Name="FCAMT_CM2_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Operating Profit Formatted"/>
+				<Property Name="FCAMT_COGS_CAL" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Cost of Goods Sold Formatted"/>
+				<Property Name="FCAMT_COGS_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Cost of Goods Sold Formatted"/>
+				<Property Name="FCAMT_COGS_DEV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Variance Formatted"/>
+				<Property Name="FCAMT_COGS_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Cost of Goods Sold Formatted"/>
+				<Property Name="FCAMT_DEF_CURR" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Invoice ID Formatted"/>
+				<Property Name="FCAMT_GREV_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label=" Formatted"/>
+				<Property Name="FCAMT_NETREV_CAL" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Net Sales Revenue Formatted"/>
+				<Property Name="FCAMT_NETREV_CURR" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Amt Comp Curr Formatted"/>
+				<Property Name="FCAMT_NETREV_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Net Sales Revenue Formatted"/>
+				<Property Name="FCAMT_NETREV_DEV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Variance Formatted"/>
+				<Property Name="FCAMT_NETREV_PREV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Amt Comp Curr Formatted"/>
+				<Property Name="FCAMT_NETREV_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Net Sales Revenue Formatted"/>
+				<Property Name="FCAMT_PERCM1" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Gross Profit  Margin Formatted"/>
+				<Property Name="FCAMT_PERCM1_CURR" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Gross Profit  Margin Formatted"/>
+				<Property Name="FCAMT_PERCM1_DEV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Variance Formatted"/>
+				<Property Name="FCAMT_PERCM1_PREV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Gross Profit  Margin Formatted"/>
+				<Property Name="FCAMT_PERCM2" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Operating Profit  Margin Formatted"/>
+				<Property Name="FCAMT_PERCM2_CURR" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Operating Profit  Margin Formatted"/>
+				<Property Name="FCAMT_PERCM2_DEV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Variance Formatted"/>
+				<Property Name="FCAMT_PERCM2_PREV" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Operating Profit  Margin Formatted"/>
+				<Property Name="KCAMT_CM1_CAL" Type="Edm.Decimal" Nullable="true" sap:label="Gross Profit" sap:filterable="true" sap:text="FCAMT_CM1_CAL" sap:aggregation-role="measure" sap:unit="UCAMT_CM1_CAL"/>
+				<Property Name="KCAMT_CM1_CURR_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Gross Profit" sap:filterable="true" sap:text="FCAMT_CM1_CURR_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_CM1_CURR_CALC"/>
+				<Property Name="KCAMT_CM1_DEV" Type="Edm.Decimal" Nullable="true" sap:label="Variance" sap:filterable="true" sap:text="FCAMT_CM1_DEV" sap:aggregation-role="measure" sap:unit="UCAMT_CM1_DEV"/>
+				<Property Name="KCAMT_CM1_PREV_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Gross Profit" sap:filterable="true" sap:text="FCAMT_CM1_PREV_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_CM1_PREV_CALC"/>
+				<Property Name="KCAMT_CM2_CAL" Type="Edm.Decimal" Nullable="true" sap:label="Operating Profit" sap:filterable="true" sap:text="FCAMT_CM2_CAL" sap:aggregation-role="measure" sap:unit="UCAMT_CM2_CAL"/>
+				<Property Name="KCAMT_CM2_CURR_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Operating Profit" sap:filterable="true" sap:text="FCAMT_CM2_CURR_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_CM2_CURR_CALC"/>
+				<Property Name="KCAMT_CM2_DEV" Type="Edm.Decimal" Nullable="true" sap:label="Variance" sap:filterable="true" sap:text="FCAMT_CM2_DEV" sap:aggregation-role="measure" sap:unit="UCAMT_CM2_DEV"/>
+				<Property Name="KCAMT_CM2_PREV_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Operating Profit" sap:filterable="true" sap:text="FCAMT_CM2_PREV_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_CM2_PREV_CALC"/>
+				<Property Name="KCAMT_COGS_CAL" Type="Edm.Decimal" Nullable="true" sap:label="Cost of Goods Sold" sap:filterable="true" sap:text="FCAMT_COGS_CAL" sap:aggregation-role="measure" sap:unit="UCAMT_COGS_CAL"/>
+				<Property Name="KCAMT_COGS_CURR_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Cost of Goods Sold" sap:filterable="true" sap:text="FCAMT_COGS_CURR_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_COGS_CURR_CALC"/>
+				<Property Name="KCAMT_COGS_DEV" Type="Edm.Decimal" Nullable="true" sap:label="Variance" sap:filterable="true" sap:text="FCAMT_COGS_DEV" sap:aggregation-role="measure" sap:unit="UCAMT_COGS_DEV"/>
+				<Property Name="KCAMT_COGS_PREV_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Cost of Goods Sold" sap:filterable="true" sap:text="FCAMT_COGS_PREV_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_COGS_PREV_CALC"/>
+				<Property Name="KCAMT_DEF_CURR" Type="Edm.Decimal" Nullable="true" Precision="28" Scale="6" sap:label="Invoice ID" sap:filterable="true" sap:text="FCAMT_DEF_CURR" sap:aggregation-role="measure" sap:unit="RCAMT_DEF_CURR"/>
+				<Property Name="KCAMT_GREV_CALC" Type="Edm.Decimal" Nullable="true" sap:filterable="true" sap:text="FCAMT_GREV_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_GREV_CALC"/>
+				<Property Name="KCAMT_NETREV_CAL" Type="Edm.Decimal" Nullable="true" sap:label="Net Sales Revenue" sap:filterable="true" sap:text="FCAMT_NETREV_CAL" sap:aggregation-role="measure" sap:unit="UCAMT_NETREV_CAL"/>
+				<Property Name="KCAMT_NETREV_CURR" Type="Edm.Decimal" Nullable="true" Precision="28" Scale="6" sap:label="Amt Comp Curr" sap:filterable="true" sap:text="FCAMT_NETREV_CURR" sap:aggregation-role="measure" sap:unit="RCAMT_NETREV_CURR"/>
+				<Property Name="KCAMT_NETREV_CURR_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Net Sales Revenue" sap:filterable="true" sap:text="FCAMT_NETREV_CURR_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_NETREV_CURR_CALC"/>
+				<Property Name="KCAMT_NETREV_DEV" Type="Edm.Decimal" Nullable="true" sap:label="Variance" sap:filterable="true" sap:text="FCAMT_NETREV_DEV" sap:aggregation-role="measure" sap:unit="UCAMT_NETREV_DEV"/>
+				<Property Name="KCAMT_NETREV_PREV" Type="Edm.Decimal" Nullable="true" Precision="28" Scale="6" sap:label="Amt Comp Curr" sap:filterable="true" sap:text="FCAMT_NETREV_PREV" sap:aggregation-role="measure" sap:unit="RCAMT_NETREV_PREV"/>
+				<Property Name="KCAMT_NETREV_PREV_CALC" Type="Edm.Decimal" Nullable="true" sap:label="Net Sales Revenue" sap:filterable="true" sap:text="FCAMT_NETREV_PREV_CALC" sap:aggregation-role="measure" sap:unit="UCAMT_NETREV_PREV_CALC"/>
+				<Property Name="KCAMT_PERCM1" Type="Edm.Decimal" Nullable="true" sap:label="Gross Profit  Margin" sap:filterable="true" sap:text="FCAMT_PERCM1" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM1"/>
+				<Property Name="KCAMT_PERCM1_CURR" Type="Edm.Decimal" Nullable="true" sap:label="Gross Profit  Margin" sap:filterable="true" sap:text="FCAMT_PERCM1_CURR" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM1_CURR"/>
+				<Property Name="KCAMT_PERCM1_DEV" Type="Edm.Decimal" Nullable="true" sap:label="Variance" sap:filterable="true" sap:text="FCAMT_PERCM1_DEV" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM1_DEV"/>
+				<Property Name="KCAMT_PERCM1_PREV" Type="Edm.Decimal" Nullable="true" sap:label="Gross Profit  Margin" sap:filterable="true" sap:text="FCAMT_PERCM1_PREV" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM1_PREV"/>
+				<Property Name="KCAMT_PERCM2" Type="Edm.Decimal" Nullable="true" sap:label="Operating Profit  Margin" sap:filterable="true" sap:text="FCAMT_PERCM2" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM2"/>
+				<Property Name="KCAMT_PERCM2_CURR" Type="Edm.Decimal" Nullable="true" sap:label="Operating Profit  Margin" sap:filterable="true" sap:text="FCAMT_PERCM2_CURR" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM2_CURR"/>
+				<Property Name="KCAMT_PERCM2_DEV" Type="Edm.Decimal" Nullable="true" sap:label="Variance" sap:filterable="true" sap:text="FCAMT_PERCM2_DEV" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM2_DEV"/>
+				<Property Name="KCAMT_PERCM2_PREV" Type="Edm.Decimal" Nullable="true" sap:label="Operating Profit  Margin" sap:filterable="true" sap:text="FCAMT_PERCM2_PREV" sap:aggregation-role="measure" sap:unit="UCAMT_PERCM2_PREV"/>
+				<Property Name="RCAMT_CM1_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_CM1_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_CM1_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_CM1_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_CM2_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_CM2_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_CM2_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_CM2_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_COGS_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Cost of Goods Sold Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_COGS_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Cost of Goods Sold Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_COGS_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_COGS_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Cost of Goods Sold Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_DEF_CURR" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Invoice ID Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_GREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label=" Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_NETREV_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Net Sales Revenue Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_NETREV_CURR" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Amt Comp Curr Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_NETREV_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Net Sales Revenue Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_NETREV_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_NETREV_PREV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Amt Comp Curr Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_NETREV_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Net Sales Revenue Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM1" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit  Margin Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM1_CURR" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit  Margin Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM1_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM1_PREV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit  Margin Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM2" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit  Margin Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM2_CURR" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit  Margin Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM2_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Currency" sap:semantics="currency-code"/>
+				<Property Name="RCAMT_PERCM2_PREV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit  Margin Currency" sap:semantics="currency-code"/>
+				<Property Name="TCALMONTH" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Calendar Year/Month Text"/>
+				<Property Name="TCMSCHEMA" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Contribution Margin Scheme Text"/>
+				<Property Name="TCOMPANY" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Company Text"/>
+				<Property Name="TCOMPCURR" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Company Currency Text"/>
+				<Property Name="TCOSTCTR" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Cost Center Text"/>
+				<Property Name="TCOUNTRY" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Country Text"/>
+				<Property Name="TCRMBYGRCD" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Customer Group Text"/>
+				<Property Name="TCRMDOCTP" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Sales Document Type Text"/>
+				<Property Name="TCUSTOMER" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Customer Text"/>
+				<Property Name="TDISTRCHN" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Distribution Channel Text"/>
+				<Property Name="TGLACCT" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="G/L Account Text"/>
+				<Property Name="TPRODCATG" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Product Category Text"/>
+				<Property Name="TPRODUCT" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Product Text"/>
+				<Property Name="TPROFITCTR" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Profit Center Text"/>
+				<Property Name="TPROFLINE" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Profitability Line Text"/>
+				<Property Name="TPROGRAM" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Program Text"/>
+				<Property Name="TPROJECT" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Project Text"/>
+				<Property Name="TREGION" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Region Text"/>
+				<Property Name="TSALESUNIT" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Sales Unit Text"/>
+				<Property Name="TSEGMENT" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Segment Text"/>
+				<Property Name="TSETOFBKS" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Set of Books Text"/>
+				<Property Name="TSREXCTM" Type="Edm.String" Nullable="true" MaxLength="60" sap:label="Service Execution Team Text"/>
+				<Property Name="UCAMT_CM1_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_CM1_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_CM1_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_CM1_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_CM2_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_CM2_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_CM2_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_CM2_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_COGS_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Cost of Goods Sold Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_COGS_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Cost of Goods Sold Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_COGS_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_COGS_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Cost of Goods Sold Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_GREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label=" Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_NETREV_CAL" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Net Sales Revenue Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_NETREV_CURR_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Net Sales Revenue Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_NETREV_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_NETREV_PREV_CALC" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Net Sales Revenue Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM1" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit  Margin Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM1_CURR" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit  Margin Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM1_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM1_PREV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Gross Profit  Margin Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM2" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit  Margin Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM2_CURR" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit  Margin Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM2_DEV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Variance Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="UCAMT_PERCM2_PREV" Type="Edm.String" Nullable="true" MaxLength="3" sap:label="Operating Profit  Margin Unit" sap:semantics="unit-of-measure"/>
+				<Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list"/>
+				<Property Name="ID" Type="Edm.String"/>
+			</EntityType>

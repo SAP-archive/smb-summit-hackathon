@@ -1,0 +1,36 @@
+{
+  "name": "b1leo",
+  "version": "1.0.0",
+  "description": " B1 Integration with SAP Leonardo Ticketing API ",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start":"node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ralphive/b1leo.git"
+  },
+  "keywords": [
+    "ml",
+    "sap",
+    "sap",
+    "cloud",
+    "platform",
+    "b1",
+    "sap",
+    "business",
+    "one"
+  ],
+  "author": "Ralph Oliveira - @Ralphive",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ralphive/b1leo/issues"
+  },
+  "homepage": "https://github.com/Ralphive/b1leo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}

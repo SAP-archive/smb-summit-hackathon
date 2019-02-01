@@ -1,0 +1,35 @@
+/* 
+	A couple styles to make the demo page look good
+ */
+ body {
+	padding-bottom: 2rem;
+	padding-top: 4rem;
+}
+.row {
+	margin-bottom: 1rem;
+}
+[class*="col-"] {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+#files {
+    overflow-y: scroll !important;
+    min-height: 320px;
+}
+
+
+.dm-uploader {
+	border: 0.25rem dashed #A5A5C7;
+	text-align: center;
+	min-height: 400px;
+
+}
+.dm-uploader.active {
+	border-color: red;
+
+	border-style: solid;
+}

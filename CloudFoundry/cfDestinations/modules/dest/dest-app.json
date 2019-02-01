@@ -1,0 +1,22 @@
+{
+  "routes": [
+    {
+      "path": "/data-byd",
+      "target": {
+        "type": "destination",
+        "name": "ByD",
+        "entryPath": "/sap/byd/odata/cust/v1"
+      },
+      "description": "Backend ByD OData services"
+    },
+    {
+      "path": "/data-b1",
+      "target": {
+        "type": "destination",
+        "name": "B1",
+        "entryPath": ""
+      },
+      "description": "Backend B1 OData services"
+	  }
+  ]
+}
