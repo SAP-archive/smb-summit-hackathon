@@ -1,4 +1,4 @@
-# B1 Alexa SAmple
+# B1 Alexa Sample
 A small Alexa Skill integration with SAP Business One for the SMB Summit 2019 Hackathon
 [![SAP](https://i.imgur.com/80Ohjn6.png)](http://cloudplatform.sap.com/)
 
