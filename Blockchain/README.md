@@ -1,39 +1,31 @@
 # SMB Innovation Summit 2019 Hackathon - Blockchain
-INTRODUCTION_OF_YOUR_BUILD_BLOCK_NOT_TOO_LONG
+To be updated.
 
-IF_YOU_NEED_IMAGE
-![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://s3.amazonaws.com/tinycards/image/0c771449acaecb388c58d8805d966f61)
 ## Overview
-WHAT_IS_EXPECTED_FROM_PARTICIPANT
+To be updated.
 
 ## Prerequisites
-IF_YOU_NEED_URL_REDIRECT [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+Follow sample repository.
 
 ## Usage
-CONFIGURATION_STEPS_IF_REQUIRED
+Follow sample repository.
 
 ## Samples
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[Github Repository - SAPBlockChainExample](https://github.com/martinambition/SAPBlockChainExample)
 
 ## Tutorials
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[Step by Step process to create your first Blockchain Project – Hello World](https://blogs.sap.com/2018/08/03/step-by-step-process-to-create-your-first-blockchain-project-hello-world/)
 
 ## References
 ### Official Documentation
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[Hyperledger Fabric on SAP Cloud Platform](https://cloudplatform.sap.com/capabilities/product-info.Hyperledger-Fabric--on-SAP-Cloud-Platform.b9fb18ba-a2dc-485b-ad59-79c30c15ec93.html)
 
 ### API References
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+To be updated.
 
 ## Author
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+- Zhang, Ann
+- Martin, Du
 
 ## License
 This repository is released under the terms of the MIT license.
