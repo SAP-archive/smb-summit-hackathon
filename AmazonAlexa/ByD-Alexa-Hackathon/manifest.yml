@@ -1,6 +1,0 @@
----
-applications:
-- name: BydDigitalAssistant
-  memory: 128m
-  instances: 1
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
