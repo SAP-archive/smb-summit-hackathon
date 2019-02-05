@@ -6,6 +6,7 @@ You need the following to complete this tutorial:
 - A computer with Wi-Fi access. 
 - If you have an AWS IoT button (pictured here), you can use it to complete this tutorial. 
 - If you do not have a button, you can purchase one here or you can use the MQTT client in the AWS IoT console to emulate a device.
+
 ![AWS IoT Dash Button](https://docs.aws.amazon.com/iot/latest/developerguide/images/iot-button.png)
 
 ## Prerequisites
@@ -15,7 +16,7 @@ You need the following to complete this tutorial:
 To be updated.
 
 ## Samples
-[smbDashButton](https://github.com/Ralphive/b1dash)
+[GitHub Repository - smbDashButton](https://github.com/Ralphive/b1dash)
 
 ## Tutorials
 [How to Configure an AWS IoT Dash Button](https://docs.aws.amazon.com/iot/latest/developerguide/configure-iot.html)
