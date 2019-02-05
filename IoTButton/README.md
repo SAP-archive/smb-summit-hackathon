@@ -1,39 +1,34 @@
-# SMB Innovation Summit 2019 Hackathon - BUILD_BLOCK_NAME
-INTRODUCTION_OF_YOUR_BUILD_BLOCK_NOT_TOO_LONG
+# SMB Innovation Summit 2019 Hackathon - AWS Internet of Things Dash Button
+This tutorial shows you how to create resources required to send, receive, and process MQTT messages from devices using AWS IoT. 
 
-IF_YOU_NEED_IMAGE
-![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://s3.amazonaws.com/tinycards/image/0c771449acaecb388c58d8805d966f61)
 ## Overview
-WHAT_IS_EXPECTED_FROM_PARTICIPANT
+You need the following to complete this tutorial: 
+- A computer with Wi-Fi access. 
+- If you have an AWS IoT button (pictured here), you can use it to complete this tutorial. 
+- If you do not have a button, you can purchase one here or you can use the MQTT client in the AWS IoT console to emulate a device.
+![AWS IoT Dash Button](https://docs.aws.amazon.com/iot/latest/developerguide/images/iot-button.png)
 
 ## Prerequisites
-IF_YOU_NEED_URL_REDIRECT [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[Amazon Account](https://aws.amazon.com/)
 
 ## Usage
-CONFIGURATION_STEPS_IF_REQUIRED
+To be updated.
 
 ## Samples
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[smbDashButton](https://github.com/Ralphive/b1dash)
 
 ## Tutorials
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[How to Configure an AWS IoT Dash Button](https://docs.aws.amazon.com/iot/latest/developerguide/configure-iot.html)
 
 ## References
 ### Official Documentation
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[Getting Started with AWS IoT Dash Button](https://docs.aws.amazon.com/iot/latest/developerguide/iot-gs.html)
 
 ### API References
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[smbDashButton](https://github.com/Ralphive/b1dash)
 
 ## Author
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+- Oliveira, Ralph
 
 ## License
 This repository is released under the terms of the MIT license.
