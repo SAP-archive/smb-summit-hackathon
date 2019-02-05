@@ -15,14 +15,20 @@ In this build block, you will learn & understand about the following components.
 
 Due to the limited time we have during the hackathon, we STRONGLY recommend you to go with the **Preconfigured Device Option A**.
 
-In an typical IoT scenario, you would need to setup & achieve the following components:
 ```mermaid
+
 graph TB
+
 A[Define your IoT Use Case Scenario] --> B[Understanding your Hardware Peripherals e.g. Sensors & Devices]
+
 B --> C[Learning how to work with your Hardware Communication Standard e.g. WiFi, Bluetooth, etc.]
+
 C --> D[Choosing the right IoT Cloud Platform]
+
 D --> E[Setting up your Gateway / Router to Platform]
+
 E --> F[Communicating between your Device and the Gateway]
+
 ```
 
 ## Overview
