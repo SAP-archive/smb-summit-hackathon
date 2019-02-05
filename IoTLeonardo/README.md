@@ -14,7 +14,7 @@ In this build block, you will learn & understand about the following components.
 *You may consider to adopt the BYOD (Bring Your Own Device) Option B, although not recommended.*
 
 Due to the limited time we have during the hackathon, we STRONGLY recommend you to go with the **Preconfigured Device Option A**.
-
+In an typical IoT scenario, you would need to setup & achieve the following components:
 1. Define your IoT Use Case Scenario
 2. Understanding your Hardware Peripherals e.g. Sensors & Devices
 3. Learning how to work with your Hardware Communication Standard e.g. WiFi, Bluetooth, etc.
