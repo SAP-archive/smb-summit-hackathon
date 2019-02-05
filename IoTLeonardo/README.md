@@ -1,4 +1,4 @@
-# SMB Innovation Summit 2019 Hackathon - Internet of Things
+# SMB Innovation Summit 2019 Hackathon - SAP Leonardo Internet of Things
 This build block takes a quick dive into the topic of Internet of Things (IoT). IoT is transforming the competitive landscape. As the world becomes increasingly connected, digitalization is a key differentiator that will enable companies to remain competitive. Using IoT data from billions of intelligent devices generating massive volumes of data, digitalization promises lower costs, improved production quality, flexibility, efficiency, shorter response time to market demands, and also opens up new business opportunities.
 
 Prior to get your hands started, make sure you're provided with a Test & Development tenant of SAP Leonardo IoT 4.0 Service Cockpit and a Sensor Device.

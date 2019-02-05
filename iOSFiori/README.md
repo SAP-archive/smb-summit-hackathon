@@ -1,39 +1,35 @@
-# SMB Innovation Summit 2019 Hackathon - iOS for SAP Fiori
-INTRODUCTION_OF_YOUR_BUILD_BLOCK_NOT_TOO_LONG
+# SMB Innovation Summit 2019 Hackathon - SAP Cloud Platform SDK for iOS on SAP Fiori
+The SDK offers a fully Swift-based API to accelerate enterprise app development in Apple’s Xcode IDE. The Foundation layer provides key enterprise services for security, connectivity, app services and more. The Fiori UI Kit provides a native, iOS HIG-compliant implementation of the Fiori Design Language, for iOS. The UI + Logic layer provides higher level reusable app components. The Mobile Services on SAP Cloud Platform integrate with the SAP Cloud Platform SDK for iOS.
 
-IF_YOU_NEED_IMAGE
-![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://s3.amazonaws.com/tinycards/image/0c771449acaecb388c58d8805d966f61)
+![SAP Cloud Platform SDK for iOS](https://developers.sap.com/dam/site/developer/images/dev-iOS-SDK-diagram_v1a.svg)
+
 ## Overview
-WHAT_IS_EXPECTED_FROM_PARTICIPANT
+SAP Cloud Platform SDK for iOS enables you to quickly develop your own native apps, with Swift, Apple’s modern programming language. Along with SAP Fiori for iOS, which includes reusable design components, the SDK builds on the services and capabilities available on SAP Cloud Platform so you can build beautiful intuitive native applications.
+To learn more about opportunities for iOS developers to develop, deliver and monetize iOS enterprise apps, here are five reasons to develop enterprise-ready iOS apps using SAP.
 
 ## Prerequisites
-IF_YOU_NEED_URL_REDIRECT [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+**Development environment**: Apple Mac running macOS High Sierra or higher with Xcode 10 or higher
+**SAP Cloud Platform SDK for iOS**: Version 3.0
 
 ## Usage
-CONFIGURATION_STEPS_IF_REQUIRED
+To be updated.
 
 ## Samples
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+To be updated.
 
 ## Tutorials
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[Create Your First Fiori for iOS App](https://developers.sap.com/tutorials/fiori-ios-scpms-teched18-02.html)
 
 ## References
 ### Official Documentation
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[About SAP Cloud Platform SDK for iOS](https://help.sap.com/viewer/fc1a59c210d848babfb3f758a6f55cb1/3.0/en-US/fd75e25c98364517b493c08709c95786.html)
 
 ### API References
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+To be updated.
 
 ## Author
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+- Mendes, Thiago
+- Oliveira, Ralph
 
 ## License
 This repository is released under the terms of the MIT license.
