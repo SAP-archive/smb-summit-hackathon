@@ -15,21 +15,12 @@ In this build block, you will learn & understand about the following components.
 
 Due to the limited time we have during the hackathon, we STRONGLY recommend you to go with the **Preconfigured Device Option A**.
 
-```mermaid
-
-graph TB
-
-A[Define your IoT Use Case Scenario] --> B[Understanding your Hardware Peripherals e.g. Sensors & Devices]
-
-B --> C[Learning how to work with your Hardware Communication Standard e.g. WiFi, Bluetooth, etc.]
-
-C --> D[Choosing the right IoT Cloud Platform]
-
-D --> E[Setting up your Gateway / Router to Platform]
-
-E --> F[Communicating between your Device and the Gateway]
-
-```
+1. Define your IoT Use Case Scenario
+2. Understanding your Hardware Peripherals e.g. Sensors & Devices
+3. Learning how to work with your Hardware Communication Standard e.g. WiFi, Bluetooth, etc.
+4. Choosing the right IoT Cloud Platform
+5. Setting up your Gateway / Router to Platform
+6. Communicating between your Device and the Gateway
 
 ## Overview
 For this hackathon if you follow the **Option A - Preconfigured Device**, most of the components above have already been preconfigured and set up for you.
@@ -74,8 +65,8 @@ https://github.com/SAP/iot-starterkit/tree/master/cf
 [Internet of Things Service API Documentation](https://trial.canary.cp.iot.sap/iot/core/api/v1/doc/)
 
 ## Author
-MARTINEZ GEA, Maria Trinidad
-Tan, Jacob
+- MARTINEZ GEA, Maria Trinidad
+- Tan, Jacob
 
 ## License
 This repository is released under the terms of the MIT license.
