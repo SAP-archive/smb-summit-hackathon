@@ -21,9 +21,9 @@ Follow sample repository.
 To be updated.
 
 ## Tutorials
-    * Get started with [Build your first bot with Recast.AI](https://recast.ai/blog/build-your-first-bot-with-recast-ai/) to understand the procedure of creating a bot with SAP Conversational AI
-    * [SAP SMB Recast Bot](https://github.com/B1SA/smb-recast-bot): 
-    <br/>This is a sample virtual assistant serving the executive about the executive-level analytics question through conversation, powered by [SAP Conversational AI](https://recast.ai/)(formerly as recast.ai) for SAP Business One and SAP Business ByDesign systems.
+* Get started with [Build your first bot with Recast.AI](https://recast.ai/blog/build-your-first-bot-with-recast-ai/) to understand the procedure of creating a bot with SAP Conversational AI
+* [SAP SMB Recast Bot](https://github.com/B1SA/smb-recast-bot): 
+<br/>This is a sample virtual assistant serving the executive about the executive-level analytics question through conversation, powered by [SAP Conversational AI](https://recast.ai/)(formerly as recast.ai) for SAP Business One and SAP Business ByDesign systems.
 
 ## References
 ### Official Documentation
@@ -33,7 +33,7 @@ To be updated.
 [API References](https://recast.ai/docs/api-reference/)
 
 ## Author
-- Li, Yatsea
+- Yatsea, Li
 - Martin, Du
 
 ## License
