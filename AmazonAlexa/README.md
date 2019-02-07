@@ -4,7 +4,7 @@
 Alexa is Amazon’s cloud-based voice service. With Alexa, you can build natural voice experiences that offer customers a more intuitive way to interact with the technology they use every day. To do so, they can use mobile apps, several other devices and also the dedicated Amazon Echo, a speaker with built in alexa services.
 
 ## Overview
-For the hackathon we prepared 2  for Alexa to communicate with SAP Business One and SAP Business ByDesign. You will have to deploy those apps in the SAP Cloud Platform and also register them in the Alexa Cockpit.
+For the hackathon we prepared 2 samples for Alexa to communicate with SAP Business One and SAP Business ByDesign. You will have to deploy those apps in the SAP Cloud Platform and also register them in the Alexa Cockpit.
 
 ## Prerequisites
 * [Amazon developer account](https://developer.amazon.com/)
