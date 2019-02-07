@@ -1,39 +1,33 @@
-# SMB Innovation Summit 2019 Hackathon - AI: Amazon Alexa
-INTRODUCTION_OF_YOUR_BUILD_BLOCK_NOT_TOO_LONG
+# SMB Innovation Summit 2019 Hackathon - Amazon Alexa
+![Amazon Echo](https://i2.wp.com/code-coverage.net/wp-content/uploads/2016/12/AlexaBanner.png?fit=768%2C274)
 
-IF_YOU_NEED_IMAGE
-![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://s3.amazonaws.com/tinycards/image/0c771449acaecb388c58d8805d966f61)
+Alexa is Amazon’s cloud-based voice service. With Alexa, you can build natural voice experiences that offer customers a more intuitive way to interact with the technology they use every day. To do so, they can use mobile apps, several other devices and also the dedicated Amazon Echo, a speaker with built in alexa services.
+
 ## Overview
-WHAT_IS_EXPECTED_FROM_PARTICIPANT
+For the hackathon we prepared 2  for Alexa to communicate with SAP Business One and SAP Business ByDesign. You will have to deploy those apps in the SAP Cloud Platform and also register them in the Alexa Cockpit.
 
 ## Prerequisites
-IF_YOU_NEED_URL_REDIRECT [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-
-## Usage
-CONFIGURATION_STEPS_IF_REQUIRED
+* [Amazon developer account](https://developer.amazon.com/)
+* [Configure your SAP Cloud Platform enviroment](https://developers.sap.com/uk/tutorials/hcp-cf-getting-started.html)
 
 ## Samples
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* [Integration with SAP Business One](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa/b1AlexaSample)
+* [Integration with SAP Business ByDesign](https://github.com/murthyvsap/ByD-Alexa-Hackathon)
 
 ## Tutorials
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[Alexa Meets ByDesign](https://blogs.sap.com/2019/01/22/alexa-meets-sap-business-bydesign/)
+[B1 Assistant Blog](https://blogs.sap.com/2016/10/10/b1-assistant-retire-keyboard-sap-business-one-alexa/) 
 
 ## References
 ### Official Documentation
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* [Build Skills with the Alexa Skills Kit](https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html)
 
 ### API References
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* [Alexa Voice Service](https://developer.amazon.com/docs/alexa-voice-service/api-overview.html) (not used on the samples)
 
-## Author
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+## Build Block Authors
+* [Ralph Oliveira](https://github.com/Ralphive)
+* [Murthy V](https://github.com/murthyvsap)
 
 ## License
 This repository is released under the terms of the MIT license.
