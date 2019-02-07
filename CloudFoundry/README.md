@@ -1,39 +1,28 @@
 # SMB Innovation Summit 2019 Hackathon - Cloud Foundry
-INTRODUCTION_OF_YOUR_BUILD_BLOCK_NOT_TOO_LONG
+![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://www.cloudfoundry.org/wp-content/uploads/2017/01/CFF_Logo_rgb.png)
 
-IF_YOU_NEED_IMAGE
-![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://s3.amazonaws.com/tinycards/image/0c771449acaecb388c58d8805d966f61)
-## Overview
-WHAT_IS_EXPECTED_FROM_PARTICIPANT
+Cloud Foundry is an open source cloud application platform, providing a choice of clouds, developer frameworks, and application services. Cloud Foundry makes it faster and easier to build, test, deploy, and scale applications. It is an open source project and is available through a variety of private cloud distributions and public cloud instances. This is the platform used to deploy applications in the SAP Cloud Platform.
 
 ## Prerequisites
-IF_YOU_NEED_URL_REDIRECT [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-
-## Usage
-CONFIGURATION_STEPS_IF_REQUIRED
+* [Configure your SAP Cloud Platform Cloud Foundry enviroment](https://developers.sap.com/uk/tutorials/hcp-cf-getting-started.html)
 
 ## Samples
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* [Cloud Foundry Sample with SAP Business One and SAP Business ByDesign using SCP Destionations](https://github.com/B1SA/cfDestinations.git)
+* [Cloud Foundry Sample with SAP Business One in NodeJS](https://github.com/B1SA/cfDemoSummit18.git)
+* [Cloud Foundry Sample with SAP Business One in .NET](https://github.com/B1SA/cfNetDemo)
 
 ## Tutorials
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* [How to Create Your First SAP Business One Loosely Coupled Solution in the SAP Cloud Platform](https://blogs.sap.com/2018/06/04/how-to-create-your-sap-business-one-loosely-coupled-solution-in-the-sap-cloud-platform/)
+* [Create Your First App on Cloud Foundry](https://developers.sap.com/group.scp-3-first-app.html)
 
 ## References
 ### Official Documentation
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-
-### API References
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* [Cloud Foundry Overview](https://docs.cloudfoundry.org/concepts/overview.html)
+* [Cloud Foundry Developer Guide](https://docs.cloudfoundry.org/devguide/index.html)
 
 ## Author
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* [Ralph Oliveira](https://github.com/Ralphive)
+* [Trinidad Martinez](https://github.com/TrinidadMG)
 
 ## License
 This repository is released under the terms of the MIT license.
