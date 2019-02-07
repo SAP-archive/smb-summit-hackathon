@@ -15,8 +15,9 @@ For the hackathon we prepared 2  for Alexa to communicate with SAP Business One 
 * [Integration with SAP Business ByDesign](https://github.com/murthyvsap/ByD-Alexa-Hackathon)
 
 ## Tutorials
-[Alexa Meets ByDesign](https://blogs.sap.com/2019/01/22/alexa-meets-sap-business-bydesign/)
-[B1 Assistant Blog](https://blogs.sap.com/2016/10/10/b1-assistant-retire-keyboard-sap-business-one-alexa/) 
+* [How to build an Alexa Skill step by step](https://medium.com/crowdbotics/how-to-build-a-custom-amazon-alexa-skill-step-by-step-my-favorite-chess-player-dcc0edae53fb)
+* [Alexa Meets ByDesign](https://blogs.sap.com/2019/01/22/alexa-meets-sap-business-bydesign/)
+* [B1 Assistant Blog](https://blogs.sap.com/2016/10/10/b1-assistant-retire-keyboard-sap-business-one-alexa/) 
 
 ## References
 ### Official Documentation
