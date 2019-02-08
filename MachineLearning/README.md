@@ -1,6 +1,6 @@
 # Tensorflow and SAP Leonardo Machine Learning Foundation
-<a href="https://help.sap.com/viewer/product/SAP_LEONARDO_MACHINE_LEARNING_FOUNDATION/1.0/en-US"><img src="https://cdn-images-1.medium.com/max/1600/1*-iY0wsA8fIILyDmerX4N0Q.jpeg"  alt="recast" width="" /></a>
-<br/>
+[![SAP](https://i.imgur.com/CkoHgRF.png)](http://cloudplatform.sap.com/)
+
 This build block is about bringing intelligence to enterprise with machine learning for SAP SMB Innovation 2019 Hackathon. It covers the following topic.
 
 * [Machine Learning 101](#Machine-Learning-101)
