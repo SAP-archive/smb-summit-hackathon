@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices m:DataServiceVersion="1.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <Schema Namespace="cust" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:c4c="http://www.sap.com/Protocols/C4CData">
+            <EntityType Name="SalesOrder">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ExternalReference" Type="Edm.String" Nullable="true" MaxLength="35" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <Property Name="DataOriginTypeCode" Type="Edm.String" Nullable="true" MaxLength="3" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" c4c:value-help="SalesOrderDataOriginTypeCodeCollection" sap:text="DataOriginTypeCodeText" />
+                <Property Name="DataOriginTypeCodeText" Type="Edm.String" Nullable="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ID" Type="Edm.String" Nullable="true" MaxLength="35" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="Name" Type="Edm.String" Nullable="true" MaxLength="255" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <Property Name="ReleaseStatusCode" Type="Edm.String" Nullable="true" MaxLength="2" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" c4c:value-help="SalesOrderReleaseStatusCodeCollection" sap:text="ReleaseStatusCodeText" />
+                <Property Name="ReleaseStatusCodeText" Type="Edm.String" Nullable="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ConsistencyStatusCode" Type="Edm.String" Nullable="true" MaxLength="2" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" c4c:value-help="SalesOrderConsistencyStatusCodeCollection" sap:text="ConsistencyStatusCodeText" />
+                <Property Name="ConsistencyStatusCodeText" Type="Edm.String" Nullable="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="NetAmount" Type="Edm.Decimal" Nullable="true" Precision="28" Scale="2" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="currencyCode" Type="Edm.String" Nullable="true" MaxLength="3" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" c4c:value-help="SalesOrdercurrencyCodeCollection" sap:text="currencyCodeText" />
+                <Property Name="currencyCodeText" Type="Edm.String" Nullable="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="GrossAmount" Type="Edm.Decimal" Nullable="true" Precision="28" Scale="6" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="currencyCode1" Type="Edm.String" Nullable="true" MaxLength="3" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" c4c:value-help="SalesOrdercurrencyCode1Collection" sap:text="currencyCode1Text" />
+                <Property Name="currencyCode1Text" Type="Edm.String" Nullable="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="DateTime" Type="Edm.DateTimeOffset" Nullable="true" Precision="7" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <NavigationProperty Name="SalesOrderBuyerParty" Relationship="cust.SalesOrder_SalesOrderBuyerParty" FromRole="SalesOrder" ToRole="SalesOrderBuyerParty" />
+                <NavigationProperty Name="SalesOrderItem" Relationship="cust.SalesOrder_SalesOrderItem" FromRole="SalesOrder" ToRole="SalesOrderItem" />
+                <NavigationProperty Name="SalesOrderSalesItem" Relationship="cust.SalesOrder_SalesOrderSalesItem" FromRole="SalesOrder" ToRole="SalesOrderSalesItem" />
+                <NavigationProperty Name="SalesOrderSalesUnitParty" Relationship="cust.SalesOrder_SalesOrderSalesUnitParty" FromRole="SalesOrder" ToRole="SalesOrderSalesUnitParty" />
+            </EntityType>
+            <EntityType Name="SalesOrderBuyerParty">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ParentObjectID" Type="Edm.String" Nullable="true" MaxLength="70" FixedLength="true" sap:creatable="true" sap:updatable="false" sap:filterable="true" />
+                <Property Name="PartyID" Type="Edm.String" Nullable="true" MaxLength="60" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <NavigationProperty Name="BuyerPartyName" Relationship="cust.SalesOrderBuyerParty_BuyerPartyName" FromRole="SalesOrderBuyerParty" ToRole="BuyerPartyName" />
+                <NavigationProperty Name="SalesOrder" Relationship="cust.SalesOrder_SalesOrderBuyerParty" FromRole="SalesOrderBuyerParty" ToRole="SalesOrder" />
+            </EntityType>
+            <EntityType Name="BuyerPartyName">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="FormattedName" Type="Edm.String" Nullable="true" MaxLength="80" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+            </EntityType>
+            <EntityType Name="SalesOrderSalesUnitParty">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ParentObjectID" Type="Edm.String" Nullable="true" MaxLength="70" FixedLength="true" sap:creatable="true" sap:updatable="false" sap:filterable="true" />
+                <Property Name="PartyID" Type="Edm.String" Nullable="true" MaxLength="60" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <NavigationProperty Name="SalesOrder" Relationship="cust.SalesOrder_SalesOrderSalesUnitParty" FromRole="SalesOrderSalesUnitParty" ToRole="SalesOrder" />
+                <NavigationProperty Name="SalesUnitPartyName" Relationship="cust.SalesOrderSalesUnitParty_SalesUnitPartyName" FromRole="SalesOrderSalesUnitParty" ToRole="SalesUnitPartyName" />
+            </EntityType>
+            <EntityType Name="SalesUnitPartyName">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="FormattedName" Type="Edm.String" Nullable="true" MaxLength="80" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+            </EntityType>
+            <EntityType Name="SalesOrderItem">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ParentObjectID" Type="Edm.String" Nullable="true" MaxLength="70" FixedLength="true" sap:creatable="true" sap:updatable="false" sap:filterable="true" />
+                <Property Name="Description" Type="Edm.String" Nullable="true" MaxLength="40" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <Property Name="ID" Type="Edm.String" Nullable="true" MaxLength="10" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <Property Name="ProcessingTypeCode" Type="Edm.String" Nullable="true" MaxLength="4" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" c4c:value-help="SalesOrderItemProcessingTypeCodeCollection" sap:text="ProcessingTypeCodeText" />
+                <Property Name="ProcessingTypeCodeText" Type="Edm.String" Nullable="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <NavigationProperty Name="SalesOrder" Relationship="cust.SalesOrder_SalesOrderItem" FromRole="SalesOrderItem" ToRole="SalesOrder" />
+                <NavigationProperty Name="SalesOrderItemProduct" Relationship="cust.SalesOrderItem_SalesOrderItemProduct" FromRole="SalesOrderItem" ToRole="SalesOrderItemProduct" />
+                <NavigationProperty Name="SalesOrderItemScheduleLine" Relationship="cust.SalesOrderItem_SalesOrderItemScheduleLine" FromRole="SalesOrderItem" ToRole="SalesOrderItemScheduleLine" />
+            </EntityType>
+            <EntityType Name="SalesOrderItemProduct">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ParentObjectID" Type="Edm.String" Nullable="true" MaxLength="70" FixedLength="true" sap:creatable="true" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ProductID" Type="Edm.String" Nullable="true" MaxLength="60" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <NavigationProperty Name="SalesOrder" Relationship="cust.SalesOrder_SalesOrderItemProduct" FromRole="SalesOrderItemProduct" ToRole="SalesOrder" />
+                <NavigationProperty Name="SalesOrderItem" Relationship="cust.SalesOrderItem_SalesOrderItemProduct" FromRole="SalesOrderItemProduct" ToRole="SalesOrderItem" />
+            </EntityType>
+            <EntityType Name="SalesOrderItemScheduleLine">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ParentObjectID" Type="Edm.String" Nullable="true" MaxLength="70" FixedLength="true" sap:creatable="true" sap:updatable="false" sap:filterable="true" />
+                <Property Name="Quantity" Type="Edm.Decimal" Nullable="true" Precision="31" Scale="14" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <Property Name="unitCode" Type="Edm.String" Nullable="true" MaxLength="3" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" c4c:value-help="SalesOrderItemScheduleLineunitCodeCollection" sap:text="unitCodeText" />
+                <Property Name="unitCodeText" Type="Edm.String" Nullable="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <NavigationProperty Name="SalesOrder" Relationship="cust.SalesOrder_SalesOrderItemScheduleLine" FromRole="SalesOrderItemScheduleLine" ToRole="SalesOrder" />
+                <NavigationProperty Name="SalesOrderItem" Relationship="cust.SalesOrderItem_SalesOrderItemScheduleLine" FromRole="SalesOrderItemScheduleLine" ToRole="SalesOrderItem" />
+            </EntityType>
+            <EntityType Name="SalesOrderSalesItem">
+                <Key>
+                    <PropertyRef Name="ObjectID" />
+                </Key>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" MaxLength="70" FixedLength="true" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ParentObjectID" Type="Edm.String" Nullable="true" MaxLength="70" FixedLength="true" sap:creatable="true" sap:updatable="false" sap:filterable="true" />
+                <Property Name="ID" Type="Edm.String" Nullable="true" MaxLength="10" FixedLength="true" sap:creatable="true" sap:updatable="true" sap:filterable="true" />
+                <NavigationProperty Name="SalesOrder" Relationship="cust.SalesOrder_SalesOrderSalesItem" FromRole="SalesOrderSalesItem" ToRole="SalesOrder" />
+            </EntityType>
+            <EntityType Name="CodeList">
+                <Key>
+                    <PropertyRef Name="Code" />
+                </Key>
+                <Property Name="Code" Type="Edm.String" Nullable="false" FixedLength="false" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+                <Property Name="Description" Type="Edm.String" Nullable="false" FixedLength="false" sap:creatable="false" sap:updatable="false" sap:filterable="true" />
+            </EntityType>
+            <Association Name="SalesOrderBuyerParty_BuyerPartyName">
+                <End Type="cust.SalesOrderBuyerParty" Multiplicity="1" Role="SalesOrderBuyerParty" />
+                <End Type="cust.BuyerPartyName" Multiplicity="*" Role="BuyerPartyName" />
+            </Association>
+            <Association Name="SalesOrderItem_SalesOrderItemProduct">
+                <End Type="cust.SalesOrderItem" Multiplicity="1" Role="SalesOrderItem" />
+                <End Type="cust.SalesOrderItemProduct" Multiplicity="1" Role="SalesOrderItemProduct" />
+            </Association>
+            <Association Name="SalesOrderItem_SalesOrderItemScheduleLine">
+                <End Type="cust.SalesOrderItem" Multiplicity="1" Role="SalesOrderItem" />
+                <End Type="cust.SalesOrderItemScheduleLine" Multiplicity="*" Role="SalesOrderItemScheduleLine" />
+            </Association>
+            <Association Name="SalesOrderSalesUnitParty_SalesUnitPartyName">
+                <End Type="cust.SalesOrderSalesUnitParty" Multiplicity="1" Role="SalesOrderSalesUnitParty" />
+                <End Type="cust.SalesUnitPartyName" Multiplicity="*" Role="SalesUnitPartyName" />
+            </Association>
+            <Association Name="SalesOrder_SalesOrderBuyerParty">
+                <End Type="cust.SalesOrder" Multiplicity="1" Role="SalesOrder" />
+                <End Type="cust.SalesOrderBuyerParty" Multiplicity="1" Role="SalesOrderBuyerParty" />
+            </Association>
+            <Association Name="SalesOrder_SalesOrderItem">
+                <End Type="cust.SalesOrder" Multiplicity="1" Role="SalesOrder" />
+                <End Type="cust.SalesOrderItem" Multiplicity="*" Role="SalesOrderItem" />
+            </Association>
+            <Association Name="SalesOrder_SalesOrderItemProduct">
+                <End Type="cust.SalesOrderItemProduct" Multiplicity="1" Role="SalesOrderItemProduct" />
+                <End Type="cust.SalesOrder" Multiplicity="1" Role="SalesOrder" />
+            </Association>
+            <Association Name="SalesOrder_SalesOrderItemScheduleLine">
+                <End Type="cust.SalesOrderItemScheduleLine" Multiplicity="1" Role="SalesOrderItemScheduleLine" />
+                <End Type="cust.SalesOrder" Multiplicity="1" Role="SalesOrder" />
+            </Association>
+            <Association Name="SalesOrder_SalesOrderSalesItem">
+                <End Type="cust.SalesOrder" Multiplicity="1" Role="SalesOrder" />
+                <End Type="cust.SalesOrderSalesItem" Multiplicity="*" Role="SalesOrderSalesItem" />
+            </Association>
+            <Association Name="SalesOrder_SalesOrderSalesUnitParty">
+                <End Type="cust.SalesOrder" Multiplicity="1" Role="SalesOrder" />
+                <End Type="cust.SalesOrderSalesUnitParty" Multiplicity="1" Role="SalesOrderSalesUnitParty" />
+            </Association>
+            <EntityContainer Name="khsalesorderdemo" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="BuyerPartyNameCollection" EntityType="cust.BuyerPartyName" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrderBuyerPartyCollection" EntityType="cust.SalesOrderBuyerParty" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrderCollection" EntityType="cust.SalesOrder" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrderConsistencyStatusCodeCollection" EntityType="cust.CodeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:semantics="fixed-values" />
+                <EntitySet Name="SalesOrderDataOriginTypeCodeCollection" EntityType="cust.CodeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:semantics="fixed-values" />
+                <EntitySet Name="SalesOrderItemCollection" EntityType="cust.SalesOrderItem" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrderItemProcessingTypeCodeCollection" EntityType="cust.CodeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:semantics="fixed-values" />
+                <EntitySet Name="SalesOrderItemProductCollection" EntityType="cust.SalesOrderItemProduct" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrderItemScheduleLineCollection" EntityType="cust.SalesOrderItemScheduleLine" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrderItemScheduleLineunitCodeCollection" EntityType="cust.CodeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:semantics="fixed-values" />
+                <EntitySet Name="SalesOrderReleaseStatusCodeCollection" EntityType="cust.CodeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:semantics="fixed-values" />
+                <EntitySet Name="SalesOrderSalesItemCollection" EntityType="cust.SalesOrderSalesItem" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrderSalesUnitPartyCollection" EntityType="cust.SalesOrderSalesUnitParty" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <EntitySet Name="SalesOrdercurrencyCode1Collection" EntityType="cust.CodeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:semantics="fixed-values" />
+                <EntitySet Name="SalesOrdercurrencyCodeCollection" EntityType="cust.CodeList" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:semantics="fixed-values" />
+                <EntitySet Name="SalesUnitPartyNameCollection" EntityType="cust.SalesUnitPartyName" sap:creatable="true" sap:updatable="true" sap:deletable="true" />
+                <AssociationSet Name="SalesOrderBuyerPartyCollection_BuyerPartyNameCollection" Association="cust.SalesOrderBuyerParty_BuyerPartyName" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderBuyerPartyCollection" Role="SalesOrderBuyerParty" />
+                    <End EntitySet="BuyerPartyNameCollection" Role="BuyerPartyName" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderCollection_SalesOrderBuyerPartyCollection" Association="cust.SalesOrder_SalesOrderBuyerParty" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderCollection" Role="SalesOrder" />
+                    <End EntitySet="SalesOrderBuyerPartyCollection" Role="SalesOrderBuyerParty" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderCollection_SalesOrderItemCollection" Association="cust.SalesOrder_SalesOrderItem" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderCollection" Role="SalesOrder" />
+                    <End EntitySet="SalesOrderItemCollection" Role="SalesOrderItem" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderCollection_SalesOrderSalesItemCollection" Association="cust.SalesOrder_SalesOrderSalesItem" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderCollection" Role="SalesOrder" />
+                    <End EntitySet="SalesOrderSalesItemCollection" Role="SalesOrderSalesItem" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderCollection_SalesOrderSalesUnitPartyCollection" Association="cust.SalesOrder_SalesOrderSalesUnitParty" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderCollection" Role="SalesOrder" />
+                    <End EntitySet="SalesOrderSalesUnitPartyCollection" Role="SalesOrderSalesUnitParty" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderItemCollection_SalesOrderItemProductCollection" Association="cust.SalesOrderItem_SalesOrderItemProduct" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderItemCollection" Role="SalesOrderItem" />
+                    <End EntitySet="SalesOrderItemProductCollection" Role="SalesOrderItemProduct" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderItemCollection_SalesOrderItemScheduleLineCollection" Association="cust.SalesOrderItem_SalesOrderItemScheduleLine" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderItemCollection" Role="SalesOrderItem" />
+                    <End EntitySet="SalesOrderItemScheduleLineCollection" Role="SalesOrderItemScheduleLine" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderItemProductCollection_SalesOrderCollection" Association="cust.SalesOrder_SalesOrderItemProduct" sap:creatable="false" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderItemProductCollection" Role="SalesOrderItemProduct" />
+                    <End EntitySet="SalesOrderCollection" Role="SalesOrder" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderItemScheduleLineCollection_SalesOrderCollection" Association="cust.SalesOrder_SalesOrderItemScheduleLine" sap:creatable="false" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderItemScheduleLineCollection" Role="SalesOrderItemScheduleLine" />
+                    <End EntitySet="SalesOrderCollection" Role="SalesOrder" />
+                </AssociationSet>
+                <AssociationSet Name="SalesOrderSalesUnitPartyCollection_SalesUnitPartyNameCollection" Association="cust.SalesOrderSalesUnitParty_SalesUnitPartyName" sap:creatable="true" sap:updatable="false" sap:deletable="false">
+                    <End EntitySet="SalesOrderSalesUnitPartyCollection" Role="SalesOrderSalesUnitParty" />
+                    <End EntitySet="SalesUnitPartyNameCollection" Role="SalesUnitPartyName" />
+                </AssociationSet>
+                <FunctionImport Name="SalesOrderReleaseCustomerRequest1" ReturnType="cust.SalesOrder" EntitySet="SalesOrderCollection" m:HttpMethod="POST">
+                    <Parameter Name="ObjectID" Type="Edm.String" Mode="In" />
+                </FunctionImport>
+                <FunctionImport Name="SalesOrderRelease2" ReturnType="cust.SalesOrder" EntitySet="SalesOrderCollection" m:HttpMethod="POST">
+                    <Parameter Name="ObjectID" Type="Edm.String" Mode="In" />
+                </FunctionImport>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
