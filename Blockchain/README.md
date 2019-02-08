@@ -16,7 +16,6 @@ Hyperledger Fabric is a blockchain framework implementation and one of the Hyper
 
 ## References
 ### Official Documentation
-* [Hyper Ledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.4/whatis.html)
 * [Hyperledger Fabric on SAP Cloud Platform](https://help.sap.com/viewer/p/HYPERLEDGER_FABRIC)
 
 
