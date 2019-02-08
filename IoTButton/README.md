@@ -12,6 +12,7 @@ The sample provided in this buil block integrates the  IoT Button with SAP Busin
 * [GitHub Repository - smbDashButton](https://github.com/Ralphive/b1dash)
 
 ## Tutorials
+* [IoT Made Simple with SAP Business One and SAP Business ByDesign](https://blogs.sap.com/2019/02/06/iot-made-simple-with-sap-business-one-and-sap-business-bydesign/)
 * [How to Configure an AWS IoT Dash Button](https://docs.aws.amazon.com/iot/latest/developerguide/configure-iot.html)
 
 ## References
