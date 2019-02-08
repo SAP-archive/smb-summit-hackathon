@@ -21,7 +21,7 @@ The sample provided in this buil block integrates the  IoT Button with SAP Busin
 
 
 ## Author
-* [Ralph Oliveira]((https://github.com/Ralphive)
+* [Ralph Oliveira](https://github.com/Ralphive)
 
 ## License
 This repository is released under the terms of the MIT license.
