@@ -15,7 +15,11 @@ SAP Open Connectors provides pre-built and feature-rich connectors to simplify t
 ## References
 ### Official Documentation
 * [Getting Started with SAP CPI](https://help.sap.com/viewer/368c481cd6954bdfa5d0435479fd4eaf/Cloud/en-US/e12c09cc8e9b4574b092d8964b049ce6.html)
+* [Introduction to Open Connectors](https://help.openconnectors.ext.hana.ondemand.com/home/elements-overview)
 
+
+### API Reference
+* [Open Connectors Catalog](https://help.openconnectors.ext.hana.ondemand.com/home/our-catalog)
 
 ## Author
 * [Eddy Neveux](https://twitter.com/eddy_nev)
