@@ -12,13 +12,13 @@ SAP Conversational AI is A collaborative end-to-end bot platform for developers,
 * Monitor: Monitor the NLP status for incoming queries, get insights on its usage, and re-train it to make it sharper, 
 
 ## Prerequisites
-Follow sample repository.
+* Sign up free as a developer for [SAP Conversational AI](https://cai.tools.sap/)
 
 ## Usage
-Follow sample repository.
+* Go through the [tutorials](#Tutorials) below
 
 ## Samples
-To be updated.
+[SAP SMB Recast Bot](https://github.com/B1SA/smb-recast-bot): 
 
 ## Tutorials
 * Get started with [Build your first bot with Recast.AI](https://recast.ai/blog/build-your-first-bot-with-recast-ai/) to understand the procedure of creating a bot with SAP Conversational AI
@@ -33,8 +33,8 @@ To be updated.
 [API References](https://recast.ai/docs/api-reference/)
 
 ## Author
-- Yatsea, Li
-- Martin, Du
+- Yatsea Li
+- Martin Du
 
 ## License
 This repository is released under the terms of the MIT license.
