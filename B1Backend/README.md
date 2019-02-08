@@ -1,26 +1,14 @@
-# SMB Innovation Summit 2019 Hackathon - ERP Backend: SAP Business One
-INTRODUCTION_OF_YOUR_BUILD_BLOCK_NOT_TOO_LONG
-
+# Backend: SAP Business One
 IF_YOU_NEED_IMAGE
-![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://s3.amazonaws.com/tinycards/image/0c771449acaecb388c58d8805d966f61)
-## Overview
-WHAT_IS_EXPECTED_FROM_PARTICIPANT
-
-## Prerequisites
-IF_YOU_NEED_URL_REDIRECT [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-
-## Usage
-CONFIGURATION_STEPS_IF_REQUIRED
+![SAPB1](http://iconisol.com/wp-content/uploads/2017/06/SAP-Business-One-Logo-trp.png)
+TODO 
 
 ## Samples
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+* Postman Collections with request samples
 
 ## Tutorials
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
-SAMPLE_GIT_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[SAP Business One Service Layer Overview](https://www.youtube.com/watch?v=zaF_i7x9-s0)
+[SAP Business One Service Layer: Entity CRUD – Update](https://blogs.sap.com/2016/04/23/b1-service-layer-entity-crud-update/)
 
 ## References
 ### Official Documentation
@@ -28,7 +16,7 @@ SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
 SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
 
 ### API References
-SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
+[SAP Business One Service Layer API Reference[()
 SAMPLE_URL [CLICK_HERE](https://bla_bla_bla) HERE_IS_AN_EXAMPLE
 
 ## Author
