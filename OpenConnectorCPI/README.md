@@ -1,4 +1,4 @@
-# SAP Cloud Platform Integration
+# SAP Cloud Platform Integration & SAP Open Connectors
 [![SAP](https://i.imgur.com/YGzZd2E.png)](http://cloudplatform.sap.com/)
 SAP Cloud Platform Integration connects cloud applications with other SAP and non-SAP cloud and on-premise apps.
 SAP Open Connectors provides pre-built and feature-rich connectors to simplify the connectivity and seamless integration with over 150 non-SAP cloud applications.
