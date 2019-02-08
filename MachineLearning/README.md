@@ -13,22 +13,6 @@ This build block is about bringing intelligence to enterprise with machine learn
 * [openSAP-Enterprise Deep Learning with TensorFlow](https://open.sap.com/courses/ml2)
 * [How to become an SAP Leonardo Machine Learning Foundation Expert](https://blogs.sap.com/2018/11/13/how-to-become-an-sap-leonardo-machine-learning-foundation-expert/)
 
-## Tensorflow
-TensorFlow™ is an open source software library for high performance numerical computation. Its flexible architecture allows easy deployment of computation across a variety of platforms (CPUs, GPUs, TPUs), and from desktops to clusters of servers to mobile and edge devices. Originally developed by researchers and engineers from the Google Brain team within Google’s AI organization, it comes with strong support for machine learning and deep learning and the flexible numerical computation core is used across many other scientific domains.
-<br>
-<br/>
-Tensorflow is the underneath ML framework used by SAP Leonardo Machine Learning Foundation. You can bring your own tensorflow model to be deployed on SAP Leonardo Machine Learning Foundation.
-
-### [Learn and use Machine Learning](https://www.tensorflow.org/tutorials)
-The high-level Keras API provides building blocks to create and train deep learning models. Start with these beginner-friendly notebook examples, then read [the TensorFlow Keras guide](https://www.tensorflow.org/guide/keras).
-<br/>
-* [Basic classification](https://www.tensorflow.org/tutorials/keras/basic_classification)
-* [Text classification](https://www.tensorflow.org/tutorials/keras/basic_text_classification)
-* [Regression](https://www.tensorflow.org/tutorials/keras/basic_regression)
-* [Overfitting and underfitting](https://www.tensorflow.org/tutorials/keras/overfit_and_underfit)
-* [Save and load](https://www.tensorflow.org/tutorials/keras/save_and_restore_models)
-
-To learn about machine learning fundamentals and concepts, consider taking the [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/). Additional TensorFlow and machine learning resources are listed in [next steps](https://www.tensorflow.org/tutorials/next_steps).
 
 ## SAP Leonardo Machine Learning Foundation
 ### Overview
@@ -128,3 +112,20 @@ If you have your own TensorFlow model you can easily import and deploy it on the
 <br/>This sample integrates SAP Business One with SAP Leonardo Machine Learning Foundation, which uses the ticket intelligence service of SAP Leonardo Machine Learning Foundation in SAP API Business Hub to classify a given review text from customers into  complaint or compliment. And then creates an Activity within SAP Business One with a specific priority. In case of a complaint, it also sends a message to the B1 User.
 * [BYOM sample: shoe-detector-tf](https://github.com/B1SA/smbmkt/tree/master/detector/tensorflow)
 <br/>This is a BYOM sample of training a shoe detection model with tensorflow and deploy/inference in Cloud Foundry, SAP Cloud Platform.
+
+## Tensorflow
+TensorFlow™ is an open source software library for high performance numerical computation. Its flexible architecture allows easy deployment of computation across a variety of platforms (CPUs, GPUs, TPUs), and from desktops to clusters of servers to mobile and edge devices. Originally developed by researchers and engineers from the Google Brain team within Google’s AI organization, it comes with strong support for machine learning and deep learning and the flexible numerical computation core is used across many other scientific domains.
+<br>
+<br/>
+Tensorflow is the underneath ML framework used by SAP Leonardo Machine Learning Foundation. You can bring your own tensorflow model to be deployed on SAP Leonardo Machine Learning Foundation.
+
+### [Learn and use Machine Learning](https://www.tensorflow.org/tutorials)
+The high-level Keras API provides building blocks to create and train deep learning models. Start with these beginner-friendly notebook examples, then read [the TensorFlow Keras guide](https://www.tensorflow.org/guide/keras).
+<br/>
+* [Basic classification](https://www.tensorflow.org/tutorials/keras/basic_classification)
+* [Text classification](https://www.tensorflow.org/tutorials/keras/basic_text_classification)
+* [Regression](https://www.tensorflow.org/tutorials/keras/basic_regression)
+* [Overfitting and underfitting](https://www.tensorflow.org/tutorials/keras/overfit_and_underfit)
+* [Save and load](https://www.tensorflow.org/tutorials/keras/save_and_restore_models)
+
+To learn about machine learning fundamentals and concepts, consider taking the [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/). Additional TensorFlow and machine learning resources are listed in [next steps](https://www.tensorflow.org/tutorials/next_steps).
