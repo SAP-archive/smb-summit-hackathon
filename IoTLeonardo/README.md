@@ -39,13 +39,12 @@ Your main task is then to understand **how to operate with the Device (Send / Re
 3. Sample SAP Fiori App to Execute Sample Script
 
 ## Installation
-Follow document  provided in the option folder. 
+Follow document provided in the option folder. 
 
 ### Prerequisites
 - [Personal] SAP Cloud Platform Trial Account
-- [Instructor] SAP Leonardo IoT 4.0 Service Cockpit Account
-- [Instructor] Texas Instruments SensorTag CC2650STK
-- [Instructor] SAP Router App
+- [Request] SAP Leonardo IoT 4.0 Service Cockpit Account
+- [Request] Texas Instruments SensorTag CC2650STK & SAP Router App from Mobile Device
 
 ## Usage
 Follow document provided in the option folder. 
