@@ -1,4 +1,4 @@
-# SMB Innovation Summit 2019 Hackathon - Cloud Foundry
+# Cloud Foundry
 ![DESCRIPTION_OF_PICTURE_AND_URL_OF_IMAGE_BELOW](https://www.cloudfoundry.org/wp-content/uploads/2017/01/CFF_Logo_rgb.png)
 
 Cloud Foundry is an open source cloud application platform, providing a choice of clouds, developer frameworks, and application services. Cloud Foundry makes it faster and easier to build, test, deploy, and scale applications. It is an open source project and is available through a variety of private cloud distributions and public cloud instances. This is the platform used to deploy applications in the SAP Cloud Platform.
