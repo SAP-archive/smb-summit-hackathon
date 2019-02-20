@@ -29,7 +29,6 @@ To be updated.
 
 ## Author
 - Mendes, Thiago
-- Oliveira, Ralph
 
 ## License
 This repository is released under the terms of the MIT license.
