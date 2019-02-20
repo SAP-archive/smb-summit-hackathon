@@ -1,5 +1,6 @@
 ![SAP](https://i.imgur.com/52qslaV.png)
-SAP SMB Summit Hackathon
+
+SAP SMB Innovation Summit Hackathon
 =======================
 If you have attended any hackathons in the past, then you know how much time it takes to
 get a project started: decide on what to build, pick a programming language, pick a web framework. 
