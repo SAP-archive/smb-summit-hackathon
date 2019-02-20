@@ -13,7 +13,6 @@ The SAP Cloud Application Programming Model enables you to quickly create busine
 ## Tutorials
 
 * [SAP Business ByDesign Side-by-Side Extensions on SAP Cloud Platform](https://blogs.sap.com/2019/02/03/sap-business-bydesign-side-by-side-extensions/)
-* [How to Configure an AWS IoT Dash Button](https://docs.aws.amazon.com/iot/latest/developerguide/configure-iot.html)
 
 ## References
 ### Official Documentation
