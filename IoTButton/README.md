@@ -1,4 +1,4 @@
-# SMB Innovation Summit 2019 Hackathon - AWS Internet of Things Dash Button
+# AWS Internet of Things Dash Button
 [![SAP](https://i.imgur.com/0PLCJPD.png)](http://cloudplatform.sap.com/)
 
 The AWS IoT Button is a programmable button based on the Amazon Dash Button hardware You can code the button's logic in the cloud to configure button clicks to count or track items, call or alert someone, start or stop something, order services, or even provide feedback.
