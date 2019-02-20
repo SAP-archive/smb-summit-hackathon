@@ -1,4 +1,4 @@
-# SMB Innovation Summit 2019 Hackathon - Blockchain
+# Blockchain
 [![SAP](https://i.imgur.com/iCUn29f.png)](http://cloudplatform.sap.com/)
 
 Hyperledger Fabric is a blockchain framework implementation and one of the Hyperledger projects hosted by The Linux Foundation. The Hyperledger Fabric service lets you provision a Hyperledger Fabric node and join it to a network of nodes. Hyperledger Fabric supports enterprise-ready blockchain with smart contracts. 
