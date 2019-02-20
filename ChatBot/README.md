@@ -1,4 +1,4 @@
-# SMB Innovation Summit 2019 Hackathon - SAP Conversational AI
+# SAP Conversational AI
 
 ![SAP Conversational AI](https://i.imgur.com/mKxXnBu.png)
 SAP Conversational AI is A collaborative end-to-end bot platform for developers, covering the end-to-end bot development to deployment.
