@@ -1,4 +1,4 @@
-[![SAP](https://i.imgur.com/52qslaV.png)
+![SAP](https://i.imgur.com/52qslaV.png)
 SAP SMB Summit Hackathon
 =======================
 If you have attended any hackathons in the past, then you know how much time it takes to
