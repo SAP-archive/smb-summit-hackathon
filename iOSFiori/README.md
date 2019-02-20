@@ -1,4 +1,4 @@
-# SMB Innovation Summit 2019 Hackathon - SAP Cloud Platform SDK for iOS on SAP Fiori
+# SAP Cloud Platform SDK for iOS on SAP Fiori
 The SDK offers a fully Swift-based API to accelerate enterprise app development in Apple’s Xcode IDE. The Foundation layer provides key enterprise services for security, connectivity, app services and more. The Fiori UI Kit provides a native, iOS HIG-compliant implementation of the Fiori Design Language, for iOS. The UI + Logic layer provides higher level reusable app components. The Mobile Services on SAP Cloud Platform integrate with the SAP Cloud Platform SDK for iOS.
 
 ![SAP Cloud Platform SDK for iOS](https://developers.sap.com/dam/site/developer/images/dev-iOS-SDK-diagram_v1a.svg)
