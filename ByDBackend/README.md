@@ -39,8 +39,7 @@ There are **3** main groups of APIs that you can use to consume SAP Business ByD
 * [SAP Business ByDesign 1808 Integration Scenarios](https://help.sap.com/http.svc/rc/saphelp_byd1808_en/2018.08/en-US/PUBLISHING/IntegrationScenarios.html) 
 
 ## Author
-* [Eddy Neveux](https://twitter.com/eddy_nev)
-* [Darius Heydarian](https://twitter.com/dariusheydarian)
+* [Knut Heusermann](https://people.sap.com/knut.heusermann#overview)
 
 
 ## License
