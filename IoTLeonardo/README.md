@@ -1,4 +1,6 @@
 # SAP Leonardo Internet of Things
+[![SAP](https://i.imgur.com/CkoHgRF.png)](http://cloudplatform.sap.com/)
+
 This build block takes a quick dive into the topic of Internet of Things (IoT). IoT is transforming the competitive landscape. As the world becomes increasingly connected, digitalization is a key differentiator that will enable companies to remain competitive. Using IoT data from billions of intelligent devices generating massive volumes of data, digitalization promises lower costs, improved production quality, flexibility, efficiency, shorter response time to market demands, and also opens up new business opportunities.
 
 ## Architecture
