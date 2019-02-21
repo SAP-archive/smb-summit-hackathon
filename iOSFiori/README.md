@@ -24,7 +24,7 @@ To learn more about opportunities for iOS developers to develop, deliver and mon
 * [About SAP Cloud Platform SDK for iOS](https://help.sap.com/viewer/fc1a59c210d848babfb3f758a6f55cb1/3.0/en-US/fd75e25c98364517b493c08709c95786.html)
 
 ## Author
-- [Mendes, Thiago](https://twitter.com/mendesthix?lang=en-gb)
+- [Thiago Mendes](https://twitter.com/mendesthix?lang=en-gb)
 
 ## License
 This repository is released under the terms of the MIT license.
