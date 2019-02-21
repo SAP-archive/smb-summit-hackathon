@@ -1,5 +1,5 @@
 # Backend: SAP Business One
-<img src="https://i.imgur.com/eVBnydL.jpg" height="350">&nbsp;
+<img src="https://i.imgur.com/eVBnydL.jpg" height="450">&nbsp;
 
 The SAP Business One will be one of the digital cores used in this hackathon. Whatever your prototype does, it needs to integrate somehow with one the backend systems we provide. The communication is performed using the SAP Business One Service Layer a REST based API which implements the [Open Data Protocol](https://www.odata.org/)
 
@@ -25,8 +25,8 @@ Instead you should build a prototype that takes advantage of a [loosely coupled 
 * [SAP Business One Service Layer API Reference](https://b1sa.github.io/hackathon/b1sl.html)
 
 ## Author
-[Eddy Neveux](https://twitter.com/eddy_nev)
-[Darius Heydarian](https://twitter.com/dariusheydarian)
+* [Eddy Neveux](https://twitter.com/eddy_nev)
+* [Darius Heydarian](https://twitter.com/dariusheydarian)
 
 
 ## License
