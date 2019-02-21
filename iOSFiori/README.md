@@ -18,6 +18,7 @@ To learn more about opportunities for iOS developers to develop, deliver and mon
 
 ## Tutorials
 * [Create Your First Fiori for iOS App](https://developers.sap.com/tutorials/fiori-ios-scpms-teched18-02.html)
+* [Fiori iOS app for the SMB’s](https://blogs.sap.com/2019/02/06/fiori-ios-app-for-the-smbs/)
 
 ## References
 ### Official Documentation
