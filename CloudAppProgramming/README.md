@@ -8,7 +8,7 @@ The SAP Cloud Application Programming Model enables you to quickly create busine
  *  [SAP Cloud Platform Free Trial Account](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
 ## Samples
-* [GitHub Repository - ByD CAP](https://github.com/Ralphive/ByDCAP.git)
+* [GitHub Repository - SAPByDExtensionOnSCP](https://github.com/TNegash/SAPByDExtensionOnSCP)
 
 ## Tutorials
 
