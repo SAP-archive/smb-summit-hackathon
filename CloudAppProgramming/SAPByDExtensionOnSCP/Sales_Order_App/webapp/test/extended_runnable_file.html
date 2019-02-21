@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sales Order Application</title>
+
+	<!-- Bootstrap the unified shell in sandbox mode for standalone usage.
+
+         The renderer is specified in the global Unified Shell configuration object "sap-ushell-config".
+
+         The fiori2 renderer will render the shell header allowing, for instance,
+         testing of additional application setting buttons.
+
+         The navigation target resolution service is configured in a way that the empty URL hash is
+         resolved to our own application.
+
+         This example uses relative path references for the SAPUI5 resources and test-resources;
+         it might be necessary to adapt them depending on the target runtime platform.
+         The sandbox platform is restricted to development or demo use cases and must NOT be used
+         for productive scenarios.
+    -->
+	<script type="text/javascript">
+		window["sap-ushell-config"] = {
+			defaultRenderer : "fiori2",
+			renderers: {
+				fiori2: {
+					componentData: {
+						config: {
+							search: "hidden"
+						}
+					}
+				}
+			},
+			applications: {
+				"Salesorder-display": {
+					additionalInformation: "SAPUI5.Component=Sales_Order_App",
+					applicationType: "URL",
+					url: "../"
+				}
+			}
+		};
+	</script>
+
+	<script src="https://sapui5.hana.ondemand.com/test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
+
+	<!-- Bootstrap the UI5 core library -->
+	<script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration" data-sap-ui-theme="sap_belize" data-sap-ui-compatversion="edge" data-sap-ui-resourceroots="{&quot;Sales_Order_App&quot;: &quot;../&quot;}" data-sap-ui-frameoptions="allow"> 	// NON-SECURE setting for testing environment
+	</script>
+	<script src="../../changes_preview.js"></script>
+
+	<script>(function(){document.addEventListener("load",function(e){if("OpaFrame"===e.target.id){var t=document.getElementById("OpaFrame").contentWindow.document,n=t.createElement("script");n.type="text/javascript",n.innerHTML="sap.ui.getCore().loadLibrary('sap.ui.fl'); jQuery.getScript('../../changes_preview.js')",t.head.appendChild(n)}},!0)})()</script>
+
+
+	<script type="text/javascript">
+		sap.ui.getCore().attachInit(function() {
+			// initialize the ushell sandbox component
+			sap.ushell.Container.createRenderer().placeAt("content");
+		});
+	</script>
+
+<style>.facadebtn{display:inline-block;width:60px;height:60px;background-color:#009de0;border-radius:50px;text-align:center;box-shadow: 2px 2px 3px #999;opacity:.3;}
+.facadebtn .sapUiIcon{color:#FFF;font-size:1.5rem;cursor:pointer;line-height:60px;width:60px;}
+.facadebtn:hover{opacity:1;}
+#interactive.viewport video{width:320px;height:240px;}
+.facade .sapMSLITitleOnly, .facade .sapMILILabel {font-size: 1rem;}
+#interactive.viewport .drawingBuffer{width:320px;height:240px;position:absolute;}
+</style>
+<script type="text/javascript">
+
+window._facadeSettings = {"cordova-plugin-device-orientation":false,"accelerometer":{},"compass":{}};
+	window.sIdeOrigin = "https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com";
+	window.sap_webide_FacadePreview = true;
+	window.sFacadePath = "https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com/hatdi_w769dc465/hybrid/cordovafacade/cordova.js";
+	window.sFacadeCfgViewPath = "https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com/hatdi_w769dc465/hybrid/view/";
+	window.bridgeHtml = "https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com/hatdi_w769dc465/hybrid/cordovafacade/MessageBridge.html";
+	window.msgDefPath = "https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com/hatdi_w769dc465/hybrid/mobileextend/MessageDef.js";
+	window.msgBridgePath = "https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com/hatdi_w769dc465/hybrid/mobileextend/MessageBridge.js";
+	window.meCssPath = "https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com/hatdi_w769dc465/hybrid/css/mobileExtend.css";
+</script>
+<script src="https://webidecp-w88fb7d13.dispatcher.int.sap.hana.ondemand.com/hatdi_w769dc465/hybrid/cordovafacade/floatingButton.js" type="text/javascript"></script>
+</head>
+
+<!-- UI Content -->
+<body class="sapUiBody" id="content">
+</body>
+</html>
