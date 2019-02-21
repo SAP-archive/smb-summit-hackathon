@@ -26,7 +26,7 @@ There are **3** main groups of APIs that you can use to consume SAP Business ByD
 * [OData Example: Read and Write Product Purchasing Data](https://blogs.sap.com/2018/02/22/odata-example-read-and-write-product-purchasing-data/comment-page-1/#comment-451160)
 * [Retrieving Analytics Data Using OData](https://help.sap.com/viewer/7c182c462ec043cba338a30b952068c7/1902/en-US/2be3c33a722d1014a62bdc2382beea48.html?q=odata)
 * [SAP Business by Design - How to Create an OData Service](https://www.youtube.com/watch?v=z6mF_1hFths)
-
+* [Get Employee ID and Business Partner Internal ID using ByDesign OData Services](https://blogs.sap.com/2016/11/24/get-employee-id-and-business-partner-internal-id-using-bydesign-odata-services/)
 ## References
 ### Official Documentation
 * [SAP Business ByDesign Help Page](https://help.sap.com/viewer/p/SAP_BUSINESS_BYDESIGN)
