@@ -1,4 +1,4 @@
-![SAP](https://i.imgur.com/52qslaV.png)
+![SAP](https://i.imgur.com/vLaieeX.png)
 
 SAP SMB Innovation Summit Hackathon
 =======================
