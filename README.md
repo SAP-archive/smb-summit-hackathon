@@ -5,7 +5,7 @@ SAP SMB Innovation Summit Hackathon
 If you have attended any hackathons in the past, then you know how much time it takes to
 get a project started: decide on what to build, pick a programming language, pick a web framework. 
 
-Unfortunately we don't have much time for this exercise, therefore we tried to keep things simple so your team can get up to speed quick and build a great prototype.
+Unfortunately we don't have much time for this exercise, therefore we tried to keep things simple so your team can get up to speed quick and build a great prototype. Don't take the samples as a wordclass code, we took several shortcuts to make sure you oboard quickly. Most important, [the quality of your code won't be evaluated](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria). 
 
 Table of Contents
 -----------------
@@ -29,7 +29,7 @@ You cloud application prototype will heavily rely on [SAP Cloud Platform](http:/
  -  <img src="https://cdn.iconscout.com/icon/free/png-256/sap-5-569505.png" height="17">&nbsp; [Configure your Cloud Foundry enviroment](https://developers.sap.com/uk/tutorials/hcp-cf-getting-started.html)
  #### Development Environment
 The SAP Cloud Platform Cloud Foundry natively supports many programming languages using the so called [System BuildPacks](https://docs.cloudfoundry.org/buildpacks/#system-buildpacks). The [open source community](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks#community-created) has also created several other Buildpacks, for [example .Net](https://github.com/cloudfoundry/dotnet-core-buildpack). 
-With that many runtimes, you can choose the developer environment that best suits you. Here are some enxamples to get your started:
+With that many runtimes, you can choose the developer environment that best suits you. Here are some examples to get you started:
  
 
 -  <img src="http://deluge-torrent.org/images/apple-logo.gif" height="17">&nbsp;**Mac OS X:** [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) OR [Visual Studio Code](https://code.visualstudio.com)
