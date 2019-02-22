@@ -5,7 +5,7 @@ SAP SMB Innovation Summit Hackathon
 If you have attended any hackathons in the past, then you know how much time it takes to
 get a project started: decide on what to build, pick a programming language, pick a web framework. 
 
-Unfortunately we don't have much time for this exercise, therefore we tried to keep things simple so your team can get up to speed quick and build a great prototype. Don't take the samples as a wordclass code, we took several shortcuts to make sure you oboard quickly. Most important, [the quality of your code won't be evaluated](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria). 
+Unfortunately we don't have much time for this exercise, therefore we tried to keep things simple so your team can get up to speed quickly and build a great prototype. Don't take the samples as a worldclass code, we took several shortcuts to make sure you onboard quickly. Most importantly, [the quality of your code won't be evaluated](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria). 
 
 Table of Contents
 -----------------
@@ -65,7 +65,7 @@ TODO: Explain cf push commands and app monitoring
 FAQ
 ---
 
-Make sure yo check the [FAQ on our Wiki](https://github.com/B1SA/hackathon/wiki/FAQ)
+Make sure to check the [FAQ on our Wiki](https://github.com/B1SA/hackathon/wiki/FAQ)
 
 License
 -------
