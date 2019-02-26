@@ -65,18 +65,22 @@ The [Judgement Criteria is on the FAQ](https://github.com/B1SA/hackathon/wiki/FA
 List of Build Blocks
 ----------------
 
-| Build Block                         | Description                                                             |
-| ------------------------------- | ------------------------------------------------------------------------|
-| Build Block Name                  | Sample Description                                                     |
-| Build Block Name                  | Sample Description                                                     |
-| Build Block Name                  | Sample Description                                                     |
+| Build Block                     | Description                                                                    |
+| ------------------------------- | -------------------------------------------------------------------------------|
+| [AmazonAlexa](AmazonAlexa)      | Voice Interface using the Amazon Echo device                                   |  
+| [B1Backend](B1Backend)          | Details about SAP Business One Connectivity                                    |
+| [Blockchain](Blockchain)        | What is and how to consume Blockchain services in the SAP Cloud Platform       |
+| [ByDBackend](ByDBackend)        | Details about SAP Business ByDesign Connectivity                               |
+| [ChatBot](ChatBot)              | What is and how to consume SAP Conversational UI services in the SAP Cloud Platform to build a chatbot |
+| [CloudAppProgramming](CloudAppProgramming)| How to build a SAP Business ByDesign extension using the SAP Cloud Application Programming Model                               |
+| [CloudFoundry](CloudFoundry)              | How the application platform of SAP CP works and how to build and deploy your cloud apps |
+| [IoTButton](IoTButton)        | How to integrate the Amazon IoT button with SAP Business One and SAP Business ByDesign |
+| [IoTLeonardo](IoTLeonardo)        | Consuming sensors data using the SAP Leonardo IoT Services in the SAP Cloud Platform |
+| [MachineLearning](MachineLearning)        | Integrating machine learning services of SAP Cloud Platform and Tensor flow into SAP Business One |
+| [OpenConnectorCPI](OpenConnectorCPI)        | A middleware for integrating third part applications with SAP Open Connectors and SAP Cloud Platform integration |
+| [UI5Fiori](UI5Fiori)        | SAP UI5 samples for building your application UI using the SAP Fiori Guidelines |
+| [iOSFiori](iOSFiori)        | How to create native iOS apps integrated with SAP Business One and SAP Business ByDesign |
 
-
-
-Deployment
-----------
-
-TODO: Explain cf push commands and app monitoring
 
 FAQ
 ---
