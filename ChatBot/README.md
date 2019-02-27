@@ -36,6 +36,8 @@ SAP Conversational AI is A collaborative end-to-end bot platform for developers,
 - Yatsea Li
 - Martin Du
 
-## License
-This repository is released under the terms of the MIT license.
-See [LICENSE](https://github.com/B1SA/hackathon/blob/master/LICENSE) for more information or see https://opensource.org/licenses/MIT.
+License
+-------
+
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](../LICENSE).
