@@ -56,8 +56,13 @@ With that many runtimes, you can choose the developer environment that best suit
 
 Getting Started
 ---------------
-TODO
+If you are comfortable and understood the concept of building Intelligent Solutions with a Loosely Coupled architecture, you are good to go. Else, take a look at the articles mentioned in the [How it Works](#how-it-works) session.  
 
+A bit of strategy can also help you this [article about winning hackathons](https://medium.freecodecamp.org/a-simple-checklist-to-help-you-win-or-have-fun-at-hackathons-98030be1a6c8) have great hints.
+
+Check our [Build Block list](#list-of-build-blocks) to get some inspiration. Also, [the samples we developed in the past](https://blogs.sap.com/2018/06/05/loosely-coupled-solutions-for-smbs-topics/#Samples) might also give you some ideas. Ask for the help of our experts if you need some guidance.
+
+Whatever the runtime and programming language you choose, your application will run the [SAP Cloud Platform Cloud Foundry](https://cloudplatform.sap.com/enterprise-paas/cloudfoundry.html). To get an idea of how to deploy, monitor and consume services in this environment, [check the dedicated build block](CloudFoundry)
 
 
 
