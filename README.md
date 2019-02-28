@@ -9,15 +9,29 @@ Unfortunately we don't have much time for this exercise, therefore we tried to k
 
 Table of Contents
 -----------------
-
+- [How It works (mini overview)](#how-it-works)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [List of Build Blocks](#list-of-build-blocks)
-- [How It works (mini overview)](#how-it-works)
 - [FAQ](#faq)
 - [License](#license)
 
  
+How It Works
+--------------------------
+
+For this hackathon, your team should develop an innovative prototype that leverages one or many services in the SAP Cloud Platform. This prototype should implement a [Loosely Coupled Architecture](https://blogs.sap.com/2018/04/27/digital-transformation-for-smbs-a-blog-series/), making no [or very little] usage of components in the backend systems (SAP Business One and/or SAP Business ByDesign).
+
+That means no SDK is required to create your prototype. The ERPs should be used as black boxes accessed via data APIs. A great example  is explained [in this blog](https://blogs.sap.com/2018/05/24/digital-transformation-for-smbs-the-intelligent-enterprise/) and several other resources in the [Loosely Coupled Topics for SMBs page](https://blogs.sap.com/2018/06/05/loosely-coupled-solutions-for-smbs-topics).
+
+Understanding the specifics of each service is not trivial. That's why we prepared a [set of Build Blocks](#list-of-build-blocks) that are straightforward to consume and also will help you understand the key concepts from each technology.
+
+Our SAP Experts will be available during the hackathon hours to answer questions and provide advice in case your team needs guidance
+
+Your team will have approximately 7 hours to develop a prototype and present it at the end of the day to a panel of judges and the hackathon audience.
+
+The [Judgement Criteria is in the FAQ](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria) and your final presentation should be of 7 minutes. 2 for a short slides presentation with the overview/architecture and a 5 minutes demo. The three best prototypes will be chosen and the winner announced on Finn Backer's Keynote in the next morning.
+
 
 Prerequisites
 -------------
@@ -42,23 +56,13 @@ With that many runtimes, you can choose the developer environment that best suit
 
 Getting Started
 ---------------
-TODO
+If you are comfortable and understood the concept of building Intelligent Solutions with a Loosely Coupled architecture, you are good to go. Else, take a look at the articles mentioned in the [How it Works](#how-it-works) session.  
 
+A bit of strategy can also help you this [article about winning hackathons](https://medium.freecodecamp.org/a-simple-checklist-to-help-you-win-or-have-fun-at-hackathons-98030be1a6c8) have great hints.
 
-How It Works
---------------------------
+Check our [Build Block list](#list-of-build-blocks) to get some inspiration. Also, [the samples we developed in the past](https://blogs.sap.com/2018/06/05/loosely-coupled-solutions-for-smbs-topics/#Samples) might also give you some ideas. Ask for the help of our experts if you need some guidance.
 
-For this hackathon, your team should develop an innovative prototype that leverages one or many services in the SAP Cloud Platform. This prototype should implement a [Loosely Coupled Architecture](https://blogs.sap.com/2018/04/27/digital-transformation-for-smbs-a-blog-series/), making no [or very little] usage of components in the backend systems (SAP Business One and/or SAP Business ByDesign).
-
-That means no SDK is required to create your prototype. The ERPs should be used as black boxes accessed via data APIs. A great example  is explained [in this blog](https://blogs.sap.com/2018/05/24/digital-transformation-for-smbs-the-intelligent-enterprise/) and several other resources in the [Loosely Coupled Topics for SMBs page](https://blogs.sap.com/2018/06/05/loosely-coupled-solutions-for-smbs-topics).
-
-Understanding the specifics of each service is not trivial. That's why we prepared a list of build blocks that are straightforward to consume and also will help you understand the key concepts from each technology.
-
-Our SAP Experts will be available during the hackathon hours to answer questions and provide advice in case your team needs guidance
-
-Your team will have approximately 7 hours to develop a prototype and present it at the end of the day to a panel of judges and the hackathon audience.
-
-The [Judgement Criteria is on the FAQ](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria) and your final presentation should be of 7 minutes. 2 for a short slides presentation with the overview/architecture and a 5 minutes demo. The three best prototypes will be chosen and the winner announced on Finn Backer's Keynote in the next morning.
+Whatever the runtime and programming language you choose, your application will run the [SAP Cloud Platform Cloud Foundry](https://cloudplatform.sap.com/enterprise-paas/cloudfoundry.html). To get an idea of how to deploy, monitor and consume services in this environment, [check the dedicated build block](CloudFoundry)
 
 
 
