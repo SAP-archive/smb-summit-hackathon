@@ -6,7 +6,7 @@ The UI5 core offers a solid foundation that simplifies your work by managing man
 You can use SAP UI5 to create beautiful and intuitive UIs for your prototype.
 
 ## Samples
-TODO
+* [FioriUI5](https://github.com/mendesthi/FioriUI5.git)
 
 ## Tutorials
 * [Create a Web Front End with SAPUI5 in Web IDE](https://developers.sap.com/group.cp-frontend-ui5-1.html)
