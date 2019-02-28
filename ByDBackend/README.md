@@ -29,9 +29,9 @@ There are **3** main groups of APIs that you can use to consume SAP Business ByD
 * [Get Employee ID and Business Partner Internal ID using ByDesign OData Services](https://blogs.sap.com/2016/11/24/get-employee-id-and-business-partner-internal-id-using-bydesign-odata-services/)
 
 ### SOAP
-* []()
-* []()
-* []()
+* [Create ByD Sales Orders using Web Services](https://blogs.sap.com/?p=529864)
+* [Read and Write ByDesign Attachments using Web Services](https://blogs.sap.com/?p=368069)
+* [How to get ByDesign Code Lists via Web Service QueryCodeListIn](https://blogs.sap.com/2015/03/12/how-to-get-bydesign-code-lists-via-web-service/)
 
 ## References
 ### Official Documentation
