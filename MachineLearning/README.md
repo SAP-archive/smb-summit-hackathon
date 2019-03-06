@@ -4,8 +4,8 @@
 This build block is about bringing intelligence to enterprise with machine learning for SAP SMB Innovation 2019 Hackathon. It covers the following topic.
 
 * [Machine Learning 101](#Machine-Learning-101)
-* [Tensorflow](#Tensorflow)
 * [SAP Leonardo Machine Learning Foundation](#SAP-Leonardo-Machine-Learning-Foundation)
+* [Tensorflow](#Tensorflow)
 
 ## Machine Learning 101
 * [What is Machine Learning?](https://www.sap.com/sea/products/leonardo/machine-learning/what-is-machine-learning.html)
