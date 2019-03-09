@@ -9,7 +9,16 @@ The backend system should be used as a "black box". That means no customizations
 Instead you should build a prototype that takes advantage of a [loosely coupled architecture](https://blogs.sap.com/2018/04/27/digital-transformation-for-smbs-a-blog-series/). If you are new to the concept, please take a look at [our landing page to check articles and samples](https://blogs.sap.com/2018/06/05/loosely-coupled-solutions-for-smbs-topics/)
 
 ## Samples
-* We provide sample REST requests that you can import in [Postman](https://www.getpostman.com/downloads/) to understand how to handle the SAP Business One data
+* We provide [sample REST requests](https://github.com/B1SA/hackathon/blob/master/B1Backend/SAP%20Business%20One.postman_collection.json) that you can import in [Postman](https://www.getpostman.com/downloads/) to understand how to handle the SAP Business One data. They include:
+  * **Master Data**
+    * Get Items
+    * Create Item
+    * Get Business Partners
+    * Create Business Partner
+  * **Transactions**
+    * Get Sales Orders
+    * Create Sales Order
+  * **Login** 
 * Check also [Import/Export Postman Collections](https://learning.getpostman.com/docs/postman/collections/data_formats)
 
 ## Tutorials
