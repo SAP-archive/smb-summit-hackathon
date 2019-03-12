@@ -86,6 +86,10 @@ List of Build Blocks
 | [iOSFiori](iOSFiori)        | How to create native iOS apps integrated with SAP Business One and SAP Business ByDesign |
 
 
+Final Presentation
+----------------
+Use the [Final Presentation](final-presentation.pptx) template to present your code at the end of the hackathon. You have 5 minutes. Use it the way you want, but as an advice. Focus on your demo and not much on slides.
+
 FAQ
 ---
 
