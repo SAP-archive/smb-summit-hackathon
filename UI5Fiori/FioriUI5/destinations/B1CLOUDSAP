@@ -1,0 +1,13 @@
+#Password=<< Existing password/certificate removed on export >>
+#
+#Wed Feb 27 17:38:10 UTC 2019
+Description=B1CLOUDSAP
+Type=HTTP
+TrustAll=true
+Authentication=BasicAuthentication
+WebIDEUsage=ui5_execute
+Name=B1CLOUDSAP
+WebIDEEnabled=true
+URL=http\://<your-sapb1hana-host>:50001/
+ProxyType=Internet
+User={"CompanyDB"\: "SBODEMOBR","UserName"\: "manager"}
