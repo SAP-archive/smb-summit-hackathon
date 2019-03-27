@@ -18,7 +18,9 @@ SAP Conversational AI is A collaborative end-to-end bot platform for developers,
 * Go through the [tutorials](#Tutorials) below
 
 ## Samples
-[SAP SMB Recast Bot](https://github.com/B1SA/smb-recast-bot): 
+* [hello-world-bot](https://github.com/YatseaLi/hello-world-bot): <br/>A hello world webhook sample for a SAP Conversational AI bot with a webhook trigger as action. This simple sample how you reply with text message and a list template message.
+* [smb-recast-bot](https://github.com/B1SA/smb-recast-bot): 
+<br/>A sample executive virtual assistant bot serves the CXOs about the executive-level analytics question through conversation, powered by SAP Conversational AI for SAP Business One and SAP Business ByDesign systems.
 
 ## Tutorials
 * Get started with [Build your first bot with Recast.AI](https://recast.ai/blog/build-your-first-bot-with-recast-ai/) to understand the procedure of creating a bot with SAP Conversational AI
