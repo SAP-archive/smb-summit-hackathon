@@ -1,4 +1,4 @@
-# SMB Innovation Summit 2019 Hackathon - Amazon Alexa
+# Amazon Alexa
 ![Amazon Echo](https://i2.wp.com/code-coverage.net/wp-content/uploads/2016/12/AlexaBanner.png?fit=768%2C274)
 
 Alexa is Amazon’s cloud-based voice service. With Alexa, you can build natural voice experiences that offer customers a more intuitive way to interact with the technology they use every day. To do so, they can use mobile apps, several other devices and also the dedicated Amazon Echo, a speaker with built in alexa services.
@@ -30,6 +30,8 @@ For the hackathon we prepared 2 samples for Alexa to communicate with SAP Busine
 * [Ralph Oliveira](https://github.com/Ralphive)
 * [Murthy V](https://github.com/murthyvsap)
 
-## License
-This repository is released under the terms of the MIT license.
-See [LICENSE](https://github.com/B1SA/hackathon/blob/master/LICENSE) for more information or see https://opensource.org/licenses/MIT.
+License
+-------
+
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](../LICENSE).

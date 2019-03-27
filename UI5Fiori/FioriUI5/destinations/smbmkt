@@ -1,0 +1,12 @@
+#
+#Wed Feb 27 17:44:20 UTC 2019
+Description=smbmkt
+Type=HTTP
+TrustAll=true
+Authentication=NoAuthentication
+WebIDEUsage=ui5_execute, odata_gen
+Name=smbmkt
+WebIDEEnabled=true
+URL=https\://smbmkt-intelligent-lemur.cfapps.eu10.hana.ondemand.com
+ProxyType=Internet
+WebIDESystem=smbmkt

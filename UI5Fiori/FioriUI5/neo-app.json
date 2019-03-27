@@ -1,0 +1,41 @@
+{
+	"welcomeFile": "webapp/test/testFLPService.html",
+	"routes": [{
+			"path": "/resources",
+			"target": {
+				"type": "service",
+				"name": "sapui5",
+				"version": "1.56.7",
+				"preferLocal": true,
+				"entryPath": "/resources"
+			},
+			"description": "SAPUI5 Resources"
+		}, {
+			"path": "/test-resources",
+			"target": {
+				"type": "service",
+				"version": "1.56.7",
+				"name": "sapui5",
+				"entryPath": "/test-resources"
+			},
+			"description": "SAPUI5 Test Resources"
+		}, {
+			"path": "/B1CLOUDSAP",
+			"target": {
+				"type": "destination",
+				"name": "B1CLOUDSAP"
+			},
+			"description": "B1CLOUDSAP"
+		}, {
+			"path": "/smbmkt",
+			"target": {
+				"type": "destination",
+				"name": "smbmkt"
+			},
+			"description": "smbmkt"
+		}
+
+	],
+	"authenticationMethod": "none",
+	"sendWelcomeFileRedirect": true
+}

@@ -11,13 +11,13 @@ In addition, this sample bot can be easily extended to accomodate other analytic
 The transactional scenario such as placing an order, checking the delivery status etc is also possible through SAP Conversational AI(formerly recast.ai), Service Layer of SAP Business One and OData API of SAP Business ByDesign. However, you may refer to [SMB Market Place Assistant Bot](https://github.com/B1SA/smbmkt) for reference, as the transactional scenario is no part of this sample. 
 
 ## High Level Architecture and Components
-![architecture](https://i.imgur.com/FpEV7XP.png)
+![architecture](https://i.imgur.com/4q0kHIg.png)
 
 The architecture diagram above illustrate the following components
 * App/Bot: A self-service bot for end users on messing platform such as Facebook Messenger, Line, WhatsApp, WeChat etc, or a chatbot on web, or an application over the voice on a device, such as an Alexa skill.
 * [SAP Conversation AI](#SAP-Conversation-AI): A collaborative end-to-end bot platform for developers.
 * [smb-recast-bot](#smb-recast-bot): The webhook action of analytics questions. 
-* [ERP backend](#ERP-backend): In this sample, it supports SAP Business One, version for SAP HANA and SAP Business ByDesign. 
+* [ERP backend](#ERP-backend): In this sample, it supports SAP Business One, version for SAP HANA and SAP Business ByDesign. You can easily extend smb-recast-bot to support S4HANA etc by adding configuration to [intents_mapping.js](https://github.com/B1SA/smb-recast-bot/blob/master/server/lib/config/intents_mapping.js) and handle the login in the /webhooks/login and /webhooks/analytics endpoint in [index.js](https://github.com/B1SA/smb-recast-bot/blob/master/server/index.js).  
 
 ### [SAP Conversation AI](https://recast.ai/)
 <a href="https://recast.ai/"><img src="https://i.imgur.com/mKxXnBu.png"  alt="recast" width="400" /></a>
