@@ -1,6 +1,5 @@
 ID: SalesOrderProcessing
 _schema-version: '2.1'
-description: Sales Order Processing
 parameters:
   deploy_mode: html5-repo
 version: 0.0.1
@@ -12,7 +11,7 @@ modules:
       disk-quota: 256M
       memory: 256M
     requires:
-      - name: rt_SalesOrderProcessing_appRouter
+      - name: SalesOrderProcessing_html5_repo_runtime
       - name: srv_api
         group: destinations
         properties:
@@ -24,13 +23,13 @@ modules:
     type: com.sap.html5.application-content
     path: SalesOrderProcessing_ui_deployer
     requires:
-      - name: dt_SalesOrderProcessing_ui_deployer
+      - name: SalesOrderProcessing_html5_repo_host
     build-parameters:
       requires:
-        - name: Sales_Order_App
+        - name: SalesOrderApp
           artifacts:
             - './*'
-          target-path: resources/Sales_Order_App
+          target-path: resources/SalesOrderApp
   - name: SalesOrderProcessing-db
     type: hdb
     path: db
@@ -39,12 +38,11 @@ modules:
       disk-quota: 256M
     requires:
       - name: SalesOrderProcessing-hdi-container
- 
   - name: SalesOrderProcessing-srv
     type: java
     path: srv
     parameters:
-      memory: 1024M
+      memory: 512M
       disk-quota: 256M
     provides:
       - name: srv_api
@@ -52,14 +50,13 @@ modules:
           url: '${default-url}'
     requires:
       - name: uaa_SalesOrderProcessing
-      - name: bydsystem
+      - name: bydsystem      
       - name: SalesOrderProcessing-hdi-container
         properties:
           JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml: {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
-  
-  - name: Sales_Order_App
+  - name: SalesOrderApp
     type: html5
-    path: Sales_Order_App
+    path: SalesOrderApp
     build-parameters:
       builder: grunt
     requires:
@@ -76,20 +73,20 @@ resources:
     parameters:
       service: destination
       service-plan: lite
-  - name: rt_SalesOrderProcessing_appRouter
+  - name: SalesOrderProcessing_html5_repo_runtime
     parameters:
       service-plan: app-runtime
       service: html5-apps-repo
     type: org.cloudfoundry.managed-service
-  - name: dt_SalesOrderProcessing_ui_deployer
+  - name: SalesOrderProcessing_html5_repo_host
     parameters:
       service-plan: app-host
       service: html5-apps-repo
     type: org.cloudfoundry.managed-service
   - name: SalesOrderProcessing-hdi-container
+    type: com.sap.xs.hdi-container
     properties:
       hdi-container-name: '${service-name}'
-    type: com.sap.xs.hdi-container
   - name: uaa_SalesOrderProcessing
     parameters:
       path: ./xs-security.json

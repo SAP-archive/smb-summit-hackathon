@@ -20,15 +20,15 @@ annotate Salesorderhandling.Products with @(
 annotate Salesorderhandling.Salesorder with {
 	salesOrderID 
 		@Common.Label : 'Sales Order ID';
-	customer
-		@Common.Label : 'Customer';
+	customerID
+		@Common.Label : 'Customer ID';
 	orderDate
 		@Common.Label : 'Ordered On';
 };
 annotate Salesorderhandling.Salesorder with @(
 	UI.LineItem: [ 
 		{$Type: 'UI.DataField', Value: salesOrderID},
-		{$Type: 'UI.DataField', Value: customer},
+		{$Type: 'UI.DataField', Value: customerID},
 		{$Type: 'UI.DataField', Value: orderDate},
 	],
 	
@@ -41,7 +41,7 @@ annotate Salesorderhandling.Salesorder with @(
 	UI.Identification:
 	[
 		{$Type: 'UI.DataField', Value: salesOrderID},
-		{$Type: 'UI.DataField', Value: customer},
+		{$Type: 'UI.DataField', Value: customerID},
 		{$Type: 'UI.DataField', Value: orderDate}
 	],
 	
@@ -153,5 +153,5 @@ annotate Salesorderhandling.Salesorderitem  with @(
 	 	{$Type: 'UI.DataField', Value: currency},
     ]
   },
-	
+  
 );

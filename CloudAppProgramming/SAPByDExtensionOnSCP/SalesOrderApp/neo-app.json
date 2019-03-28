@@ -13,15 +13,6 @@
     {
       "path": "/resources",
       "target": {
-        "type": "application",
-        "name": "sapui5preview",
-        "entryPath": "/resources"
-      },
-      "description": "SAPUI5 Resources"
-    },
-    {
-      "path": "/resources",
-      "target": {
         "type": "service",
         "name": "sapui5",
         "preferLocal": true,
@@ -41,15 +32,6 @@
     {
       "path": "/webapp/resources",
       "target": {
-        "type": "application",
-        "name": "sapui5preview",
-        "entryPath": "/resources"
-      },
-      "description": "SAPUI5 Resources"
-    },
-    {
-      "path": "/webapp/resources",
-      "target": {
         "type": "service",
         "name": "sapui5",
         "entryPath": "/resources"
@@ -59,26 +41,8 @@
     {
       "path": "/webapp/test-resources",
       "target": {
-        "type": "application",
-        "name": "sapui5preview",
-        "entryPath": "/test-resources"
-      },
-      "description": "SAPUI5 Test Resources"
-    },
-    {
-      "path": "/webapp/test-resources",
-      "target": {
         "type": "service",
         "name": "sapui5",
-        "entryPath": "/test-resources"
-      },
-      "description": "SAPUI5 Test Resources"
-    },
-    {
-      "path": "/test-resources",
-      "target": {
-        "type": "application",
-        "name": "sapui5preview",
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"

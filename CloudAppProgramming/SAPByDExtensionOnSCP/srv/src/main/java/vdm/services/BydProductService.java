@@ -25,7 +25,7 @@ public interface BydProductService {
      * If no other path was provided via the {@link #withServicePath(String)} method, this is the default service path used to access the endpoint.
      * 
      */
-    String DEFAULT_SERVICE_PATH = "/ByDSyS1/sap/byd/odata/cust/v1/byd_product";
+    String DEFAULT_SERVICE_PATH = "/sap/byd/odata/cust/v1/byd_product";
 
     /**
      * Overrides the default service path and returns a new service instance with the specified service path. Also adjusts the respective entity URLs.

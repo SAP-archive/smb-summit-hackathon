@@ -1,7 +1,7 @@
 {
 	"_version": "1.8.0",
 	"sap.app": {
-		"id": "Sales_Order_App",
+		"id": "SalesOrderApp",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -12,8 +12,6 @@
 		"tags": {
 			"keywords": []
 		},
-		"ach": "XX",
-		"resources": "resources.json",
 		"dataSources": {
 			"mainService": {
 				"uri": "/odata/v2/Salesorderhandling/",
@@ -136,10 +134,6 @@
 				}
 			}
 		}
-	},
-	"sap.fiori": {
-		"registrationIds": [],
-		"archeType": "transactional"
 	},
 	"sap.platform.hcp": {
 		"uri": ""

@@ -12,6 +12,9 @@
   <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Aggregation.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
     <edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
   </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+  </edmx:Reference>
   <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/462030211/Analytics.xml?api=v2" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
     <edmx:Include Alias="Analytics" Namespace="com.sap.vocabularies.Analytics.v1"/>
   </edmx:Reference>
@@ -24,27 +27,38 @@
   <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
     <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
   </edmx:Reference>
+  <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/496435637/PersonalData.xml?api=v2" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="PersonalData" Namespace="com.sap.vocabularies.PersonalData.v1"/>
+  </edmx:Reference>
   <edmx:DataServices m:DataServiceVersion="2.0">
     <Schema Namespace="Salesorderhandling" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
       <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Products" EntityType="Salesorderhandling.Products"/>
         <EntitySet Name="Salesorder" EntityType="Salesorderhandling.Salesorder"/>
         <EntitySet Name="Salesorderitem" EntityType="Salesorderhandling.Salesorderitem"/>
         <FunctionImport Name="Salesorderitem_CheckATP" ReturnType="Edm.String" m:HttpMethod="POST" sap:action-for="Salesorderhandling.Salesorderitem">
           <Parameter Name="itemID" Type="Edm.Int32" Nullable="false" Mode="In"/>
           <Parameter Name="salesOrder_salesOrderID" Type="Edm.String" Nullable="false" Mode="In"/>
         </FunctionImport>
-        <EntitySet Name="Products" EntityType="Salesorderhandling.Products"/>
         <AssociationSet Name="Salesorderitem_salesOrder" Association="Salesorderhandling.Salesorderitem_salesOrder">
           <End Role="Salesorderitem" EntitySet="Salesorderitem"/>
           <End Role="Salesorder" EntitySet="Salesorder"/>
         </AssociationSet>
       </EntityContainer>
+      <EntityType Name="Products">
+        <Key>
+          <PropertyRef Name="ObjectID"/>
+        </Key>
+        <Property Name="ObjectID" Type="Edm.String" MaxLength="70" Nullable="false"/>
+        <Property Name="InternalID" Type="Edm.String" MaxLength="40"/>
+        <Property Name="Description" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
       <EntityType Name="Salesorder">
         <Key>
           <PropertyRef Name="salesOrderID"/>
         </Key>
         <Property Name="salesOrderID" Type="Edm.String" Nullable="false"/>
-        <Property Name="customer" Type="Edm.String"/>
+        <Property Name="customerID" Type="Edm.String"/>
         <Property Name="orderDate" Type="Edm.DateTimeOffset"/>
         <NavigationProperty Name="Salesorderitem" Relationship="Salesorderhandling.Salesorderitem_salesOrder" FromRole="Salesorder" ToRole="Salesorderitem"/>
       </EntityType>
@@ -65,16 +79,10 @@
         <Property Name="currency" Type="Edm.String" MaxLength="3"/>
         <Property Name="salesOrder_salesOrderID" Type="Edm.String" Nullable="false"/>
       </EntityType>
-      <EntityType Name="Products">
-        <Key>
-          <PropertyRef Name="ObjectID"/>
-        </Key>
-        <Property Name="ObjectID" Type="Edm.String" MaxLength="70" Nullable="false"/>
-        <Property Name="InternalID" Type="Edm.String" MaxLength="40"/>
-        <Property Name="Description" Type="Edm.String" MaxLength="40"/>
-      </EntityType>
       <Association Name="Salesorderitem_salesOrder">
-        <End Role="Salesorderitem" Type="Salesorderhandling.Salesorderitem" Multiplicity="*"/>
+        <End Role="Salesorderitem" Type="Salesorderhandling.Salesorderitem" Multiplicity="*">
+          <OnDelete Action="Cascade"/>
+        </End>
         <End Role="Salesorder" Type="Salesorderhandling.Salesorder" Multiplicity="0..1"/>
         <ReferentialConstraint>
           <Principal Role="Salesorder">
@@ -85,17 +93,45 @@
           </Dependent>
         </ReferentialConstraint>
       </Association>
-      <Annotations Target="Salesorderhandling.Salesorder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="UI.LineItem">
+      <Annotations Target="Salesorderhandling.Products" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="UI.Identification">
           <Collection>
             <Record Type="UI.DataField">
-              <PropertyValue Property="Value" Path="salesOrderID"/>
+              <PropertyValue Property="Value" Path="InternalID"/>
             </Record>
             <Record Type="UI.DataField">
-              <PropertyValue Property="Value" Path="customer"/>
+              <PropertyValue Property="Value" Path="Description"/>
             </Record>
-            <Record Type="UI.DataField">
-              <PropertyValue Property="Value" Path="orderDate"/>
+          </Collection>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="Salesorderhandling.Products/ObjectID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+        <Annotation Term="Common.Label" String="Node ID"/>
+      </Annotations>
+      <Annotations Target="Salesorderhandling.Products/InternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Product ID"/>
+      </Annotations>
+      <Annotations Target="Salesorderhandling.Products/Description" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Description"/>
+      </Annotations>
+      <Annotations Target="Salesorderhandling.Salesorder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="UI.Facets">
+          <Collection>
+            <Record Type="UI.CollectionFacet">
+              <PropertyValue Property="Facets">
+                <Collection>
+                  <Record Type="UI.ReferenceFacet">
+                    <PropertyValue Property="Label" String="General Info"/>
+                    <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
+                  </Record>
+                </Collection>
+              </PropertyValue>
+              <PropertyValue Property="Label" String="Order Details"/>
+            </Record>
+            <Record Type="UI.ReferenceFacet">
+              <PropertyValue Property="Label" String="Sales Order Items"/>
+              <PropertyValue Property="Target" AnnotationPath="Salesorderitem/@UI.LineItem"/>
             </Record>
           </Collection>
         </Annotation>
@@ -116,29 +152,23 @@
               <PropertyValue Property="Value" Path="salesOrderID"/>
             </Record>
             <Record Type="UI.DataField">
-              <PropertyValue Property="Value" Path="customer"/>
+              <PropertyValue Property="Value" Path="customerID"/>
             </Record>
             <Record Type="UI.DataField">
               <PropertyValue Property="Value" Path="orderDate"/>
             </Record>
           </Collection>
         </Annotation>
-        <Annotation Term="UI.Facets">
+        <Annotation Term="UI.LineItem">
           <Collection>
-            <Record Type="UI.CollectionFacet">
-              <PropertyValue Property="Facets">
-                <Collection>
-                  <Record Type="UI.ReferenceFacet">
-                    <PropertyValue Property="Label" String="General Info"/>
-                    <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
-                  </Record>
-                </Collection>
-              </PropertyValue>
-              <PropertyValue Property="Label" String="Order Details"/>
+            <Record Type="UI.DataField">
+              <PropertyValue Property="Value" Path="salesOrderID"/>
             </Record>
-            <Record Type="UI.ReferenceFacet">
-              <PropertyValue Property="Label" String="Sales Order Items"/>
-              <PropertyValue Property="Target" AnnotationPath="Salesorderitem/@UI.LineItem"/>
+            <Record Type="UI.DataField">
+              <PropertyValue Property="Value" Path="customerID"/>
+            </Record>
+            <Record Type="UI.DataField">
+              <PropertyValue Property="Value" Path="orderDate"/>
             </Record>
           </Collection>
         </Annotation>
@@ -146,13 +176,104 @@
       <Annotations Target="Salesorderhandling.Salesorder/salesOrderID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="Sales Order ID"/>
       </Annotations>
-      <Annotations Target="Salesorderhandling.Salesorder/customer" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Customer"/>
+      <Annotations Target="Salesorderhandling.Salesorder/customerID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Customer ID"/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorder/orderDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="Ordered On"/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="UI.Facets">
+          <Collection>
+            <Record Type="UI.CollectionFacet">
+              <PropertyValue Property="Facets">
+                <Collection>
+                  <Record Type="UI.ReferenceFacet">
+                    <PropertyValue Property="Label" String="General Info"/>
+                    <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneralInfo"/>
+                  </Record>
+                  <Record Type="UI.ReferenceFacet">
+                    <PropertyValue Property="Label" String="Quantity Info"/>
+                    <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Quantity"/>
+                  </Record>
+                  <Record Type="UI.ReferenceFacet">
+                    <PropertyValue Property="Label" String="Price Info"/>
+                    <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Price"/>
+                  </Record>
+                </Collection>
+              </PropertyValue>
+              <PropertyValue Property="Label" String="Item Details"/>
+            </Record>
+          </Collection>
+        </Annotation>
+        <Annotation Term="UI.FieldGroup" Qualifier="GeneralInfo">
+          <Record Type="UI.FieldGroupType">
+            <PropertyValue Property="Data">
+              <Collection>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="salesOrder_salesOrderID"/>
+                </Record>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="itemID"/>
+                </Record>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="productID"/>
+                </Record>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="productDescription"/>
+                </Record>
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="Label" String="General Info"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="UI.FieldGroup" Qualifier="Price">
+          <Record Type="UI.FieldGroupType">
+            <PropertyValue Property="Data">
+              <Collection>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="price"/>
+                </Record>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="currency"/>
+                </Record>
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="Label" String="Price Info"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="UI.FieldGroup" Qualifier="Quantity">
+          <Record Type="UI.FieldGroupType">
+            <PropertyValue Property="Data">
+              <Collection>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="quantity"/>
+                </Record>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="quantityUOM"/>
+                </Record>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="confirmedQuantity"/>
+                </Record>
+                <Record Type="UI.DataField">
+                  <PropertyValue Property="Value" Path="confirmedQuantityUOM"/>
+                </Record>
+              </Collection>
+            </PropertyValue>
+            <PropertyValue Property="Label" String="Quantity Info"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="UI.HeaderInfo">
+          <Record Type="UI.HeaderInfoType">
+            <PropertyValue Property="Title">
+              <Record Type="UI.DataField">
+                <PropertyValue Property="Value" Path="itemID"/>
+              </Record>
+            </PropertyValue>
+            <PropertyValue Property="TypeName" String="Sales Order Item"/>
+            <PropertyValue Property="TypeNamePlural" String="Sales Order Items"/>
+          </Record>
+        </Annotation>
         <Annotation Term="UI.LineItem">
           <Collection>
             <Record Type="UI.DataFieldForAction">
@@ -193,109 +314,19 @@
             </Record>
           </Collection>
         </Annotation>
-        <Annotation Term="UI.HeaderInfo">
-          <Record Type="UI.HeaderInfoType">
-            <PropertyValue Property="Title">
-              <Record Type="UI.DataField">
-                <PropertyValue Property="Value" Path="itemID"/>
-              </Record>
-            </PropertyValue>
-            <PropertyValue Property="TypeName" String="Sales Order Item"/>
-            <PropertyValue Property="TypeNamePlural" String="Sales Order Items"/>
-          </Record>
-        </Annotation>
-        <Annotation Term="UI.Facets">
-          <Collection>
-            <Record Type="UI.CollectionFacet">
-              <PropertyValue Property="Facets">
-                <Collection>
-                  <Record Type="UI.ReferenceFacet">
-                    <PropertyValue Property="Label" String="General Info"/>
-                    <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneralInfo"/>
-                  </Record>
-                  <Record Type="UI.ReferenceFacet">
-                    <PropertyValue Property="Label" String="Quantity Info"/>
-                    <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Quantity"/>
-                  </Record>
-                  <Record Type="UI.ReferenceFacet">
-                    <PropertyValue Property="Label" String="Price Info"/>
-                    <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Price"/>
-                  </Record>
-                </Collection>
-              </PropertyValue>
-              <PropertyValue Property="Label" String="Item Details"/>
-            </Record>
-          </Collection>
-        </Annotation>
-        <Annotation Term="UI.FieldGroup" Qualifier="GeneralInfo">
-          <Record Type="UI.FieldGroupType">
-            <PropertyValue Property="Label" String="General Info"/>
-            <PropertyValue Property="Data">
-              <Collection>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="salesOrder_salesOrderID"/>
-                </Record>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="itemID"/>
-                </Record>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="productID"/>
-                </Record>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="productDescription"/>
-                </Record>
-              </Collection>
-            </PropertyValue>
-          </Record>
-        </Annotation>
-        <Annotation Term="UI.FieldGroup" Qualifier="Quantity">
-          <Record Type="UI.FieldGroupType">
-            <PropertyValue Property="Label" String="Quantity Info"/>
-            <PropertyValue Property="Data">
-              <Collection>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="quantity"/>
-                </Record>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="quantityUOM"/>
-                </Record>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="confirmedQuantity"/>
-                </Record>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="confirmedQuantityUOM"/>
-                </Record>
-              </Collection>
-            </PropertyValue>
-          </Record>
-        </Annotation>
-        <Annotation Term="UI.FieldGroup" Qualifier="Price">
-          <Record Type="UI.FieldGroupType">
-            <PropertyValue Property="Label" String="Price Info"/>
-            <PropertyValue Property="Data">
-              <Collection>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="price"/>
-                </Record>
-                <Record Type="UI.DataField">
-                  <PropertyValue Property="Value" Path="currency"/>
-                </Record>
-              </Collection>
-            </PropertyValue>
-          </Record>
-        </Annotation>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/itemID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="Item ID"/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/salesOrder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Sales Order ID"/>
         <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+        <Annotation Term="Common.Label" String="Sales Order ID"/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/productID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="Product ID"/>
         <Annotation Term="Common.ValueList">
           <Record Type="Common.ValueListType">
+            <PropertyValue Property="SearchSupported" Bool="true"/>
             <PropertyValue Property="Label" String="Products"/>
             <PropertyValue Property="CollectionPath" String="Products"/>
             <PropertyValue Property="Parameters">
@@ -312,13 +343,12 @@
                 </Record>
               </Collection>
             </PropertyValue>
-            <PropertyValue Property="SearchSupported" Bool="true"/>
           </Record>
         </Annotation>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/productDescription" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Product Description"/>
         <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/ReadOnly"/>
+        <Annotation Term="Common.Label" String="Product Description"/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/quantity" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="Quantity "/>
@@ -327,12 +357,12 @@
         <Annotation Term="Common.Label" String="Quantity UoM "/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/confirmedQuantity" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Confirmed Quantity "/>
         <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/ReadOnly"/>
+        <Annotation Term="Common.Label" String="Confirmed Quantity "/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/confirmedQuantityUOM" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Confirmed Quantity UoM "/>
         <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/ReadOnly"/>
+        <Annotation Term="Common.Label" String="Confirmed Quantity UoM "/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/price" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Common.Label" String="Price"/>
@@ -341,30 +371,8 @@
         <Annotation Term="Common.Label" String="Currency"/>
       </Annotations>
       <Annotations Target="Salesorderhandling.Salesorderitem/salesOrder_salesOrderID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
         <Annotation Term="Common.Label" String="Sales Order ID"/>
-        <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-      </Annotations>
-      <Annotations Target="Salesorderhandling.Products" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="UI.Identification">
-          <Collection>
-            <Record Type="UI.DataField">
-              <PropertyValue Property="Value" Path="InternalID"/>
-            </Record>
-            <Record Type="UI.DataField">
-              <PropertyValue Property="Value" Path="Description"/>
-            </Record>
-          </Collection>
-        </Annotation>
-      </Annotations>
-      <Annotations Target="Salesorderhandling.Products/ObjectID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Node ID"/>
-        <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-      </Annotations>
-      <Annotations Target="Salesorderhandling.Products/InternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Product ID"/>
-      </Annotations>
-      <Annotations Target="Salesorderhandling.Products/Description" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Description"/>
       </Annotations>
     </Schema>
   </edmx:DataServices>

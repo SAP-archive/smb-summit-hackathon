@@ -1,3 +1,14 @@
+gen/
+.gen/
+node_modules/
+target/
+*.db
+.DS_Store
+_out
+.che/
+.cds_gen.log
+package-lock.json
+*.orig
 fioriHtmlRunner.html
 .*/fioriHtmlRunner.html
 visual_ext_index.html

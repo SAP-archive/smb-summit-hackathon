@@ -12,7 +12,7 @@ import com.sap.cloud.sdk.service.prov.api.annotations.Action;
 import com.sap.cloud.sdk.service.prov.api.request.OperationRequest;
 import com.sap.cloud.sdk.service.prov.api.response.OperationResponse;
 
-public class ATPCheckHandler {
+public class ATPCheckHandler{
 
 	@Action(Name = "Salesorderitem_CheckATP", serviceName = "Salesorderhandling")
 	public OperationResponse checkATP(OperationRequest actionRequest, ExtensionHelper extensionHelper) {

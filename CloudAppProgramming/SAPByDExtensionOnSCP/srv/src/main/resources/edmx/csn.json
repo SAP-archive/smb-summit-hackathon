@@ -1,13 +1,144 @@
 {
+  "namespace": "my.app",
   "definitions": {
+    "my.app.Salesorder": {
+      "kind": "entity",
+      "elements": {
+        "salesOrderID": {
+          "key": true,
+          "indexNo": 1,
+          "type": "cds.String",
+          "@cds.persistence.name": "SALESORDERID"
+        },
+        "customerID": {
+          "indexNo": 2,
+          "type": "cds.String",
+          "@cds.persistence.name": "CUSTOMERID"
+        },
+        "orderDate": {
+          "indexNo": 3,
+          "type": "cds.DateTime",
+          "@cds.persistence.name": "ORDERDATE"
+        },
+        "Salesorderitem": {
+          "indexNo": 4,
+          "type": "cds.Composition",
+          "target": "my.app.Salesorderitem",
+          "cardinality": {
+            "targetMax": "*"
+          },
+          "onCond": {
+            "op": "=",
+            "args": [
+              {
+                "=": "Salesorderitem.salesOrder"
+              },
+              {
+                "=": "$self"
+              }
+            ]
+          },
+          "@cds.persistence.name": "SALESORDERITEM"
+        }
+      },
+      "@cds.persistence.name": "MY_APP_SALESORDER"
+    },
+    "my.app.Salesorderitem": {
+      "kind": "entity",
+      "elements": {
+        "itemID": {
+          "key": true,
+          "indexNo": 1,
+          "type": "cds.Integer",
+          "@cds.persistence.name": "ITEMID"
+        },
+        "salesOrder": {
+          "key": true,
+          "indexNo": 2,
+          "type": "cds.Association",
+          "target": "my.app.Salesorder",
+          "@Common.Label": "Sales Order ID",
+          "@Common.FieldControl": {
+            "#": "Hidden"
+          },
+          "foreignKeys": {
+            "salesOrderID": {
+              "path": "salesOrderID",
+              "indexNo": 1,
+              "generatedFieldName": "salesOrder_salesOrderID",
+              "@cds.persistence.name": "SALESORDERID"
+            }
+          },
+          "@cds.persistence.name": "SALESORDER"
+        },
+        "productID": {
+          "indexNo": 3,
+          "type": "cds.String",
+          "@cds.persistence.name": "PRODUCTID"
+        },
+        "productDescription": {
+          "indexNo": 4,
+          "type": "cds.String",
+          "@cds.persistence.name": "PRODUCTDESCRIPTION"
+        },
+        "quantity": {
+          "indexNo": 5,
+          "type": "cds.Decimal",
+          "precision": 12,
+          "scale": 3,
+          "@cds.persistence.name": "QUANTITY"
+        },
+        "quantityUOM": {
+          "indexNo": 6,
+          "type": "cds.String",
+          "@cds.persistence.name": "QUANTITYUOM"
+        },
+        "confirmedQuantity": {
+          "indexNo": 7,
+          "type": "cds.Decimal",
+          "precision": 12,
+          "scale": 3,
+          "@cds.persistence.name": "CONFIRMEDQUANTITY"
+        },
+        "confirmedQuantityUOM": {
+          "indexNo": 8,
+          "type": "cds.String",
+          "@cds.persistence.name": "CONFIRMEDQUANTITYUOM"
+        },
+        "price": {
+          "indexNo": 9,
+          "type": "cds.Decimal",
+          "precision": 12,
+          "scale": 3,
+          "@cds.persistence.name": "PRICE"
+        },
+        "currency": {
+          "indexNo": 10,
+          "type": "cds.String",
+          "length": 3,
+          "@cds.persistence.name": "CURRENCY"
+        },
+        "salesOrder_salesOrderID": {
+          "type": "cds.String",
+          "key": true,
+          "@odata.foreignKey4": "salesOrder",
+          "@Common.Label": "Sales Order ID",
+          "@Common.FieldControl": {
+            "#": "Hidden"
+          },
+          "@cds.persistence.name": "SALESORDER_SALESORDERID"
+        }
+      },
+      "@cds.persistence.name": "MY_APP_SALESORDERITEM"
+    },
     "Salesorderhandling": {
       "kind": "service",
       "@source": "srv/my-service.cds"
     },
     "Salesorderhandling.Salesorder": {
       "kind": "entity",
-      "@insertonly": true,
       "source": "my.app.Salesorder",
+      "@insertonly": true,
       "@UI.LineItem": [
         {
           "$Type": "UI.DataField",
@@ -18,7 +149,7 @@
         {
           "$Type": "UI.DataField",
           "Value": {
-            "=": "customer"
+            "=": "customerID"
           }
         },
         {
@@ -43,7 +174,7 @@
         {
           "$Type": "UI.DataField",
           "Value": {
-            "=": "customer"
+            "=": "customerID"
           }
         },
         {
@@ -83,15 +214,15 @@
           "type": "cds.String",
           "@cds.persistence.name": "SALESORDERID"
         },
-        "customer": {
-          "origin": "my.app.Salesorder..customer",
+        "customerID": {
+          "origin": "my.app.Salesorder..customerID",
           "indexNo": 2,
           "value": {
-            "=": "Salesorder.customer"
+            "=": "Salesorder.customerID"
           },
-          "@Common.Label": "Customer",
+          "@Common.Label": "Customer ID",
           "type": "cds.String",
-          "@cds.persistence.name": "CUSTOMER"
+          "@cds.persistence.name": "CUSTOMERID"
         },
         "orderDate": {
           "origin": "my.app.Salesorder..orderDate",
@@ -125,7 +256,6 @@
               }
             ]
           },
-          "on": "Salesorderitem.salesOrder = $self",
           "redirected": true,
           "@cds.persistence.name": "SALESORDERITEM"
         }
@@ -134,6 +264,7 @@
     },
     "Salesorderhandling.Salesorderitem": {
       "kind": "entity",
+      "source": "my.app.Salesorderitem",
       "actions": {
         "CheckATP": {
           "kind": "action",
@@ -144,7 +275,6 @@
         }
       },
       "@insertonly": true,
-      "source": "my.app.Salesorderitem",
       "@UI.LineItem": [
         {
           "$Type": "UI.DataFieldForAction",
@@ -481,8 +611,8 @@
     },
     "Salesorderhandling.Products": {
       "kind": "entity",
-      "@cds.persistence.skip": true,
       "source": "cust.Material",
+      "@cds.persistence.skip": true,
       "@UI.Identification": [
         {
           "$Type": "UI.DataField",
@@ -537,137 +667,6 @@
         }
       },
       "@cds.persistence.name": "SALESORDERHANDLING_PRODUCTS"
-    },
-    "my.app.Salesorder": {
-      "kind": "entity",
-      "elements": {
-        "salesOrderID": {
-          "key": true,
-          "indexNo": 1,
-          "type": "cds.String",
-          "@cds.persistence.name": "SALESORDERID"
-        },
-        "customer": {
-          "indexNo": 2,
-          "type": "cds.String",
-          "@cds.persistence.name": "CUSTOMER"
-        },
-        "orderDate": {
-          "indexNo": 3,
-          "type": "cds.DateTime",
-          "@cds.persistence.name": "ORDERDATE"
-        },
-        "Salesorderitem": {
-          "indexNo": 4,
-          "type": "cds.Composition",
-          "target": "my.app.Salesorderitem",
-          "cardinality": {
-            "targetMax": "*"
-          },
-          "onCond": {
-            "op": "=",
-            "args": [
-              {
-                "=": "Salesorderitem.salesOrder"
-              },
-              {
-                "=": "$self"
-              }
-            ]
-          },
-          "on": "Salesorderitem.salesOrder = $self",
-          "@cds.persistence.name": "SALESORDERITEM"
-        }
-      },
-      "@cds.persistence.name": "MY_APP_SALESORDER"
-    },
-    "my.app.Salesorderitem": {
-      "kind": "entity",
-      "elements": {
-        "itemID": {
-          "key": true,
-          "indexNo": 1,
-          "type": "cds.Integer",
-          "@cds.persistence.name": "ITEMID"
-        },
-        "salesOrder": {
-          "key": true,
-          "indexNo": 2,
-          "type": "cds.Association",
-          "target": "my.app.Salesorder",
-          "@Common.Label": "Sales Order ID",
-          "@Common.FieldControl": {
-            "#": "Hidden"
-          },
-          "foreignKeys": {
-            "salesOrderID": {
-              "path": "salesOrderID",
-              "indexNo": 1,
-              "generatedFieldName": "salesOrder_salesOrderID",
-              "@cds.persistence.name": "SALESORDERID"
-            }
-          },
-          "@cds.persistence.name": "SALESORDER"
-        },
-        "productID": {
-          "indexNo": 3,
-          "type": "cds.String",
-          "@cds.persistence.name": "PRODUCTID"
-        },
-        "productDescription": {
-          "indexNo": 4,
-          "type": "cds.String",
-          "@cds.persistence.name": "PRODUCTDESCRIPTION"
-        },
-        "quantity": {
-          "indexNo": 5,
-          "type": "cds.Decimal",
-          "precision": 12,
-          "scale": 3,
-          "@cds.persistence.name": "QUANTITY"
-        },
-        "quantityUOM": {
-          "indexNo": 6,
-          "type": "cds.String",
-          "@cds.persistence.name": "QUANTITYUOM"
-        },
-        "confirmedQuantity": {
-          "indexNo": 7,
-          "type": "cds.Decimal",
-          "precision": 12,
-          "scale": 3,
-          "@cds.persistence.name": "CONFIRMEDQUANTITY"
-        },
-        "confirmedQuantityUOM": {
-          "indexNo": 8,
-          "type": "cds.String",
-          "@cds.persistence.name": "CONFIRMEDQUANTITYUOM"
-        },
-        "price": {
-          "indexNo": 9,
-          "type": "cds.Decimal",
-          "precision": 12,
-          "scale": 3,
-          "@cds.persistence.name": "PRICE"
-        },
-        "currency": {
-          "indexNo": 10,
-          "type": "cds.String",
-          "length": 3,
-          "@cds.persistence.name": "CURRENCY"
-        },
-        "salesOrder_salesOrderID": {
-          "type": "cds.String",
-          "key": true,
-          "@odata.foreignKey4": "salesOrder",
-          "@Common.Label": "Sales Order ID",
-          "@Common.FieldControl": {
-            "#": "Hidden"
-          },
-          "@cds.persistence.name": "SALESORDER_SALESORDERID"
-        }
-      },
-      "@cds.persistence.name": "MY_APP_SALESORDERITEM"
     },
     "cust.Material": {
       "kind": "entity",
@@ -732,7 +731,6 @@
     }
   },
   "version": {
-    "creator": "CDS Compiler v1.2.0",
     "csn": "0.1.0"
   },
   "@sql_mapping": "plain"
