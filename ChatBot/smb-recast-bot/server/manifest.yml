@@ -1,6 +1,6 @@
 ---
 applications:
-- name: smb-recast-bot
+- name: sap-smb-recast-bot
   memory: 256m
   instances: 1
   env:
@@ -10,4 +10,5 @@ applications:
     "B1_USER_PASSWORD": "<Your B1 User password>"
     "BYD_BASE_URL": "<The base url of your ByD tenant>for example: https://myxxxxx.sapbydesign.com"
     "BYD_USER_NAME": "<Your ByD User Name>"
-    "BYD_USER_PASSWORD": "<Your ByD User Password>" 
+    "BYD_USER_PASSWORD": "<Your ByD User Password>"
+    "BOT_WEBHOOK_HOST": "<Your Bot Web Host>for example: https://sap-smb-recast-bot.cfapps.us30.hana.ondemand.com"

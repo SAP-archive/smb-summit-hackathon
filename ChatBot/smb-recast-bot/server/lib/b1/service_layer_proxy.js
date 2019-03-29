@@ -40,9 +40,7 @@ exports.Login = function (company, user, password) {
             })
             .then(function (response) {
                 //console.log(response);
-                sldCookies[0] = response.headers['set-cookie'][0].split(';')[0];
                 //[ 'JSESSIONID=726AA8B326CB63B151D4882BEC4DE72A; Path=/sld; Secure; HttpOnly' ]
-                //sldCookies2 = cookie.parse(response.headers['set-cookie'][0]);
                 console.log('Set-Cookie in response.headers:');
                 console.log(response.headers['set-cookie']);
                 if (typeof response.data.SessionId !== 'undefined') {

@@ -64,8 +64,13 @@ Composed of the following components
         * Abstract mapping model: 
         <br/>An abstract mapping model between intent/entity of NLP and semantic model/(Measures,Dimensions,Filters) without any system specific information.
         <br/>For instance:
-            * The dimension entity  in NLP result with value "Client","Buyer","Customer" etc is mapped an abstract dimension field "Customer".
+            * The dimension entity  in NLP result with value "Client","Buyer","Customer" etc is mapped to an abstract dimension field "Customer".
             * The measure entity in NLP result with value "Sales","Sales Number","Revenue" etc is mapped an abstract measure field "Sales Amount".
+        * Fuzzy search: 
+        <br/>To be more typo-tolerant, [fuzzy search](http://fusejs.io/) is applied to find the abstract fields from entity of NLP during Abstract mapping model. 
+        <br/>For instance:
+            * The misspelled dimension entity in NLP result like "Clent","Byer" and "Cutomer" etc are correctly recognised as "Client", "Buyer", and "Customer" with fuzzy search, which are eventually mapped an abstract dimension field "Customer".
+            * The misspelled measure entity in NLP result like "Sals","Saes Numer","Reveue" etc are correctly recognised as "Sales", "Sales Number", "Revenue" with fuzzy search, which are mapped an abstract measure field "Sales Amount".
         * Mapping model for SAP Business One
         <br/>For instance:
             * The abstract dimension field "Customer" is mapped into the technical field "BusinessPartnerNameAndCode" in view "SalesQnalysisQuery".
@@ -158,8 +163,9 @@ Take the following example:
 ```
 
 ### 2.Convert the nlp result to semantic model of target system by parser
-First the parser finds the entity mapping to the abstract model with [fuzzy search](http://fusejs.io/),
-then mapping the technical fields and view in the target system type.
+First the parser finds the entity mapping to the abstract model with [fuzzy search](http://fusejs.io/)(for instance, even if the customer is misspelled in the sentence as "cutomer"/"byer"/"clent" etc, still can be recognised as "customer"/"buyer"/"client" and identified its neutral abstract name as "Customer").
+
+Then mapping the abstract fields to the technical fields and view in the target system type.
 
 * SAP Business One, version for SAP HANA
 ```json

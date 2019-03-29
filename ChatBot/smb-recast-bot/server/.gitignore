@@ -60,6 +60,7 @@ typings/
 # next.js build output
 .next
 
+../.DS_Store
 .DS_Store
 lib/.DS_Store
 lib/b1/.DS_Store

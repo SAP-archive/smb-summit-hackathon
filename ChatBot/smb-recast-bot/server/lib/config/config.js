@@ -4,7 +4,9 @@
  * B1_SL_BASE_URL, B1_COMPANY_DB, B1_USER_NAME, B1_USER_PASSWORD
  * 2.(mandatory)SAP Business ByDesign Connection parameters
  * BYD_BASE_URL, BYD_USER_NAME, BYD_USER_PASSWORD
- * 3.Mapping between intents and ERP semantics layer
+ * 3.(madatory)The host of your bot webhook.
+ * BOT_WEBHOOK_HOST
+ * 4.Mapping between intents and ERP semantics layer
  * Intent2SemanticLayer
  * 
  * The source code is under MIT license. Please kindly check the LICENSE.
@@ -27,6 +29,9 @@ exports.B1Password = process.env.B1_USER_PASSWORD;
 exports.ByDBaseUrl = process.env.BYD_BASE_URL;
 exports.ByDUserName = process.env.BYD_USER_NAME;
 exports.ByDPassword = process.env.BYD_USER_PASSWORD;
+
+//Bot Webhook Host
+exports.BotWebhookHost = process.env.BOT_WEBHOOK_HOST;
 
 exports.getLoginUrl = function () {
     return exports.B1SLBaseUrl + '/b1s/v1/Login';

@@ -3,3 +3,14 @@ test/
 lib/byd/*.xml
 lib/recast/*.csv
 notes.txt
+*.md
+.DS_Store
+lib/.DS_Store
+lib/b1/.DS_Store
+lib/byd/.DS_Store
+lib/config/.DS_Store
+lib/recast/.DS_Store
+lib/util/.DS_Store
+web/.DS_Store
+test/.DS_Store
+LICENSE

@@ -9,7 +9,7 @@
  * 
  * ERP specific mapping:
  * The abstract field "Customer Code" is mapped as a dimension in
- * SAP B1: "BusinessParterCode" of SalesAnalyticsQuery in semantica layer
+ * SAP B1: "BusinessPartnerCode" of SalesAnalyticsQuery in semantica layer
  * SAP ByD: "CCUSTOMER" of BIF Sales Revenue Report in ByD Analytics
  * 
  * How to add your own mapping between intent and smantic layers?
@@ -31,7 +31,7 @@ module.exports = [{
     Intent: "sales-analysis",
     Synonyms: [{
             Field: "Customer",
-            Description: "Customer Full Name in cluding the customer name and code",
+            Description: "Customer Full Name",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Customer", "Customers", "Customer Name", "Customer Names", "Customer's Names", "Business Partner", "Business Partners", "Client", "Clients", "Client Name", "Buyer", "Buyer Name"]
@@ -57,7 +57,7 @@ module.exports = [{
         },
         {
             Field: "Product",
-            Description: "Product description and code",
+            Description: "Product Desc.&Code",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Product", "Products", "Product Name", "Product Names", "Item", "Item Name", "Goods", "Best-Seller", "BestSeller", "Best Seller", "BestSellers", "Best Sellers", "Material", "Material Name"]

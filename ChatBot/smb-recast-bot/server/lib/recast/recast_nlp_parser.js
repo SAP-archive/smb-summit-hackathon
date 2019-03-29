@@ -258,6 +258,7 @@ exports.GetTechnicalFields = function (pIntent, systemType, fieldType, nlpFields
             } else if (fieldType === 'Measure') {
                 let item = {};
                 item.Measure = mapping[0].TechnicalField;
+                item.Description = mapping[0].NLP_Field;
                 item.Aggregation = mapping[0].Aggregation;
                 results.push(item);
             }
