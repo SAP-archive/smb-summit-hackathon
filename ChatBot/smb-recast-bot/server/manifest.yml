@@ -12,3 +12,4 @@ applications:
     "BYD_USER_NAME": "<Your ByD User Name>"
     "BYD_USER_PASSWORD": "<Your ByD User Password>"
     "BOT_WEBHOOK_HOST": "<Your Bot Web Host>for example: https://sap-smb-recast-bot.cfapps.us30.hana.ondemand.com"
+    "REPLY_FORMAT": "<text or list>"

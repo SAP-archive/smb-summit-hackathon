@@ -60,7 +60,7 @@ var corsOptions = {
 
 //app.use(cors(corsOptions));
 app.use(cors());
-//app.use('/client', express.static(path.join(__dirname, './web')));
+app.use('/client', express.static(path.join(__dirname, './web')));
 app.use('/web', express.static(path.join(__dirname, './views')));
 
 app.set('view engine', 'ejs');
@@ -180,7 +180,8 @@ app.post('/webhooks/login', (req, res) => {
 
 //Route for the webhook of generic analytics.
 app.post('/webhooks/analytics', (req, res) => {
-    // Do your actual logic here
+    //default reply format as list template.
+    //More format info available here: https://cai.tools.sap/docs/concepts/structured-messages
     let reply = {
         replies: [{
             "type": "list",
@@ -303,7 +304,8 @@ app.post('/webhooks/analytics', (req, res) => {
             }
             console.log(JSON.stringify(chartData));
 
-            if (elements.length > 1) {
+            //reply format conversion
+            if (elements.length > 1 && config.ReplyFormat !== 'text') {
                 let encodedData = util.Base64Encode(JSON.stringify(chartData));
                 reply.replies[0].content.buttons[0].value = `${config.BotWebhookHost}/web/chart?data=${encodedData}`;
                 //Workaround for the content.buttons doesn't show on fb messenger.
@@ -319,8 +321,22 @@ app.post('/webhooks/analytics', (req, res) => {
             else{
                 //only one element, then switch to text reply.
                 //for FB messenger List template require more than one element
-                reply = botHelper.GenerateTextReply(`${elements[0].title}\n${elements[0].subtitle}`);
+                //or the REPLY_FORMAT env variable is configured as 'text'
+                let text;
+                for(let i = 0; i < elements.length; ++ i){
+                    if(i === 0)
+                    {
+                        text = `${elements[i].title}\n${elements[i].subtitle}`;
+                    }else
+                    {
+                        text = `${text}\n\n${elements[i].title}\n${elements[i].subtitle}`;
+                    }
+                    
+                }
+                 
+                reply = botHelper.GenerateTextReply(text);
             }
+            
             console.log('\n');
             console.log(JSON.stringify(reply));
             res.status(200).json(reply);

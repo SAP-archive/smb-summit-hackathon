@@ -14,3 +14,4 @@ lib/util/.DS_Store
 web/.DS_Store
 test/.DS_Store
 LICENSE
+cf_setenv.sh

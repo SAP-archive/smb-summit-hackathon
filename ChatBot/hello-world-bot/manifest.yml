@@ -1,6 +1,6 @@
 ---
 applications:
-- name: hello-world-bot
+- name: xxx-hello-world-bot
   memory: 64m
   instances: 1
     

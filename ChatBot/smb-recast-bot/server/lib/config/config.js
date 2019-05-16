@@ -17,6 +17,7 @@
  * Compnay: SAP SE
  * All rights reserved by SAP SE
  */
+const constants = require('../util/constants');
 exports.ReturnBotSession = true;
 
 //b1 connection parameters
@@ -32,6 +33,7 @@ exports.ByDPassword = process.env.BYD_USER_PASSWORD;
 
 //Bot Webhook Host
 exports.BotWebhookHost = process.env.BOT_WEBHOOK_HOST;
+exports.ReplyFormat = process.env.REPLY_FORMAT || constants.DEFAULT_REPLY_FORMAT;
 
 exports.getLoginUrl = function () {
     return exports.B1SLBaseUrl + '/b1s/v1/Login';

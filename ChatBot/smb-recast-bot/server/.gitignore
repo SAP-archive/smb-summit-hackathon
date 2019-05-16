@@ -70,3 +70,5 @@ lib/recast/.DS_Store
 lib/util/.DS_Store
 web/.DS_Store
 test/.DS_Store
+
+cf_setenv.sh

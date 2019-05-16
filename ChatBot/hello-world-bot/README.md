@@ -63,19 +63,66 @@ Open your bot on SAP Conversation AI
 * Setup the trigger as when the target intent is present. 
 * For action, use Call Webhook to reply, and fill in the webhook url as step of deployment.
 
-Now test you bot, it will reply two messages 
-One as a text message "roger that"
-The other as a list of customer with sales amount and gross profit.
-
-## Todo
-Complete the service fulfilment in webhook endpoint for your own bot.
+Now test you bot, it will reply two messages:
+* One as a text message "roger that"
+* The other as a list of customer with sales amount and gross profit.
+<br/>For more reply templates, please refer to [this online help](https://cai.tools.sap/docs/concepts/structured-messages) 
 ```javascript
 app.post('/', (req, res) => {
       console.log(req.body)
-
       //Todo: Please implement your service fulfilment for the intent here
-      //And send back the reply message in text or list template.
+      //And format the result of service fulfilment and send back the reply message.
+      res.send({
+    replies: [{
+      type: 'text',
+      content: 'Roger that',
+    }, {
+      "type": "list",
+      "content": {
+        "elements": [{
+            "title": "C20000",
+            "subtitle": "Sales Amount: 20000.00$\nGross Profit: 5000.00$",
+            "buttons": [{
+              "title": "View Details",
+              "type": "BUTTON_TYPE",
+              "value": "View Details"
+            }]
+          },
+          {
+            "title": "C30000",
+            "subtitle": "Sales Amount: 30000.00$\nGross Profit: 8000.00$",
+            "buttons": [{
+              "title": "View Details",
+              "type": "BUTTON_TYPE",
+              "value": "View Details"
+            }]
+          }
+        ],
+        "buttons": [{
+          "title": "View Chart",
+          "type": "BUTTON_TYPE",
+          "value": "View Chart"
+        }]
+      }
+    }],
+    conversation: {
+      memory: {
+        key: 'value'
+      }
+    }
+  })
 ```
+<br/>Here conclude the hello_world_webhook sample for a bot powered by SAP Conversational AI
+
+## Further todos for a complete webhook implementation of your own bot
+1. Complete the service fulfilment in webhook endpoint for your own bot.
+2. Format the result of service fulfilment above into reply back to user
+<br/>This sample only show one end point "/" for the webhook.
+<br/>Of course, you could have multiple endpoint, each serve one intent
+<br/>For instance, you have built an online shopping assistant bot with several inents, then you can endpoint as
+  * product-inquiry intent: app.post('/search-product', (req, res) => {}) ,which handle the product inquiry by searching the products from product catalog with given key words.
+  * add-to-cart intent: app.post('/add-to-cart', (req, res) => {}), which handle the add-to-cart intent by adding the given item to the shopping cart
+  * place-order intent: app.post('/place-order', (req, res) => {}) which handle the checkout the shopping cart and place the order to ERP.
 
 ## License
 The source code is under MIT license. Please kindly check the LICENSE. Here is to highlight that THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Therefore no support available.

@@ -32,69 +32,74 @@ const app = express()
 const port = process.env.PORT || 5000
 app.use(bodyParser.json())
 
+//This sample only show one end point "/" for the webhook.
+//Of course, you could have multiple endpoint, each serve one intent
+//For instance, you have built an online shopping assistant bot 
+//with several inents, then you can endpoint as
+//1.product-inquiry intent: app.post('/search-product', (req, res) => {})
+//which handle the product inquiry by searching the products from product
+//catalog with given key words.
+//2.add-to-cart intent: app.post('/add-to-cart', (req, res) => {})
+//which handle the add-to-cart intent by adding the given item to the shopping cart
+//3.place-order intent: app.post('/place-order', (req, res) => {})
+//which handle the checkout the shopping cart and place the order to ERP 
 app.post('/', (req, res) => {
-      console.log(req.body)
+  console.log(req.body)
 
-      //Todo: Please implement your service fulfilment for the intent here
-      //And send back the reply message in text or list template.
-      //1.Text reply sample
-      res.send({
-        replies: [{
-          type: 'text',
-          content: 'Roger that',
-        }],
-        conversation: {
-          memory: {
-            key: 'value'
+  //Todo #1: Please implement your service fulfilment for the intent here
+  
+  //Todo #2: Format the result of service fulfilment above into reply back to user
+  //This sample sends back the reply message in text and list template.
+  //1.Text reply sample
+  //2.A list template reply
+  //for more reply template, please refer to
+  //https://cai.tools.sap/docs/concepts/structured-messages
+  res.send({
+    replies: [{
+      type: 'text',
+      content: 'Roger that',
+    }, {
+      "type": "list",
+      "content": {
+        "elements": [{
+            "title": "C20000",
+            "subtitle": "Sales Amount: 20000.00$\nGross Profit: 5000.00$",
+            "buttons": [{
+              "title": "View Details",
+              "type": "BUTTON_TYPE",
+              "value": "View Details"
+            }]
+          },
+          {
+            "title": "C30000",
+            "subtitle": "Sales Amount: 30000.00$\nGross Profit: 8000.00$",
+            "buttons": [{
+              "title": "View Details",
+              "type": "BUTTON_TYPE",
+              "value": "View Details"
+            }]
           }
-        }
-      })
+        ],
+        "buttons": [{
+          "title": "View Chart",
+          "type": "BUTTON_TYPE",
+          "value": "View Chart"
+        }]
+      }
+    }],
+    conversation: {
+      memory: {
+        key: 'value'
+      }
+    }
+  })
+})
 
-      //2.A list template reply
-      res.send({
-          replies: [{
-              "type": "list",
-              "content": {
-                "elements": [{
-                    "title": "C20000",
-                    "subtitle": "Sales Amount: 20000.00$\nGross Profit: 5000.00$",
-                    "buttons": [{
-                      "title": "View Details",
-                      "type": "BUTTON_TYPE",
-                      "value": "View Details"
-                    }]
-                  },
-                  {
-                    "title": "C30000",
-                    "subtitle": "Sales Amount: 30000.00$\nGross Profit: 8000.00$",
-                    "buttons": [{
-                      "title": "View Details",
-                      "type": "BUTTON_TYPE",
-                      "value": "View Details"
-                    }]
-                  }],
-                  "buttons": [{
-                    "title": "View Chart",
-                    "type": "BUTTON_TYPE",
-                    "value": "View Chart"
-                  }]
-                }
-              }],
-            conversation: {
-              memory: {
-                key: 'value'
-              }
-            }
-          }
-        )
-        
-      })
+app.post('/errors', (req, res) => {
+  console.log(req.body)
+  res.send()
+})
 
-    app.post('/errors', (req, res) => {
-      console.log(req.body)
-      res.send()
-    })
-
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`)
-    })
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`)
+})
