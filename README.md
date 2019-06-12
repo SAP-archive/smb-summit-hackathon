@@ -88,7 +88,7 @@ List of Build Blocks
 
 Final Presentation
 ----------------
-Use the [Final Presentation](final-presentation.pptx) template to present your code at the end of the hackathon. You have 5 minutes. Use it the way you want, but as an advice. Focus on your demo and not much on slides.
+You have 5 minutes to present your code at the end of the hackathon. Use it the way you want, but as an advice: focus on your demo and code.
 
 FAQ
 ---
