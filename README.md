@@ -30,7 +30,7 @@ Our SAP Experts will be available during the hackathon hours to answer questions
 
 Your team will have approximately 7 hours to develop a prototype and present it at the end of the day to a panel of judges and the hackathon audience.
 
-The [Judgement Criteria is in the FAQ](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria) and your final presentation should be of 7 minutes. 2 for a short slides presentation with the overview/architecture and a 5 minutes demo. The three best prototypes will be chosen and the winner announced on Finn Backer's Keynote in the next morning.
+The [Judgement Criteria is in the FAQ](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria) and your final presentation should be of 5 minutes. The three best prototypes will be chosen and the winner announced on Finn Backer's Keynote in the next morning.
 
 
 Prerequisites
