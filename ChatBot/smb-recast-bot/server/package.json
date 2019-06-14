@@ -1,7 +1,7 @@
 {
   "name": "smb-recast-bot",
   "version": "1.0.0",
-  "description": "SAP SMB(B1/ByD) Assistant Bot Sample powered by recast.ai",
+  "description": "SAP SMB(B1/ByD) Executive Assistant Bot Sample powered by recast.ai",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/test.js",
@@ -16,9 +16,6 @@
     "recast",
     "nlp"
   ],
-  "engines": {
-    "node": "^6.12.0"
-  },
   "author": "Yatsea Li",
   "license": "MIT",
   "dependencies": {
