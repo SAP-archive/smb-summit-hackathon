@@ -45,6 +45,7 @@ module.exports = [{
         {
             Field: "Customer Code",
             Description: "Customer Code",
+            FieldType: "Dimension",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Customer Code", "Customers Code", "Customers Code", "CardCode", "BP Code", "Business Partner Code", "Partner Code", "Client Code", "Clients Code", "Client Number", "Client ID", "Buyer Code", "Buyer ID"]
@@ -58,6 +59,7 @@ module.exports = [{
         {
             Field: "Product",
             Description: "Product Desc.&Code",
+            FieldType: "Dimension",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Product", "Products", "Product Name", "Product Names", "Item", "Item Name", "Goods", "Best-Seller", "BestSeller", "Best Seller", "BestSellers", "Best Sellers", "Material", "Material Name"]
@@ -71,6 +73,7 @@ module.exports = [{
         {
             Field: "Product Code",
             Description: "Product Code",
+            FieldType: "Dimension",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Product Code", "Products Code", "ProdCode", "Prod Code",
@@ -88,10 +91,11 @@ module.exports = [{
         {
             Field: "Sales Employee",
             Description: "Sales Employee Name",
+            FieldType: "Dimension",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Sales Employee", "Sales Employees", "Sales Emp", "Sales Man", "Sales Men", "Sales Staff",
-                        "Sales Representative", "Sales Rep", "Sales Person", "Sales People"
+                        "Sales Representative", "Sales Rep", "Sales Person", "Sales People", "Sales Team", "Sales Guys", "Sales Guy"
                     ]
                 },
                 {
@@ -103,6 +107,7 @@ module.exports = [{
         {
             Field: "Year",
             Description: "Posting Year",
+            FieldType: "Dimension",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Year", "Yearly", "Posting Year", "PostingYear", "yr", "Fiscal Year", "Financial Year"]
@@ -116,6 +121,7 @@ module.exports = [{
         {
             Field: "Quarter",
             Description: "Posting Quarter",
+            FieldType: "Dimension",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Quarter", "Quarterly", "Quarters", "Posting Quarter", "PostingQuarter", "Quarters"]
@@ -129,6 +135,7 @@ module.exports = [{
         {
             Field: "Month",
             Description: "Posting Month",
+            FieldType: "Dimension",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Month", "Months", "Monthly", "Posting Months", "PostingMonth"]
@@ -142,6 +149,7 @@ module.exports = [{
         {
             Field: "Sales Amount",
             Description: "Net Sales Amount",
+            FieldType: "Measure",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Sales Amount", "Total Amount", , "Sales Status", "Sale Amount",
@@ -159,6 +167,7 @@ module.exports = [{
         {
             Field: "Gross Profit",
             Description: "Gross Profit",
+            FieldType: "Measure",
             MultiLingoSynonyms: [{
                     Language: "en",
                     Values: ["Gross Profit", "GrossProfit", "Profit", "Sales Profit", "Sales", "Sales Status", "Sales Figure", "Sales Figures", "Sales Number",

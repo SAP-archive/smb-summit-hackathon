@@ -11,7 +11,7 @@ This application implements some of the SAP Leonardo Machine Learning APIs for i
 ### Installation in the Cloud
 Clone this repository
 ```sh
-$ git clone https://github.com/Ralphive/b1leo.git
+$ git clone https://github.com/Ralphive/leoImg.git
 ```
 Give a name to your app on the [manifest.yml](manifest.yml)
 
@@ -31,15 +31,6 @@ Restart your application (so it can read the new environment variables)
 ```sh
 $ cf restart <your app name set on the manifest.yml>
 ```
-
-Leonardo APIs have changed in the past, so in case you need to upadte them you can set the environment variables belo
-```sh
-LEO_SIMILARITY_ENDPOINT
-LEO_FEATUREX_ENDPOINT
-LEO_IMAGE_CLASSIFY
-```
-
-
 Access the app from the URL route shown in the terminal
 
 ### Usage

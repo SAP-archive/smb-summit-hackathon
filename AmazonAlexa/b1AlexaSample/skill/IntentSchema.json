@@ -38,19 +38,33 @@
                         {
                             "name": "Quantity",
                             "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "ItemRecom",
+                            "type": "SAP_ITEMS"
                         }
                     ],
                     "samples": [
-                        "buy me {Quantity} unities of {ItemName}",
-                        "buy me {ItemName}",
+                        "I need office supplies",
+                        "get me office supplies",
+                        "buy me office supplies",
+                        "for office supplies",
+                        "I need to buy things",
+                        "I need to place an order",
                         "{ItemName}",
-                        "I need supplies",
+                        "buy me {ItemName}",
+                        "buy me {Quantity} unities of {ItemName}",
+                        "buy me {Quantity} unity of {ItemName}",
+                        "buy me {Quantity} packs of {ItemName}",
+                        "buy me {Quantity} pack of {ItemName}",
                         "{Quantity} unities",
+                        "{Quantity} unity",
+                        "{Quantity} pack",
                         "{Quantity} packs",
-                        "{Quantity} pieces",
-                        "I need {Quantity} unities",
-                        "I need {Quantity} packs",
-                        "I need {Quantity} pieces"
+                        "get me also {ItemRecom}",
+                        "{ItemRecom} will be nice",
+                        "you can add {ItemRecom} to this order",
+                        "{ItemRecom} and i am good"
                     ]
                 },
                 {
@@ -84,6 +98,14 @@
                 },
                 {
                     "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
                     "samples": []
                 }
             ],
@@ -137,18 +159,36 @@
                     "name": "SAP_ITEMS",
                     "values": [
                         {
+                            "id": "drive",
                             "name": {
-                                "value": "Compressor"
+                                "value": "usb"
                             }
                         },
                         {
                             "name": {
-                                "value": "Stove"
+                                "value": "usb drive"
                             }
                         },
                         {
                             "name": {
-                                "value": "Boiler"
+                                "value": "ink"
+                            }
+                        },
+                        {
+                            "id": "ink",
+                            "name": {
+                                "value": "printer ink"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "paper"
+                            }
+                        },
+                        {
+                            "id": "paper",
+                            "name": {
+                                "value": "printer paper"
                             }
                         }
                     ]

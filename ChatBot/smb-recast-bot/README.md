@@ -1,10 +1,11 @@
 # SAP SMB Assistant Bot powered by SAP Conversational AI(recast.ai)
 ## Overview
-This is a sample executive virtual assistant [smb-recast-bot](https://recast.ai/yatseali/smb-recast-bot) which can serves the CXOs about the executive-level analytics question through conversation, powered by [SAP Conversational AI](https://recast.ai/)(formerly as recast.ai) for SAP Business One and SAP Business ByDesign systems. Precisely, the sales analysis through conversation is implemented in this sample. 
+This is a sample executive virtual assistant [smb-recast-bot](https://cai.tools.sap/yatseali/smb-recast-bot) which can serves the CXOs about the executive-level analytics question through conversation, powered by [SAP Conversational AI](https://cai.tools.sap/)(formerly as recast.ai) for SAP Business One and SAP Business ByDesign systems. Precisely, the sales analysis through conversation is implemented in this sample. 
 
 Here you have the video recordings about the PoC demos of smb-recast-bot.
+* [A quick demo on Facebook Messenger](https://youtu.be/YHksguNVlMU)
 * [Sales Analysis demo based SAP Business One](https://youtu.be/mWy4Zu2zYG4)
-* [Sales Analysis demo based SAP Business ByDesign](https://youtu.be/D5ZK3hzDvlI)   
+* [Sales Analysis demo based SAP Business ByDesign](https://youtu.be/D5ZK3hzDvlI)
 
 In addition, this sample bot can be easily extended to accomodate other analytics question about delivery performance, purchasing, financial etc.Please refer to [this document](https://github.com/B1SA/smb-recast-bot/blob/master/server/README.md).
 
@@ -19,27 +20,27 @@ The architecture diagram above illustrate the following components
 * [smb-recast-bot](#smb-recast-bot): The webhook action of analytics questions. 
 * [ERP backend](#ERP-backend): In this sample, it supports SAP Business One, version for SAP HANA and SAP Business ByDesign. You can easily extend smb-recast-bot to support S4HANA etc by adding configuration to [intents_mapping.js](https://github.com/B1SA/smb-recast-bot/blob/master/server/lib/config/intents_mapping.js) and handle the login in the /webhooks/login and /webhooks/analytics endpoint in [index.js](https://github.com/B1SA/smb-recast-bot/blob/master/server/index.js).  
 
-### [SAP Conversation AI](https://recast.ai/)
-<a href="https://recast.ai/"><img src="https://i.imgur.com/mKxXnBu.png"  alt="recast" width="400" /></a>
+### [SAP Conversation AI](https://cai.tools.sap/)
+<a href="https://cai.tools.sap/"><img src="https://i.imgur.com/mKxXnBu.png"  alt="recast" width="400" /></a>
 <br/>A collaborative end-to-end bot platform for developers. 
 
-* [Train](https://recast.ai/docs/concepts/train-your-bot): Train your bots to understand the human language.
-* [Build](https://recast.ai/docs/concepts/build-your-conversation): Build a conversation flow for the bot.
+* [Train](https://cai.tools.sap/docs/concepts/train-your-bot): Train your bots to understand the human language.
+* [Build](https://cai.tools.sap/docs/concepts/build-your-conversation): Build a conversation flow for the bot.
 * Code: Program a Webhook action with your preferred language to fulfil the request, which can perform external API call. The action is triggered by a bot skill when its trigger conditions are met. Recast.AI calls your API at the URL specified in the bot settings, at the endpoint specified in the action itself.
 * Connect: Connect your bot to multile channels(WebChat, Facebook Messenger, Line, Slack, Alexa etc)
 * Monitor: Monitor the NLP status for incoming queries, get insights on its usage, and re-train it to make it sharper, 
 
 More Userful resources:
-* [Concept](https://recast.ai/docs/concepts/create-builder-bot): Please read this to understand the concepts of Intent, Expression, Entity, Sentiment etc.
-* [Tutorials](https://recast.ai/blog/category/tutorial/): 
- Get started with [Build your first bot with Recast.AI](https://recast.ai/blog/build-your-first-bot-with-recast-ai/) to understand the procedure of creating a bot with SAP Conversational AI
-* [API References](https://recast.ai/docs/api-reference/)
+* [Concept](https://cai.tools.sap/docs/concepts/create-builder-bot): Please read this to understand the concepts of Intent, Expression, Entity, Sentiment etc.
+* [Tutorials](https://cai.tools.sap/blog/category/tutorial/): 
+ Get started with [Build your first bot with Recast.AI](https://cai.tools.sap/blog/build-your-first-bot-with-recast-ai/) to understand the procedure of creating a bot with SAP Conversational AI
+* [API References](https://cai.tools.sap/docs/api-reference/)
 
 ### smb-recast-bot
 Composed of the following components
-* [smb-recast-bot](https://recast.ai/yatseali/smb-recast-bot) in SAP Conversation AI
+* [smb-recast-bot](https://cai.tools.sap/yatseali/smb-recast-bot) in SAP Conversation AI
 <br/>The trained intents
-    * [sales-analysis intent](https://recast.ai/yatseali/smb-recast-bot/train/intents/sales-analysis)
+    * [sales-analysis intent](https://cai.tools.sap/yatseali/smb-recast-bot/train/intents/sales-analysis)
 <br/>Sample questions of sales-analysis intent:
         * "How is my sales status for this quarter?"
         * "Give me the monthly sales report for 2018"
@@ -47,9 +48,9 @@ Composed of the following components
         * "Who contributes the most profits for 2018?"
         * "What are the top 5 best-sellers for 2018?"
         <br/>......
-    * [login-erp intent](https://recast.ai/yatseali/smb-recast-bot/train/intents/login-erp)
+    * [login-erp intent](https://cai.tools.sap/yatseali/smb-recast-bot/train/intents/login-erp)
 <br/>Login to different ERP system such as SAP Business One, version for SAP HANA and SAP Business ByDesign, which is configured in [config.js](https://github.com/B1SA/smb-recast-bot/blob/master/server/lib/config/config.js). By default, the server is connected to the configured SAP Business One, version for SAP HANA system.
-<br/>Sample questions of [login-erp](https://recast.ai/yatseali/smb-recast-bot/train/intents/login-erp) intent:
+<br/>Sample questions of [login-erp](https://cai.tools.sap/yatseali/smb-recast-bot/train/intents/login-erp) intent:
         * "Login to b1"
         * "Sign me into byd"
         <br/>.....

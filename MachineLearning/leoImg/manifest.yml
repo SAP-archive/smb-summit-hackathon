@@ -2,8 +2,9 @@ applications:
 - name: leoimg
   memory: 256m
   instances: 1
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+  buildpacks: 
+    - https://github.com/cloudfoundry/nodejs-buildpack.git
   env:
     IMAGE_DIR: "files/imgs"
     VECTOR_DIR: "files/vectors"
-    UPLOAD_DIR: "files/uploads"     
+    UPLOAD_DIR: "files/uploads"   

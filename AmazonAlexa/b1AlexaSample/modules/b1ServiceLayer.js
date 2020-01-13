@@ -39,6 +39,7 @@ function ServiceLayerRequest(isReport, method, endpoint, body, callback) {
             }
             console.log("Preparing Service Layer Request: " + JSON.stringify(options.method) + " - " + JSON.stringify(options.url))
 
+            console.log("REQUEST BODY: "+ JSON.stringify(options.body))
 
             request(options, function (error, response, body) {
                 if (error) {
@@ -53,7 +54,19 @@ function ServiceLayerRequest(isReport, method, endpoint, body, callback) {
                         })
                         console.log("Request response with status: " + response.statusCode +
                             "\nRequest headers: " + JSON.stringify(response.headers))
+                    }else{
+                        //Not Succesfull & no HTTP Error message
+                        if ((response.statusCode < 200 || response.statusCode > 299) && !error){
+                            // Business error is on body
+                            body = JSON.parse(body)
+                            if(body.hasOwnProperty('error')){
+                                error = body.error.message.value
+                            } else{
+                                error = "Error "+ response.statusCode + " "+ response.statusMessage
+                            }
+                        }
                     }
+
                 }
                 callback(error, response, body);
             });

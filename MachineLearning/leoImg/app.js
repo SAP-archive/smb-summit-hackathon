@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 });
 
 // Get specific Image
-app.get(path.join(process.env.IMAGE_DIR || "./files.imgs", ':img'), function (req, res) {
+app.get(path.join(process.env.IMAGE_DIR || "./files/imgs", "^:img"), function (req, res) {
     res.sendFile(filepath);
 });
 

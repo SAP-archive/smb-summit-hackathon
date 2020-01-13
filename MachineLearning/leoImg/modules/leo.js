@@ -20,10 +20,14 @@ var uuid = require('node-uuid');
 var fs = require('fs');
 var path = require('path');
 
+// sap-leonardo NPM Module - https://blogs.sap.com/2018/10/04/npm-module-for-sap-leonardo-machine-learning/
+const leonardo = require('sap-leonardo')
+const leonardoKey = process.env.LEO_API_KEY || "IfNotProvidedLeonardoWillThrowError"
+
 var dbDir = path.join(process.env.IMAGE_DIR  || "./files/imgs", "db");
-var LeoServer = process.env.LEO_SERVER || "https://sandbox.api.sap.com/ml"
 
 console.log("Storing images on: " + dbDir);
+
 
 function UpdateVectorsBase() {
     /*
@@ -47,7 +51,6 @@ function UpdateVectorsBase() {
         extractVectors(zipPath, function (vectors) {
 
             //Creates a New Zip File with the vectors of each image
-            vectors = JSON.parse(vectors);
             if (vectors.predictions.length <= 0) {
                 console.error('Could not retrieve vectors from Leonardo');
                 console.error(vectors);
@@ -101,31 +104,22 @@ function UpdateVectorsBase() {
 
 }
 
+// More info on
+// https://help.sap.com/viewer/product/SAP_LEONARDO_MACHINE_LEARNING_FOUNDATION/1.0/en-US
+// Image Feature Extraction Help - https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1906B/en-US/d6fee2fd184d48d5b221928a8db4c2fd.html
+// API Business Hub - https://api.sap.com/api/img_feature_extraction_api/resource
 function extractVectors(file, callback) {
+    var imageFeatureExtraction = new leonardo.ImageFeatureExtraction(leonardoKey);
+    imageFeatureExtraction.featureExtraction(file)
+      .then((body) => {
+        console.log("leonardo.ImageFeatureExtraction result:", body.predictions[0].featureVectors.length, 'vectors');
+        callback(body);        
+      })
+      .catch((err) => { 
+        logError(err)
+        callback(null, err)
+      });
 
-    // More info on
-    // https://help.sap.com/viewer/product/SAP_LEONARDO_MACHINE_LEARNING_FOUNDATION/1.0/en-US
-    var endpoint = process.env.LEO_FEATUREX_ENDPOINT || '/imagefeatureextraction/feature-extraction'
-    var options = {
-        url: LeoServer+endpoint,
-        headers: {
-            'APIKey': process.env.LEO_API_KEY,
-            'Accept': 'application/json'
-        },
-        formData: {
-            files: fs.createReadStream(file)
-        },
-    }
-
-    request.post(options, function (err, res, body) {
-        if (res.statusCode != 200) {
-            logLeoError(endpoint, res, body)
-            callback(body,res.statusMessage)
-        }
-        else {
-            callback(body);
-        }
-    });
 }
 
 function GetSimilarItems(req, callback) {
@@ -160,7 +154,7 @@ function GetSimilarItems(req, callback) {
                         } else {
                             console.error("ERROR Getting Similarity Score")
                             console.error(err)
-                            callback(err, resp);
+                            callback(err, null);
                         }
                     })
                 }
@@ -205,9 +199,16 @@ function uploadFile(req, callback) {
 
     // File uploaded successfuly. 
     form.on('file', function (field, file) {
-        fs.rename(file.path, file.path + '.jpg');
-        //Callback with the route to the file in the server
-        callback(file.path + '.jpg');
+        fs.rename(file.path, file.path + '.jpg', function(err) {
+            if ( err ) { 
+                console.log('ERROR on file name: ' + err); 
+                callback(null, err); 
+            }
+            else {
+                //Callback with the route to the file in the server
+                callback(file.path + '.jpg', null);
+            }
+        });
     });
 
     // log any errors that occur
@@ -224,14 +225,18 @@ function uploadFile(req, callback) {
 
     // parse the incoming request containing the form data
     form.parse(req, function (err, fields, files) {
-        console.log("uploadFile" + files)
+        console.log("uploadFile " + files)
     });
 
 
 }
 
+// More info on
+// https://help.sap.com/viewer/product/SAP_LEONARDO_MACHINE_LEARNING_FOUNDATION/1.0/en-US
+// SAP Leonardo API - https://api.sap.com/api/similarity_scoring_api/resource
 function getSimilatiryScoring(vectors, callback) {
-    vectors = JSON.parse(vectors);
+
+    var similarityscoring = new leonardo.SimilarityScoring(leonardoKey);
 
     // Create e zip file of vectors to be used by the Similarity scoring service 
     var zipFile = uuid.v4() + '.zip';
@@ -242,30 +247,23 @@ function getSimilatiryScoring(vectors, callback) {
 
     // listen for all archive data to be written 
     output.on('close', function () {
-        var endpoint = process.env.LEO_SIMILARITY_ENDPOINT || '/similarityscoring/similarity-scoring'
-        var options = {
-            url: LeoServer+endpoint,
-            headers: {
-                'APIKey': process.env.LEO_API_KEY,
-                'Accept': 'application/json'
-            },
-            formData: {
-                files: fs.createReadStream(path.join(dbDir, zipFile)),
-                options: "{\"numSimilarVectors\":3}"
-            }
-        }
 
-        request.post(options, function (err, res, body) {
-            if (res.statusCode != 200) {
-                logLeoError(endpoint, res, body)
-                callback(null,JSON.parse(body),res.statusMessage)
+        similarityscoring.similarityScoring(path.join(dbDir, zipFile), null, '{"numSimilarVectors":3}')
+        .then((body) => {
+            console.log("similarityScoring SUCCESS " + JSON.stringify(body));
+            if (body.error)
+            {
+                logError(JSON.stringify(body));
+                callback(fileName, null, body)                
             }
-            else {                
-                callback(fileName, JSON.parse(body),null);
-    
+            else {
+                callback(fileName, body, null);
             }
+        })
+        .catch((err) => { 
+            logError(err)
+            callback(fileName, null, err)
         });
-
     });
 
     // good practice to catch warnings (ie stat failures and other non-blocking errors) 
@@ -300,37 +298,22 @@ function getSimilatiryScoring(vectors, callback) {
 
     // finalize the archive (ie we are done appending files but streams have to finish yet) 
     archive.finalize();
-
 }
 
-function categorizeImg(file, callback) {
-    // More info on
-    var endpoint = process.env.LEO_IMAGE_CLASSIFY || '/imageclassification/classification'
-    var options = {
-        url: LeoServer+endpoint,
-        headers: {
-            'APIKey': process.env.LEO_API_KEY ,
-            'Accept': 'application/json'
-        },
-        formData: {
-            files: fs.createReadStream(file)
-        },
-    }
-
-    request.post(options, function (err, res, body) {
-        if (res.statusCode != 200) {
-            logLeoError(endpoint, res, body)
+// SAP Leonardo Product Image Classification Help - https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1906B/en-US/3013afaa529440429a6e63dfd31d1799.html
+// SAP Leonardo API - https://api.sap.com/api/product_image_classification_api/resource
+function categorizeImg(file, callback) {    
+    var imageclassification = new leonardo.Imageclassification(leonardoKey);
+    imageclassification.classification(file)
+        .then((body) => {
+            callback(null, body);
+        })
+        .catch((err) => { 
+            logError(err)
             callback("Error Categorizing Image - " + res.statusCode, JSON.parse(body));
-        }
-        else {
-            callback(null, JSON.parse(body));
-        }
-    });
-
+        });
 }
 
-function logLeoError(endpoint, response, body){
-    console.error("RESPONSE "+ endpoint+ " - " + response.statusCode + " - " + response.statusMessage)
-    console.error("BODY"+ endpoint+ " - "+ body)
-
+function logError(err){
+    console.error(err)
 }

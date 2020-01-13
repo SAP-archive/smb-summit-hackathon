@@ -61,22 +61,20 @@ exports.GetFirstEntity = function (nlpPayload, entityName) {
  * Input Parameters:
  * @nlpPayload: the nlp payload sent from Recast
  */
-exports.GetSysType = function(nlpPayload) {
+exports.GetSysType = function (nlpPayload) {
     let systemType = exports.GetFirstEntity(nlpPayload, 'system_type');
-    if(null == systemType)
+    if (null == systemType)
         return constants.B1_SYS_TYPE;
-    
+
     let tempIndex = 0, tempScore = 1;
-    for(let i = 0; i < config.SystemTypes.length; i++)
-    {
+    for (let i = 0; i < config.SystemTypes.length; i++) {
         let item = config.SystemTypes[i];
         let fuzzyResult = utility.FuzzySearch(item.Values, systemType);
-        if(fuzzyResult == null)
+        if (fuzzyResult == null)
             continue;
 
         let score = fuzzyResult.score;
-        if(tempScore > score)
-        {
+        if (tempScore > score) {
             tempIndex = i;
             tempScore = score;
         }
@@ -109,6 +107,44 @@ exports.GetDefaultDimensions = function (pIntent) {
 }
 
 /**
+ * Get the field type(dimension or measure) wit the given field name
+ * NOT IN USE
+ * 
+ * Input Parameters:
+ * @nlpPayload: The nlp payload from recast
+ * @systemType: The target system type
+ * @fieldName:  The abstract nlp field name
+ */
+exports.GetFieldTypeByName = function (nlpPayload, systemType, fieldName) {
+    let result = constants.DIMENSION_TYPE;
+    let pIntent = exports.GetIntent(nlpPayload);
+    let targeIntent = config.Intent2SemanticLayer.filter(function (entry) {
+        return entry.Intent === pIntent;
+    });
+
+    if (typeof targeIntent === 'undefined' || targeIntent.length === 0) {
+        console.log(`No intent setting found in config.Intent2SemanticLayer for intent ${pIntent}`);
+        return result;
+    }
+
+    let targetMappedSemantic = exports.GetSemanticByIntent(pIntent, systemType);
+    if (typeof targetMappedSemantic === 'undefined' || targetMappedSemantic.length === 0) {
+        console.log(`No intent setting found in config.Intent2SemanticLayer for intent ${pIntent}`);
+        return result;
+    }
+
+    let targetMapping = targetMappedSemantic.Mappings.filter(entry => {
+        return entry.NLP_Field === fieldName;
+    })
+
+    if (targetMapping && targetMapping.length > 0) {
+        result = targetMapping[0].FieldType;
+    }
+
+    return result;
+}
+
+/**
  * Fuzzy search for the mapping semantic fileds in Intent2SemamticLayer for the intent
  * 
  * Input Parameters:
@@ -135,13 +171,16 @@ exports.GetMappedSemanticFieldsByType = function (nlpPayload, fieldType) {
             return result;
         }
 
+        //todo: to improve.
         for (i = 0; i < nlpFields.length; i++) {
             let element = nlpFields[i];
             let bestMatchedField = [];
             let score = 1.0;
             for (j = 0; j < targeIntent[0].Synonyms.length; j++) {
                 let synonym = targeIntent[0].Synonyms[j];
-
+                //filter by the field type 
+                if(synonym.FieldType !== fieldType)
+                    continue;
                 for (k = 0; k < synonym.MultiLingoSynonyms.length; k++) {
                     let synonymLang = synonym.MultiLingoSynonyms[k];
                     //exact matching
@@ -196,7 +235,7 @@ exports.GetMappedSemanticFieldsByType = function (nlpPayload, fieldType) {
  */
 exports.GetDimensions = function (nlpPayload) {
     return exports.GetMappedSemanticFieldsByType(nlpPayload, constants.DIMENSION_TYPE);
-    }
+}
 
 /**
  * Get the default measures by the intent in NLP payload

@@ -100,7 +100,7 @@ app.use(function (req, res, next) {
 app.listen(port, () => {
     slProxy.Login(config.B1CompanyDB, config.B1UserName, config.B1Password)
         .then(response => {
-            sl_cookie = response.Cookie;
+            sl_cookie = response.Cookie.join();
             sl_session_id = response.SessionId;
             sl_options = {
                 headers: {
@@ -114,7 +114,7 @@ app.listen(port, () => {
             console.log('An error occurs in login to Service Layer');
         });
 
-    console.log('SAP SMB(B1&ByD) Assistant Bot Powered by SAP Conversational AI is running at https://127.0.0.1:' + port + '/analytics-webhook');
+    console.log('SAP SMB(B1&ByD) Assistant Bot Powered by SAP Conversational AI is running at http://127.0.0.1:' + port + '/webhooks/analytics');
 });
 
 //if the node app is exit, we make sure to clean up
@@ -155,7 +155,7 @@ app.post('/webhooks/login', (req, res) => {
         queryGenerator = b1QueryGenerator;
         slProxy.Login(config.B1CompanyDB, config.B1UserName, config.B1Password)
             .then(response => {
-                sl_cookie = response.Cookie;
+                sl_cookie = response.Cookie.join();
                 sl_session_id = response.SessionId;
                 sl_options = {
                     headers: {
@@ -342,7 +342,7 @@ app.post('/webhooks/analytics', (req, res) => {
             res.status(200).json(reply);
         })
         .catch(function (error) {
-            console.log('error caught in /analytics-webhook');
+            console.log('error caught in /webhooks/analytics');
             console.log(error.message);
             res.status(500).json({
                 error: error.data

@@ -284,14 +284,15 @@ function postPurchase(intent, session, callback) {
 
         B1SL.PostSalesOrder(extractItem(ItemName), Quantity, extractItem(ItemRecom), function (err, response) {
             if (err) {
-                console.error(error)
-                speechOutput = "There was a problem calling Service Layer. Please check logs"
+                console.error(err)
+                speechOutput = "There was a problem calling Service Layer. "
+                speechOutput += err + ". Check the logs for more details."
             } else {
                 speechOutput = "Your order number " + response.DocNum + " was placed successfully! " +
                     "The total amount of your purchase is " + response.DocTotal +
                     " " + response.DocCurrency;
-
-                shouldEndSession = true;
+            };
+              shouldEndSession = true;
 
                 // call back with result
                 callback(sessionAttributes,
@@ -300,7 +301,6 @@ function postPurchase(intent, session, callback) {
                         repromptText, shouldEndSession
                     )
                 );
-            };
         })
         return;
     }
@@ -425,7 +425,7 @@ function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
             title: title,
             text: output,
             image: {
-                smallImageUrl: "https://i.imgur.com/ZJFFyRa.png"
+                smallImageUrl: "https://i.imgur.com/FVTjmsN.png"
             }
         },
         reprompt: {

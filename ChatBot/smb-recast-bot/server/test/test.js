@@ -3,6 +3,8 @@ let queryGenerator = require('../lib/byd/byd_query_generator');
 let util = require('../lib/util/utility');
 let config = require('../lib/config/config');
 
+let testSalesGuys = {"nlp":{"uuid":"b2e635dd-9312-412a-ac09-41a101cd11fa","intents":[{"slug":"sales-analysis","confidence":0.99,"description":"Sales Analysis by Year, Quarter, Month, Customers and Products"}],"entities":{"sorting_direction":[{"value":"best","raw":"best","confidence":0.87}],"dimension":[{"value":"sales guys","raw":"sales guys","confidence":0.86}]},"language":"en","processing_language":"en","version":"1903.6.2","timestamp":"2019-05-31T13:06:48.553055+00:00","status":200,"source":"who are my best sales guys","act":"wh-query","type":"hum:ind","sentiment":"vpositive"},"action_id":"8ea6bef3-c82d-45d3-8da3-2ca5a0a78608","conversation":{"id":"test-1559307750761","conversation_id":"test-1559307750761","warning":"The conversation_id field will be depreciated on January 1st 2018! Switch to using the id field instead","language":"en","memory":{"dimension":{"value":"sales guys","raw":"sales guys","confidence":0.86},"END_CONVERSATION":true},"skill_stack":["sales-analysis"],"skill":"sales-analysis","skill_occurences":2,"participant_data":{}}};
+
 let login2b1 = {
     "nlp": {
         "uuid": "778bc347-f998-4c39-b463-eb30982b6291",
@@ -902,10 +904,14 @@ let testNlp_Top3Items = {
     }
 };
 
-let testNlp = testNlp_top5customer_thismonth;
+let testNlp = testSalesGuys;
 
 testList = ["Customer", "Customers", "Customer Name", "Customer Names", "Customer's Names",
     "Business Partner", "Business Partners", "Client", "Clients", "Client Name", "Buyer", "Buyer Name"
+];
+
+testSalesEmpList = ["Sales Employee", "Sales Employees", "Sales Emp", "Sales Man", "Sales Men", "Sales Staff",
+"Sales Representative", "Sales Rep", "Sales Person", "Sales People", "Sales Team", "Sales Guys", "Sales Guy"
 ];
 
 Test();
@@ -966,14 +972,20 @@ function Test() {
     console.log(query);
 
     let fuzzyResult = util.FuzzySearch(testList, 'Buer');
+    fuzzyResult = util.FuzzySearch(testSalesEmpList, 'Sales Guy');
+    
     console.log(JSON.stringify(fuzzyResult));
+
 
     let encodedCred = util.Base64Encode(`${config.ByDUserName}:${config.ByDPassword}`);
     let bydAuth = `Basic ${encodedCred}`;
-    console.log('13.Encoding byd authentication')
+    console.log('13.Encoding byd authentication');
     console.log(bydAuth);
 
-    console.log('14.Get first entity by name')
+    console.log('14.Get first entity by name');
     console.log(parser.GetFirstEntity(login2b1, 'system_type'));
     console.log(parser.GetSysType(login2b1));
+
+    console.log('15.Get field type by name');
+    console.log(parser.GetFieldTypeByName(testNlp, 'b1', 'Sales Employee'));
 }

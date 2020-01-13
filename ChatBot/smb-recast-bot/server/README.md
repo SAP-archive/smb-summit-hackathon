@@ -2,6 +2,7 @@
 This document focuse on: 
 * [How to run this smb-recast-bot?](#How-to-run-this-sample-smb-recast-bot?)
 * [How to extend the smb-recast-bot?](#How-to-extend-the-smb-recast-bot?)
+* [How to localize the smb-recast-bot?](https://blogs.sap.com/2019/07/03/how-to-localize-smb-recast-bot/)
 
 Here you [the overview introduction of smb-recast-bot](https://github.com/B1SA/smb-recast-bot/) about the scenario, architecture and process flow.
 
