@@ -9,8 +9,8 @@ To learn more about opportunities for iOS developers to develop, deliver and mon
 
 ## Prerequisites
 ### Development environment
-* Apple Mac running macOS High Sierra or higher with [Xcode 10 or higher](https://developer.apple.com/xcode/)
-* [SAP Cloud Platform SDK for iOS Version 3.0](https://www.sap.com/uk/developer/trials-downloads/additional-downloads/sap-cloud-platform-sdk-for-ios-14485.html)
+* Apple Mac running macOS High Sierra or higher with [Xcode 10 or higher](https://apps.apple.com/es/app/xcode/id497799835?l=en&mt=12)
+* [SAP Cloud Platform SDK for iOS Version 3.0](https://developers.sap.com/topics/cloud-platform-sdk-for-ios.html)
 
 ## Samples
 * [iOS Fiori with SAP Business One](https://github.com/mendesthi/iOSFioriB1.git)
