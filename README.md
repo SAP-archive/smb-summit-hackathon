@@ -1,4 +1,4 @@
-![SAP](https://i.imgur.com/vLaieeX.png)
+![SAP](https://i.imgur.com/GTD0iYb.png)
 
 SAP SMB Innovation Summit Hackathon
 =======================
@@ -52,7 +52,7 @@ With that many runtimes, you can choose the developer environment that best suit
  - <img src="http://i1-news.softpedia-static.com/images/extra/LINUX/small/slw218news1.png" height="17">&nbsp;**Fedora**: `sudo dnf groupinstall "Development Tools"`
  - <img src="https://en.opensuse.org/images/b/be/Logo-geeko_head.png" height="17">&nbsp;**OpenSUSE:** `sudo zypper install --type pattern devel_basis`
 
-**Note:** Most samples presented here are developed in [NodeJS](https://nodejs.org/en/). If you are new to Node or Express, Take a look at [Node.js and Express 101](https://www.youtube.com/watch?v=BN0JlMZCtNU) screencast by Alex Ford that teaches Node and Express from scratch. 
+**Note:** Most samples presented here are developed in [NodeJS](https://nodejs.org/en/). If you are new to Node or Express, Take a look at [Node.js and Express](https://www.youtube.com/watch?v=G8uL0lFFoN0) crash course by [FreeCodeCamp.org](https://www.freecodecamp.org/learn)
 
 Getting Started
 ---------------
@@ -88,7 +88,7 @@ List of Build Blocks
 
 Final Presentation
 ----------------
-You have 5 minutes to present your code at the end of the hackathon. Use it the way you want, but as an advice: focus on your demo and code.
+You have 5 minutes to present your code at the end of the hackathon. Use it the way you want, but as an advice: focus on your demo and code. Don't waste time with slides.
 
 FAQ
 ---
@@ -98,7 +98,7 @@ Make sure to check the [FAQ on our Wiki](https://github.com/B1SA/hackathon/wiki/
 License
 -------
 
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
 This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](LICENSE).
 
 
