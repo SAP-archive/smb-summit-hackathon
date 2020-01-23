@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 
 /* Load Local Modules */
 var sl = require('./modules/serviceLayer');
-var db = require('./modules/persist');
+
+//Default SL options on requests
 var slOptions = {
   headers: {
     "Content-Type": "application/json",
@@ -37,34 +38,6 @@ if (!process.env.APIHUB) {
   slOptions.headers["APIKey"] = process.env.APIKey
 }
 
-db.Connect(function (error) {
-  if (error) {
-    console.error("Can't Connect to CF Database");
-    console.error(error);
-  }
-})
-
-//Endpoint to POST items to Service Layer
-app.post('/InsertItem', function (req, res) {
-  db.Insert(req.body, function (error, resp) {
-    res.redirect('/');
-  });
-});
-
-//Endpoint to POST items to Service Layer
-app.get('/SelectItems', function (req, res) {
-  db.Select(function (error, resp) {
-    if (error) {
-      console.log('Cant Select rows')
-      console.log(error);
-    } else {
-      res.setHeader('Content-Type', 'application/json');
-      res.send(resp);
-    }
-  });
-});
-
-
 //EndPoint To retrieve Items from Service Layer
 app.get('/GetItems', function (req, res) { 
   sl.GetItems(slOptions, function (error, resp) {
@@ -86,40 +59,6 @@ app.get('/GetEnv', function (req, res) {
   output.env = process.env.HOME;
   res.send(output);
 });
-
-//Synchronize Local DB with B1 SL
-app.post('/Sync', function (req, res) {
-  console.log("LETS SYNC ITEMS");
-  db.Select(function (error, rows) {
-    if (error) {
-      console.log('Cant Select rows')
-      console.log(error);
-    } else {
-      console.log("HERE ARE ITEMS TO SYNC" + JSON.stringify(rows));
-      var items = 0
-      for (var i = 0; i < rows.length; i++) {
-        var body = { ItemCode: rows[i].code, ItemName: rows[i].name }
-        console.log("Sync Item " + rows[i].code)
-        sl.PostItems(slOptions, body, function (err, slItem) {
-          items++;
-          if (!err) {
-            db.Update(slItem.ItemCode, function (err, resp) {
-              if (!err) {
-                console.log("Item Synchronized");
-              } else {
-                console.error(err);
-              }
-            })
-            if (items == rows.length){
-              res.redirect('/');
-            }
-          }
-        })
-      }
-    }
-  });
-});
-
 
 // Root path to retrieve Index.html
 app.get('/', function (req, res) {

@@ -1,5 +1,6 @@
-/* Service Layer module to interact with B1 Data */
-/* Server Configuration and User Credentials set in the /config.json file */
+// Service Layer module to interact with B1 Data */
+// Server Configuration and User Credentials set in environment variables
+
 module.exports = {
     Connect: function (response) {
         return (Connect(response));
@@ -13,14 +14,16 @@ module.exports = {
 }
 
 
-//Load Local configuration file
+//Load Configurations
 var SLServer =   process.env.B1_SERVER_ENV+":"
                 +process.env.B1_SLPORT_ENV 
                 +process.env.B1_SLPATH_ENV;
+
 //Load Node Modules
 var req = require('request') // HTTP Client
 var ItemGroupCode = 103; //Just for filtering
 
+//Connect to Service Layer
 function Connect(callback) {
     var uri = SLServer + "Login"
     var resp = {}
@@ -36,6 +39,7 @@ function Connect(callback) {
     options = { uri: uri, body: JSON.stringify(data) }
 
     console.log("Connecting to SL on " + uri);
+    
     //Make Request
     req.post(options, function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -54,6 +58,7 @@ function Connect(callback) {
 
 }
 
+//Retrieve Items
 function GetItems(options, callback) {
     var uri = SLServer + "Items?$select=ItemCode,ItemName,"
         + "QuantityOnStock,QuantityOrderedFromVendors,QuantityOrderedByCustomers"
@@ -77,6 +82,7 @@ function GetItems(options, callback) {
     });
 }
 
+//Create Items (Not implemented on the FrontEnd)
 function PostItems(options, body, callback) {
 
     var uri = SLServer + "Items"
