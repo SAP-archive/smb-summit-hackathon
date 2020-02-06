@@ -8,6 +8,7 @@ Detailed how to of a similar app - http://bit.ly/2dGJv9d
 ## Prerequisites
 * [Amazon developer account](https://developer.amazon.com/)
 * [SAP Cloud Platform Trial Account With Cloud Foundry enviroment](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
+* [Install the Cloud Foundry CLI](https://developers.sap.com/tutorials/cp-cf-download-cli.html)
 
 
 ## Installation - 
