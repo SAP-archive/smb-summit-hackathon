@@ -24,7 +24,7 @@ At the end of the process, Cloud Platform should return a Route as shown below. 
 ### Step 2 - Creation of Alexa Skill
 * Follow [these steps to create a new Alexa Skill](https://developer.amazon.com/docs/devconsole/create-a-skill-and-choose-the-interaction-model.html#create-a-new-skill)
 * When asked for a *Model* choose *Custom*.
-* Once the skill is created, option JSON Editor in the skill menu. Replace its content [with our model](skill/IntentSchema.json)
+* Once the skill is created, look for the [option JSON Editor in the skill menu](https://i.imgur.com/TO1FOvG.png). Replace its content [with our model](skill/IntentSchema.json)
 * On the skills endpoit, set it with the route showed previously.
 * For the certificate option choose *My development endpoints is a sub-domain...*
 * You are ready to test your skill
