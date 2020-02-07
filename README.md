@@ -40,7 +40,7 @@ Prerequisites
 You cloud application prototype will heavily rely on [SAP Cloud Platform](http://cloudplatform.sap.com/) services. So make sure you have:
 
  - <img src="https://cdn.iconscout.com/icon/free/png-256/sap-5-569505.png" height="17">&nbsp; [SAP Cloud Platform Free Trial Account](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
- -  <img src="https://cdn.iconscout.com/icon/free/png-256/sap-5-569505.png" height="17">&nbsp; [Configure your Cloud Foundry enviroment](https://developers.sap.com/uk/tutorials/hcp-cf-getting-started.html)
+ -  <img src="https://cdn.iconscout.com/icon/free/png-256/sap-5-569505.png" height="17">&nbsp; [Install Cloud Foundry CLI](https://developers.sap.com/tutorials/cp-cf-download-cli.html)
  #### Development Environment
 The SAP Cloud Platform Cloud Foundry natively supports many programming languages using the so called [System BuildPacks](https://docs.cloudfoundry.org/buildpacks/#system-buildpacks). The [open source community](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks#community-created) has also created several other Buildpacks, for [example .Net](https://github.com/cloudfoundry/dotnet-core-buildpack). 
 With that many runtimes, you can choose the developer environment that best suits you. Here are some examples to get you started:
@@ -62,7 +62,7 @@ A bit of strategy can also help you this [article about winning hackathons](http
 
 Check our [Build Block list](#list-of-build-blocks) to get some inspiration. Also, [the samples we developed in the past](https://blogs.sap.com/2018/06/05/loosely-coupled-solutions-for-smbs-topics/#Samples) might also give you some ideas. Ask for the help of our experts if you need some guidance.
 
-Whatever the runtime and programming language you choose, your application will run the [SAP Cloud Platform Cloud Foundry](https://cloudplatform.sap.com/enterprise-paas/cloudfoundry.html). To get an idea of how to deploy, monitor and consume services in this environment, [check the dedicated build block](CloudFoundry)
+Whatever the runtime and programming language you choose, your application will run the SAP Cloud Platform Cloud Foundry. To get an idea of how to deploy, monitor and consume services in this environment, [check the dedicated build block](CloudFoundry)
 
 
 
@@ -80,8 +80,8 @@ List of Build Blocks
 | [CloudFoundry](CloudFoundry)              | How the application platform of SAP CP works and how to build and deploy your cloud apps |
 | [IoTButton](IoTButton)        | How to integrate the Amazon IoT button with SAP Business One and SAP Business ByDesign |
 | [IoTLeonardo](IoTLeonardo)        | Consuming sensors data using the SAP Leonardo IoT Services in the SAP Cloud Platform |
-| [MachineLearning](MachineLearning)        | Integrating machine learning services of SAP Cloud Platform and Tensor flow into SAP Business One |
 | [OpenConnectorCPI](OpenConnectorCPI)        | A middleware for integrating third part applications with SAP Open Connectors and SAP Cloud Platform integration |
+| [SAP Analytics Cloud](AnalyticsCloud)        | BI, and augmented analytics in one solution. Already connected with  SAP Business One and ByDesign |
 | [UI5Fiori](UI5Fiori)        | SAP UI5 samples for building your application UI using the SAP Fiori Guidelines |
 | [iOSFiori](iOSFiori)        | How to create native iOS apps integrated with SAP Business One and SAP Business ByDesign |
 
