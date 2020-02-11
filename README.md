@@ -75,14 +75,12 @@ List of Build Blocks
 | [B1Backend](B1Backend)          | Details about SAP Business One Connectivity                                    |
 | [Blockchain](Blockchain)        | What is and how to consume Blockchain services in the SAP Cloud Platform       |
 | [ByDBackend](ByDBackend)        | Details about SAP Business ByDesign Connectivity                               |
-| [ChatBot](ChatBot)              | What is and how to consume SAP Conversational UI services in the SAP Cloud Platform to build a chatbot |
-| [CloudAppProgramming](CloudAppProgramming)| How to build a SAP Business ByDesign extension using the SAP Cloud Application Programming Model                               |
+| [ChatBot](ChatBot)              | What is and how to consume SAP Conversational UI services in the SAP Cloud Platform to build a chatbot |                 |
 | [CloudFoundry](CloudFoundry)              | How the application platform of SAP CP works and how to build and deploy your cloud apps |
 | [IoTButton](IoTButton)        | How to integrate the Amazon IoT button with SAP Business One and SAP Business ByDesign |
 | [IoTLeonardo](IoTLeonardo)        | Consuming sensors data using the SAP Leonardo IoT Services in the SAP Cloud Platform |
 | [OpenConnectorCPI](OpenConnectorCPI)        | A middleware for integrating third part applications with SAP Open Connectors and SAP Cloud Platform integration |
 | [SAP Analytics Cloud](AnalyticsCloud)        | BI, and augmented analytics in one solution. Already connected with  SAP Business One and ByDesign |
-| [UI5Fiori](UI5Fiori)        | SAP UI5 samples for building your application UI using the SAP Fiori Guidelines |
 | [iOSFiori](iOSFiori)        | How to create native iOS apps integrated with SAP Business One and SAP Business ByDesign |
 
 
