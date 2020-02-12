@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <img src="https://i.imgur.com/TtAoZWQ.png" width="350">
+        </div>
+        <div class="row text-left" id="env">
+        </div>
+
+        <h4>B1 SL Items</h4>
+        <table class="table .table-striped" id="resultTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Qty Stock</th>
+                    <th>Qty Ordered</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h4>Cloud Platform DB Items</h4>
+        <table class="table .table-striped" id="resultTableSQL">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Integrated</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="sync" class="btn btn-info btn-md">
+                <i class="fa fa-refresh"></i> Sync
+        </button>
+        <h4>Why not add a new Item?</h4>
+        <form method="post" action="/InsertItem" class="form-inline">
+            <div class="form-group">
+                <label for="code">Code</label>
+                <input type="text" class="form-control" name="code" name="code">
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/calls.js"></script>
+</body>
+
+</html>

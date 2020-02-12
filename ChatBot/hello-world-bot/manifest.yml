@@ -1,0 +1,6 @@
+---
+applications:
+- name: xxx-hello-world-bot
+  memory: 64m
+  instances: 1
+    

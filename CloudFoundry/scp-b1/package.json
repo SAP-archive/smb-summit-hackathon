@@ -1,0 +1,39 @@
+{
+  "name": "scp-b1",
+  "version": "1.0.0",
+  "description": "A NodeJS sample app to demonstrate cloud foundry and B1 Service Layer",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ralphive/scp-b1.git"
+  },
+  "keywords": [
+    "service",
+    "layer",
+    "sap",
+    "business",
+    "one",
+    "b1",
+    "be",
+    "one",
+    "odata",
+    "sap",
+    "hana",
+    "cloud",
+    "platform"
+  ],
+  "author": "@Ralphive",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ralphive/scp-b1/issues"
+  },
+  "homepage": "https://github.com/Ralphive/scp-b1#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}

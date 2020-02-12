@@ -1,0 +1,6 @@
+---
+applications:
+- name: scp-b1
+  memory: 64m
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git

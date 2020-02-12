@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "215afb94-11b8-425c-a5dd-7abede29791a",
+		"name": "Alexa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sales Number for Quarter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"version\": \"1.0\",\n\t\"session\": {\n\t\t\"new\": false,\n\t\t\"sessionId\": \"amzn1.echo-api.session.440b1746-5b18-46d9-b882-3b3b4ddd5d2b\",\n\t\t\"application\": {\n\t\t\t\"applicationId\": \"amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4\"\n\t\t},\n\t\t\"attributes\": {\n\t\t\t\"PreviousIntent\": \"SalesInfo\"\n\t\t},\n\t\t\"user\": {\n\t\t\t\"userId\": \"amzn1.ask.account.AGA4TBEZG2QY6HA7BMRZ6B2JC6WKAGDOITYYADLQN3H6WZ7RH5RODILT6PA2XTQ27MOILMWREQE224O3ECI2FE2EG4O45I2FU7KUD2IEQBBB6XYTKTG7MAWOORPKL3FQ2K3S3GECG7V6YD3GD64Q4AOXYKOJ536SCCFD6KJLQ35FPTCG55PJTUXRIBNSLZW54AGAMGROHCQP77Y\"\n\t\t}\n\t},\n\t\"context\": {\n\t\t\"System\": {\n\t\t\t\"application\": {\n\t\t\t\t\"applicationId\": \"amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4\"\n\t\t\t},\n\t\t\t\"user\": {\n\t\t\t\t\"userId\": \"amzn1.ask.account.AGA4TBEZG2QY6HA7BMRZ6B2JC6WKAGDOITYYADLQN3H6WZ7RH5RODILT6PA2XTQ27MOILMWREQE224O3ECI2FE2EG4O45I2FU7KUD2IEQBBB6XYTKTG7MAWOORPKL3FQ2K3S3GECG7V6YD3GD64Q4AOXYKOJ536SCCFD6KJLQ35FPTCG55PJTUXRIBNSLZW54AGAMGROHCQP77Y\"\n\t\t\t},\n\t\t\t\"device\": {\n\t\t\t\t\"deviceId\": \"amzn1.ask.device.AERYBKGTC65OKHYH5P3R6UCGG3GAK33Y7XAOJOQG44QMMVYUHE3KXG3MTT3JBSP3RXHGBTFGNT7PJNCEUXWNEFUHIWEW2XI3MMGB5DOSWHZ3DA7A2SOKJJRNWW4KL26ICIKBVIH4TXZUVUHMGGCIQVHBUHOQ\",\n\t\t\t\t\"supportedInterfaces\": {}\n\t\t\t},\n\t\t\t\"apiEndpoint\": \"https://api.eu.amazonalexa.com\",\n\t\t\t\"apiAccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmJkMmFiNTQ1LTljNzQtNDc0OS1iNjExLTA4OTU2NzMwMjNlNCIsImV4cCI6MTU0NzgwMzcwMSwiaWF0IjoxNTQ3ODAwMTAxLCJuYmYiOjE1NDc4MDAxMDEsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUVSWUJLR1RDNjVPS0hZSDVQM1I2VUNHRzNHQUszM1k3WEFPSk9RRzQ0UU1NVllVSEUzS1hHM01UVDNKQlNQM1JYSEdCVEZHTlQ3UEpOQ0VVWFdORUZVSElXRVcyWEkzTU1HQjVET1NXSFozREE3QTJTT0tKSlJOV1c0S0wyNklDSUtCVklINFRYWlVWVUhNR0dDSVFWSEJVSE9RIiwidXNlcklkIjoiYW16bjEuYXNrLmFjY291bnQuQUdBNFRCRVpHMlFZNkhBN0JNUlo2QjJKQzZXS0FHRE9JVFlZQURMUU4zSDZXWjdSSDVST0RJTFQ2UEEyWFRRMjdNT0lMTVdSRVFFMjI0TzNFQ0kyRkUyRUc0TzQ1STJGVTdLVUQySUVRQkJCNlhZVEtURzdNQVdPT1JQS0wzRlEySzNTM0dFQ0c3VjZZRDNHRDY0UTRBT1hZS09KNTM2U0NDRkQ2S0pMUTM1RlBUQ0c1NVBKVFVYUklCTlNMWlc1NEFHQU1HUk9IQ1FQNzdZIn19.dhs9bwC18iRe72Twf-k5goyD2bFkMMZyRvbecMIi1uarEQNTEIkNPXUZslD4qCTMV3yw2NqnBtC0elLi3NPgOTAhPhZIlX7xD6-0iTi4v4T9TSa5Qp-lgNokqm4IJaEou5ZXlWvOE3ST_exUwDCxKsoGAxdyhp2h7NKwQ2xi61L66a7zb-2qE4zxq4jenFYGSNSrLiNLU5zZuC-Uci8W16gcvD3U_puQNY3xi_MvPB1DvEss395gr2xt2dSej56Uo_rzK4iBXKI_SZx-jCMA_JXlABP5RjTq2Zl3Mc8MuZhApq5-PqQ-JedsL9qXTeHLkvhmW92FiYLacMi7wBRFrQ\"\n\t\t},\n\t\t\"Viewport\": {\n\t\t\t\"experiences\": [\n\t\t\t\t{\n\t\t\t\t\t\"arcMinuteWidth\": 246,\n\t\t\t\t\t\"arcMinuteHeight\": 144,\n\t\t\t\t\t\"canRotate\": false,\n\t\t\t\t\t\"canResize\": false\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"shape\": \"RECTANGLE\",\n\t\t\t\"pixelWidth\": 1024,\n\t\t\t\"pixelHeight\": 600,\n\t\t\t\"dpi\": 160,\n\t\t\t\"currentPixelWidth\": 1024,\n\t\t\t\"currentPixelHeight\": 600,\n\t\t\t\"touch\": [\n\t\t\t\t\"SINGLE\"\n\t\t\t]\n\t\t}\n\t},\n\t\"request\": {\n\t\t\"type\": \"IntentRequest\",\n\t\t\"requestId\": \"amzn1.echo-api.request.fbc138a7-795e-46e4-bcde-bd48c28ca757\",\n\t\t\"timestamp\": \"2019-01-18T08:28:21Z\",\n\t\t\"locale\": \"en-GB\",\n\t\t\"intent\": {\n\t\t\t\"name\": \"SalesInfo\",\n\t\t\t\"confirmationStatus\": \"NONE\",\n\t\t\t\"slots\": {\n\t\t\t\t\"SalesYear\": {\n\t\t\t\t\t\"name\": \"SalesYear\",\n\t\t\t\t\t\"confirmationStatus\": \"NONE\"\n\t\t\t\t},\n\t\t\t\t\"SalesQuarter\": {\n\t\t\t\t\t\"name\": \"SalesQuarter\",\n\t\t\t\t\t\"value\": \"1st\",\n\t\t\t\t\t\"resolutions\": {\n\t\t\t\t\t\t\"resolutionsPerAuthority\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"authority\": \"amzn1.er-authority.echo-sdk.amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4.SAP_QUARTERS\",\n\t\t\t\t\t\t\t\t\"status\": {\n\t\t\t\t\t\t\t\t\t\"code\": \"ER_SUCCESS_MATCH\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"values\": [\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\t\t\t\t\t\"name\": \"first\",\n\t\t\t\t\t\t\t\t\t\t\t\"id\": \"8b04d5e3775d298e78455efc5ca404d5\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t\"confirmationStatus\": \"NONE\",\n\t\t\t\t\t\"source\": \"USER\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8089",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales Number for QUarter and Year",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"version\": \"1.0\",\n\t\"session\": {\n\t\t\"new\": false,\n\t\t\"sessionId\": \"amzn1.echo-api.session.17a29af6-0079-4697-96c1-d6a9c48195e6\",\n\t\t\"application\": {\n\t\t\t\"applicationId\": \"amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4\"\n\t\t},\n\t\t\"attributes\": {\n\t\t\t\"PreviousIntent\": \"SalesInfo\"\n\t\t},\n\t\t\"user\": {\n\t\t\t\"userId\": \"amzn1.ask.account.AGA4TBEZG2QY6HA7BMRZ6B2JC6WKAGDOITYYADLQN3H6WZ7RH5RODILT6PA2XTQ27MOILMWREQE224O3ECI2FE2EG4O45I2FU7KUD2IEQBBB6XYTKTG7MAWOORPKL3FQ2K3S3GECG7V6YD3GD64Q4AOXYKOJ536SCCFD6KJLQ35FPTCG55PJTUXRIBNSLZW54AGAMGROHCQP77Y\"\n\t\t}\n\t},\n\t\"context\": {\n\t\t\"System\": {\n\t\t\t\"application\": {\n\t\t\t\t\"applicationId\": \"amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4\"\n\t\t\t},\n\t\t\t\"user\": {\n\t\t\t\t\"userId\": \"amzn1.ask.account.AGA4TBEZG2QY6HA7BMRZ6B2JC6WKAGDOITYYADLQN3H6WZ7RH5RODILT6PA2XTQ27MOILMWREQE224O3ECI2FE2EG4O45I2FU7KUD2IEQBBB6XYTKTG7MAWOORPKL3FQ2K3S3GECG7V6YD3GD64Q4AOXYKOJ536SCCFD6KJLQ35FPTCG55PJTUXRIBNSLZW54AGAMGROHCQP77Y\"\n\t\t\t},\n\t\t\t\"device\": {\n\t\t\t\t\"deviceId\": \"amzn1.ask.device.AERYBKGTC65OKHYH5P3R6UCGG3GAK33Y7XAOJOQG44QMMVYUHE3KXG3MTT3JBSP3RXHGBTFGNT7PJNCEUXWNEFUHIWEW2XI3MMGB5DOSWHZ3DA7A2SOKJJRNWW4KL26ICIKBVIH4TXZUVUHMGGCIQVHBUHOQ\",\n\t\t\t\t\"supportedInterfaces\": {}\n\t\t\t},\n\t\t\t\"apiEndpoint\": \"https://api.eu.amazonalexa.com\",\n\t\t\t\"apiAccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmJkMmFiNTQ1LTljNzQtNDc0OS1iNjExLTA4OTU2NzMwMjNlNCIsImV4cCI6MTU0ODc2MDE1MywiaWF0IjoxNTQ4NzU5ODUzLCJuYmYiOjE1NDg3NTk4NTMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUVSWUJLR1RDNjVPS0hZSDVQM1I2VUNHRzNHQUszM1k3WEFPSk9RRzQ0UU1NVllVSEUzS1hHM01UVDNKQlNQM1JYSEdCVEZHTlQ3UEpOQ0VVWFdORUZVSElXRVcyWEkzTU1HQjVET1NXSFozREE3QTJTT0tKSlJOV1c0S0wyNklDSUtCVklINFRYWlVWVUhNR0dDSVFWSEJVSE9RIiwidXNlcklkIjoiYW16bjEuYXNrLmFjY291bnQuQUdBNFRCRVpHMlFZNkhBN0JNUlo2QjJKQzZXS0FHRE9JVFlZQURMUU4zSDZXWjdSSDVST0RJTFQ2UEEyWFRRMjdNT0lMTVdSRVFFMjI0TzNFQ0kyRkUyRUc0TzQ1STJGVTdLVUQySUVRQkJCNlhZVEtURzdNQVdPT1JQS0wzRlEySzNTM0dFQ0c3VjZZRDNHRDY0UTRBT1hZS09KNTM2U0NDRkQ2S0pMUTM1RlBUQ0c1NVBKVFVYUklCTlNMWlc1NEFHQU1HUk9IQ1FQNzdZIn19.MAAwEomMT9FsQtSMIi213s11uGctaHVEIlLivf33TvFrs91WRpJ83dY9IIU9_bBc7CtcW1CN5kmbnL9GoKy3bMXRv1WYBmAQ2W-s13vLfTmDINgLz1tSPbatmu65rqZg8QCWHHSnIGd2qK-ZuW0zJJfzy1B7H7Q3au3RXtoHPfj7UEERvUnoaeU5o3nl40ugd9PAp2kRi2-uWkkS6RY-qOaj69lD7kkdXvAcbzET2qInRLS5hOOFmbmQB_PO7Omc1cvASoOm-4U_TkwghNbxe6wXB5esY122A04vsUxVwwVv-6Je0xlhReYd7Qrqd5LcR0PmIU3trJkyn08nAeT_4w\"\n\t\t},\n\t\t\"Viewport\": {\n\t\t\t\"experiences\": [\n\t\t\t\t{\n\t\t\t\t\t\"arcMinuteWidth\": 246,\n\t\t\t\t\t\"arcMinuteHeight\": 144,\n\t\t\t\t\t\"canRotate\": false,\n\t\t\t\t\t\"canResize\": false\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"shape\": \"RECTANGLE\",\n\t\t\t\"pixelWidth\": 1024,\n\t\t\t\"pixelHeight\": 600,\n\t\t\t\"dpi\": 160,\n\t\t\t\"currentPixelWidth\": 1024,\n\t\t\t\"currentPixelHeight\": 600,\n\t\t\t\"touch\": [\n\t\t\t\t\"SINGLE\"\n\t\t\t]\n\t\t}\n\t},\n\t\"request\": {\n\t\t\"type\": \"IntentRequest\",\n\t\t\"requestId\": \"amzn1.echo-api.request.49dffa6d-e21f-4523-9552-66b05d694e52\",\n\t\t\"timestamp\": \"2019-01-29T11:04:13Z\",\n\t\t\"locale\": \"en-GB\",\n\t\t\"intent\": {\n\t\t\t\"name\": \"SalesInfo\",\n\t\t\t\"confirmationStatus\": \"NONE\",\n\t\t\t\"slots\": {\n\t\t\t\t\"SalesYear\": {\n\t\t\t\t\t\"name\": \"SalesYear\",\n\t\t\t\t\t\"value\": \"2018\",\n\t\t\t\t\t\"confirmationStatus\": \"NONE\",\n\t\t\t\t\t\"source\": \"USER\"\n\t\t\t\t},\n\t\t\t\t\"SalesQuarter\": {\n\t\t\t\t\t\"name\": \"SalesQuarter\",\n\t\t\t\t\t\"value\": \"1st\",\n\t\t\t\t\t\"resolutions\": {\n\t\t\t\t\t\t\"resolutionsPerAuthority\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"authority\": \"amzn1.er-authority.echo-sdk.amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4.SAP_QUARTERS\",\n\t\t\t\t\t\t\t\t\"status\": {\n\t\t\t\t\t\t\t\t\t\"code\": \"ER_SUCCESS_MATCH\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"values\": [\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\t\t\t\t\t\"name\": \"first\",\n\t\t\t\t\t\t\t\t\t\t\t\"id\": \"Q1\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t\"confirmationStatus\": \"NONE\",\n\t\t\t\t\t\"source\": \"USER\"\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"dialogState\": \"COMPLETED\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8089",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make a paper Purchase with Printer ink",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"version\": \"1.0\",\n\t\"session\": {\n\t\t\"new\": false,\n\t\t\"sessionId\": \"amzn1.echo-api.session.b7da71bc-fa01-42bc-88f8-b7eff79c36b3\",\n\t\t\"application\": {\n\t\t\t\"applicationId\": \"amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4\"\n\t\t},\n\t\t\"attributes\": {\n\t\t\t\"PreviousIntent\": \"MakePurchase\",\n\t\t\t\"ItemName\": \"paper\",\n\t\t\t\"Quantity\": \"10\"\n\t\t},\n\t\t\"user\": {\n\t\t\t\"userId\": \"amzn1.ask.account.AGA4TBEZG2QY6HA7BMRZ6B2JC6WKAGDOITYYADLQN3H6WZ7RH5RODILT6PA2XTQ27MOILMWREQE224O3ECI2FE2EG4O45I2FU7KUD2IEQBBB6XYTKTG7MAWOORPKL3FQ2K3S3GECG7V6YD3GD64Q4AOXYKOJ536SCCFD6KJLQ35FPTCG55PJTUXRIBNSLZW54AGAMGROHCQP77Y\"\n\t\t}\n\t},\n\t\"context\": {\n\t\t\"System\": {\n\t\t\t\"application\": {\n\t\t\t\t\"applicationId\": \"amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4\"\n\t\t\t},\n\t\t\t\"user\": {\n\t\t\t\t\"userId\": \"amzn1.ask.account.AGA4TBEZG2QY6HA7BMRZ6B2JC6WKAGDOITYYADLQN3H6WZ7RH5RODILT6PA2XTQ27MOILMWREQE224O3ECI2FE2EG4O45I2FU7KUD2IEQBBB6XYTKTG7MAWOORPKL3FQ2K3S3GECG7V6YD3GD64Q4AOXYKOJ536SCCFD6KJLQ35FPTCG55PJTUXRIBNSLZW54AGAMGROHCQP77Y\"\n\t\t\t},\n\t\t\t\"device\": {\n\t\t\t\t\"deviceId\": \"amzn1.ask.device.AERYBKGTC65OKHYH5P3R6UCGG3GAK33Y7XAOJOQG44QMMVYUHE3KXG3MTT3JBSP3RXHGBTFGNT7PJNCEUXWNEFUHIWEW2XI3MMGB5DOSWHZ3DA7A2SOKJJRNWW4KL26ICIKBVIH4TXZUVUHMGGCIQVHBUHOQ\",\n\t\t\t\t\"supportedInterfaces\": {}\n\t\t\t},\n\t\t\t\"apiEndpoint\": \"https://api.eu.amazonalexa.com\",\n\t\t\t\"apiAccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmJkMmFiNTQ1LTljNzQtNDc0OS1iNjExLTA4OTU2NzMwMjNlNCIsImV4cCI6MTU0NzgzMjQyNiwiaWF0IjoxNTQ3ODI4ODI2LCJuYmYiOjE1NDc4Mjg4MjYsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUVSWUJLR1RDNjVPS0hZSDVQM1I2VUNHRzNHQUszM1k3WEFPSk9RRzQ0UU1NVllVSEUzS1hHM01UVDNKQlNQM1JYSEdCVEZHTlQ3UEpOQ0VVWFdORUZVSElXRVcyWEkzTU1HQjVET1NXSFozREE3QTJTT0tKSlJOV1c0S0wyNklDSUtCVklINFRYWlVWVUhNR0dDSVFWSEJVSE9RIiwidXNlcklkIjoiYW16bjEuYXNrLmFjY291bnQuQUdBNFRCRVpHMlFZNkhBN0JNUlo2QjJKQzZXS0FHRE9JVFlZQURMUU4zSDZXWjdSSDVST0RJTFQ2UEEyWFRRMjdNT0lMTVdSRVFFMjI0TzNFQ0kyRkUyRUc0TzQ1STJGVTdLVUQySUVRQkJCNlhZVEtURzdNQVdPT1JQS0wzRlEySzNTM0dFQ0c3VjZZRDNHRDY0UTRBT1hZS09KNTM2U0NDRkQ2S0pMUTM1RlBUQ0c1NVBKVFVYUklCTlNMWlc1NEFHQU1HUk9IQ1FQNzdZIn19.Z1nKv6Aa7xwMEYQbhWAz-zOfTt1eJuLhOOXX0IQ2oJwKg1D-wKvKGvL1YaERhf6mvAelulyVpWeh99k9gAJFRXcHlJWYnxZBpxHDIjf1kP5MrjDAPnsEjpGQNljF0cu3ChP76Y4JzIL2v6-68FqRghRkcpMEMP1SjvA8wj04M77uRaZyjvZ_lmbYaN3SJYMLsrz8Yrm0_OYpCfHGy4jHovWOz3eHlICjSkq9aJ3ajK_zJbM3MiSPeDB1ZAu7q8QLlIVsJBd51qT-rJBUmv4VSk7-Xg6rELGTDiGDbRB6SqyaSLSsDf1paKFNGwPlWCaHSXRSnMiQzf0b7KVsxZozGg\"\n\t\t},\n\t\t\"Viewport\": {\n\t\t\t\"experiences\": [\n\t\t\t\t{\n\t\t\t\t\t\"arcMinuteWidth\": 246,\n\t\t\t\t\t\"arcMinuteHeight\": 144,\n\t\t\t\t\t\"canRotate\": false,\n\t\t\t\t\t\"canResize\": false\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"shape\": \"RECTANGLE\",\n\t\t\t\"pixelWidth\": 1024,\n\t\t\t\"pixelHeight\": 600,\n\t\t\t\"dpi\": 160,\n\t\t\t\"currentPixelWidth\": 1024,\n\t\t\t\"currentPixelHeight\": 600,\n\t\t\t\"touch\": [\n\t\t\t\t\"SINGLE\"\n\t\t\t]\n\t\t}\n\t},\n\t\"request\": {\n\t\t\"type\": \"IntentRequest\",\n\t\t\"requestId\": \"amzn1.echo-api.request.1ad8e1e9-a6f3-4320-bc61-e1d42631c555\",\n\t\t\"timestamp\": \"2019-01-18T16:27:06Z\",\n\t\t\"locale\": \"en-GB\",\n\t\t\"intent\": {\n\t\t\t\"name\": \"MakePurchase\",\n\t\t\t\"confirmationStatus\": \"NONE\",\n\t\t\t\"slots\": {\n\t\t\t\t\"Quantity\": {\n\t\t\t\t\t\"name\": \"Quantity\",\n\t\t\t\t\t\"confirmationStatus\": \"NONE\"\n\t\t\t\t},\n\t\t\t\t\"ItemName\": {\n\t\t\t\t\t\"name\": \"ItemName\",\n\t\t\t\t\t\"confirmationStatus\": \"NONE\"\n\t\t\t\t},\n\t\t\t\t\"ItemRecom\": {\n\t\t\t\t\t\"name\": \"ItemRecom\",\n\t\t\t\t\t\"value\": \"printer ink\",\n\t\t\t\t\t\"resolutions\": {\n\t\t\t\t\t\t\"resolutionsPerAuthority\": [\n\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\"authority\": \"amzn1.er-authority.echo-sdk.amzn1.ask.skill.bd2ab545-9c74-4749-b611-0895673023e4.SAP_ITEMS\",\n\t\t\t\t\t\t\t\t\"status\": {\n\t\t\t\t\t\t\t\t\t\"code\": \"ER_SUCCESS_MATCH\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"values\": [\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\t\t\t\t\t\"name\": \"printer ink\",\n\t\t\t\t\t\t\t\t\t\t\t\"id\": \"ink\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t\"confirmationStatus\": \"NONE\",\n\t\t\t\t\t\"source\": \"USER\"\n\t\t\t\t}\n\t\t\t}\n\t\t},\n\t\t\"dialogState\": \"STARTED\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8089",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089"
+				}
+			},
+			"response": []
+		}
+	]
+}

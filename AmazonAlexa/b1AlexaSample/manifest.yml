@@ -1,0 +1,15 @@
+---
+applications:
+- name: b1AssistHack
+  memory: 64m
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+  env:
+    "B1_HOST" : "<https://Your HTTPS hostname>"
+    "B1_PORT" : "<50000 for HTTPS or 50001 for HTTP"
+    "B1_REPORTAPI" : "/b1s/v1/sml.svc"
+    "B1_DATAAPI" : "/b1s/v1"
+    "B1_USER": "manager"
+    "B1_PASS": "1234"
+    "B1_COMP": "SBODEMOUS"
+    "DEFAULT_BP": "C99998"

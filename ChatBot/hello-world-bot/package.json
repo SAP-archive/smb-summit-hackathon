@@ -1,0 +1,27 @@
+{
+  "name": "hello-world-bot",
+  "version": "1.0.0",
+  "description": "hello world sample webhook for SAP Conversational AI bot",
+  "main": "hello_world_webhook.js",
+  "scripts": {
+    "start": "node hello_world_webhook.js"
+  },
+  "keywords": [
+    "b1",
+    "byd",
+    "bot",
+    "chatbot",
+    "conversational ui",
+    "recast",
+    "nlp"
+  ],
+  "engines": {
+    "node": "^6.12.0"
+  },
+  "author": "Yatsea Li",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}

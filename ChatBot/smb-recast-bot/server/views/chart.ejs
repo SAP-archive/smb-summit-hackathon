@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>View Chart</title>
+    <script src="./Chart.min.js"></script>
+    <script src="./utils.js"></script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script>
+        var color = Chart.helpers.color;
+        let ds = <%- JSON.stringify(datasets); %>;
+        //let datasets3 = JSON.parse(datasets2);
+        //console.log(ds);
+        var color = Chart.helpers.color;
+        var chartData = {
+            labels: <%- JSON.stringify(labels); %>,
+            datasets: []
+        };
+        
+        let chartType = getRandomChartType(chartData.labels.length);
+
+        ds.forEach(element => {
+            //console.log(getRandomColor());
+            let rc = getRandomColor();
+            let dataset = {};
+            dataset.label = element.MeasureLabel;
+            dataset.backgroundColor = color(rc).alpha(0.5).rgbString();
+            dataset.borderColor = rc;
+            dataset.borderWidth = 1;
+            dataset.data = element.MeasureValues;
+            if(chartType === 'line')
+                dataset.fill = false;
+            chartData.datasets.push(dataset);
+        });
+
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx, {
+                type: getRandomChartType(chartData.labels.length),
+                data: chartData,
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: ''
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>

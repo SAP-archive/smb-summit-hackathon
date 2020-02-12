@@ -1,0 +1,162 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "bee why dee",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NetSales",
+                    "slots": [],
+                    "samples": [
+                        "what is my net sales of the last three months",
+                        "what is my net sales of last three months",
+                        "what is my net sales value of last three months",
+                        "what is my net sales value of the last three months",
+                        "what's my net sales value of last three months",
+                        "what's my net sales of last three months",
+                        "what's my net sales of the last three months",
+                        "what's my net sales value of the last three months"
+                    ]
+                },
+                {
+                    "name": "TopAccounts",
+                    "slots": [],
+                    "samples": [
+                        "list my top three accounts of last three months",
+                        "list my top three customers of last three months",
+                        "list my top three customers of the last three months",
+                        "list my top three accounts of the last three months"
+                    ]
+                },
+                {
+                    "name": "MakePurchase",
+                    "slots": [
+                        {
+                            "name": "ItemName",
+                            "type": "SAP_ITEMS"
+                        },
+                        {
+                            "name": "Quantity",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "buy me {Quantity} units of {ItemName}",
+                        "buy me {Quantity} packs of {ItemName}",
+                        "buy me {Quantity} pieces of {ItemName}",
+                        "buy me {ItemName}",
+                        "{ItemName}",
+                        "I need supplies",
+                        "Create Order",
+                        "{Quantity} unities",
+                        "{Quantity} packs",
+                        "{Quantity} pieces",
+                        "I need {Quantity} units",
+                        "I need {Quantity} packs",
+                        "I need {Quantity} pieces"
+                    ]
+                },
+                {
+                    "name": "SalesInfo",
+                    "slots": [
+                        {
+                            "name": "SalesQuarter",
+                            "type": "SAP_QUARTERS"
+                        },
+                        {
+                            "name": "SalesYear",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "{SalesQuarter}",
+                        "{SalesYear}",
+                        "{SalesQuarter} quarter of {SalesYear}",
+                        "{SalesQuarter} of {SalesYear}",
+                        "show me sales numbers",
+                        "give me sales info"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "SAP_ITEMS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Compressor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stove"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Boiler"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SAP_QUARTERS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "last"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "this",
+                                "synonyms": [
+                                    "current"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fourth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "third"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "second"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "first"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
