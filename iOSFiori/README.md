@@ -7,6 +7,9 @@ The SDK offers a fully Swift-based API to accelerate enterprise app development 
 SAP Cloud Platform SDK for iOS enables you to quickly develop your own native apps, with Swift, Apple’s modern programming language. Along with SAP Fiori for iOS, which includes reusable design components, the SDK builds on the services and capabilities available on SAP Cloud Platform so you can build beautiful intuitive native applications.
 To learn more about opportunities for iOS developers to develop, deliver and monetize iOS enterprise apps, here are five reasons to develop enterprise-ready iOS apps using SAP.
 
+## Quick Start
+Follow the steps of [this blog post](https://blogs.sap.com/2019/02/06/fiori-ios-app-for-the-smbs/) using the custom metada for [b1](https://raw.githubusercontent.com/B1SA/hackathon/master/iOSFiori/iOSFioriB1/customB1metadata.xml) or [byd](https://raw.githubusercontent.com/B1SA/hackathon/master/iOSFiori/iOSFioriByD/customByDmetadata.xml) and get your app up and running quickly for Purchase and Sales Orders. Then customize it as you wish.
+
 ## Prerequisites
 ### Development environment
 * Apple Mac running macOS High Sierra or higher with [Xcode 10 or higher](https://apps.apple.com/es/app/xcode/id497799835?l=en&mt=12)
