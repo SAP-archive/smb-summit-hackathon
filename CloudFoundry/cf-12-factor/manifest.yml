@@ -1,6 +1,0 @@
----
-applications:
-- name: cf-12-factor
-  memory: 128m
-  instances: 1
-  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
