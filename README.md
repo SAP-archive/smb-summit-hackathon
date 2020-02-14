@@ -82,7 +82,7 @@ List of Build Blocks
 | [CAP](C)        | Cloud application programming model  implementation with ByDesign |
 | [IoTButton](IoTButton)        | How to integrate the Amazon IoT button with SAP Business One and SAP Business ByDesign |
 | [IoTLeonardo](IoTLeonardo)        | Consuming sensors data using the SAP Leonardo IoT Services in the SAP Cloud Platform |
-| [OpenConnectorCPI](OpenConnectorCPI)        | A middleware for integrating third part applications with SAP Open Connectors and SAP Cloud Platform integration |
+| [scp-cpi](scp-integration)        | A middleware for integrating third part applications with SAP Open Connectors and SAP Cloud Platform integration |
 | [iOSFiori](iOSFiori)        | How to create native iOS apps integrated with SAP Business One and SAP Business ByDesign |
 
 
