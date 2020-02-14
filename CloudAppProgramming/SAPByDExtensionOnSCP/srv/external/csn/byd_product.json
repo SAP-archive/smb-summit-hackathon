@@ -1,0 +1,53 @@
+{
+    "definitions": {
+        "cust.Material": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "ObjectID": {
+                    "key": true,
+                    "type": "cds.String",
+                    "length": 70
+                },
+                "UUID": {
+                    "type": "cds.UUID"
+                },
+                "InternalID": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "Description": {
+                    "type": "cds.String",
+                    "length": 40
+                },
+                "DescriptionlanguageCode": {
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "DescriptionlanguageCodeText": {
+                    "type": "cds.LargeString"
+                },
+                "BaseMeasureUnitCode": {
+                    "type": "cds.String",
+                    "length": 3
+                },
+                "BaseMeasureUnitCodeText": {
+                    "type": "cds.LargeString"
+                }
+            }
+        },
+        "cust.CodeList": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+                "Code": {
+                    "key": true,
+                    "type": "cds.LargeString"
+                },
+                "Description": {
+                    "type": "cds.LargeString"
+                }
+            }
+        }
+    }
+}
