@@ -15,16 +15,16 @@ For the Hackathon we prepared one sample from SAP Analytics Cloud, where you com
 
 ## [](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa#samples)Samples
 
--   [Integration with SAP Business One](https://github.com/B1SA/hackathon/new/master/AnalyticsCloud#integration---sac-and-sap-business-one)
--   [Integration with SAP Business ByDesign]()
+-   [Integration with SAP Business One](instructionsb1.md)
+-   [Integration with SAP Business ByDesign](instructionsbyd.md)
 
-## [](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa#tutorials) [](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa#references)References
+## References
 
-### [](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa#official-documentation)Official Documentation
+### Official Documentation
 
 -   [SAP Analytics Cloud Official Learning](https://www.sapanalytics.cloud/learning/)
 
-## [](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa#build-block-authors)Build Block Authors
+## Build Block Authors
 
 -   [Jeroen van de Waart](https://github.com/)
 -   [Andre Silveira](https://github.com/andresilveirajr)
