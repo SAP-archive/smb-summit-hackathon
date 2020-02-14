@@ -72,15 +72,17 @@ List of Build Blocks
 | Build Block                     | Description                                                                    |
 | ------------------------------- | -------------------------------------------------------------------------------|
 | [AmazonAlexa](AmazonAlexa)      | Voice Interface using the Amazon Echo device                                   |  
+| [Analytics Cloud](AnalyticsCloud)        | BI, and augmented analytics in one solution. Already connected with  SAP Business One and ByDesign |
+| [Azure](Azure)        | Microsoft Azure services |
 | [B1Backend](B1Backend)          | Details about SAP Business One Connectivity                                    |
 | [Blockchain](Blockchain)        | What is and how to consume Blockchain services in the SAP Cloud Platform       |
 | [ByDBackend](ByDBackend)        | Details about SAP Business ByDesign Connectivity                               |
 | [ChatBot](ChatBot)              | What is and how to consume SAP Conversational UI services in the SAP Cloud Platform to build a chatbot |                 |
 | [CloudFoundry](CloudFoundry)              | How the application platform of SAP CP works and how to build and deploy your cloud apps |
+| [CAP](C)        | Cloud application programming model  implementation with ByDesign |
 | [IoTButton](IoTButton)        | How to integrate the Amazon IoT button with SAP Business One and SAP Business ByDesign |
 | [IoTLeonardo](IoTLeonardo)        | Consuming sensors data using the SAP Leonardo IoT Services in the SAP Cloud Platform |
-| [OpenConnectorCPI](OpenConnectorCPI)        | A middleware for integrating third part applications with SAP Open Connectors and SAP Cloud Platform integration |
-| [SAP Analytics Cloud](AnalyticsCloud)        | BI, and augmented analytics in one solution. Already connected with  SAP Business One and ByDesign |
+| [scp-cpi](scp-integration)        | A middleware for integrating third part applications with SAP Open Connectors and SAP Cloud Platform integration |
 | [iOSFiori](iOSFiori)        | How to create native iOS apps integrated with SAP Business One and SAP Business ByDesign |
 
 
