@@ -10,8 +10,8 @@ For the Hackathon we prepared one sample from SAP Analytics Cloud, where you com
 ## [](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa#prerequisites)Prerequisites
 
 -   [SAP Analytics Cloud account and tenant](https://b1-benelux.eu1.sapanalytics.cloud) - Please ask credentials from SAC Specialists during Hackathon
--   [SAP Business ByDesign Account](https://my351153.sapbydesign.com/)
--   [SAP Business One Account](http://hana_server:8000/sap/hana/ide/editor)
+-   SAP Business ByDesign Account
+-   SAP Business One Account - It's not the same as the hackathon environment, talk to an expert)
 
 ## [](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa#samples)Samples
 
