@@ -38,7 +38,6 @@ Go [here](https://github.com/raepple/azure-iot-hackathon/blob/master/README.md#p
 We will use Cognitive Services to implement several scenarios:
 
 - Object Detection on images with our [Custom Vision API](https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/) and a PowerApp that will provide a convenient interface to train a Custom Vision model and classify objects. 
-- Text anlytics of tweets and create audio files of them with our [Text-Analytics-API](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) and our [Text-to-Speech API](https://azure.microsoft.com/en-us/services/cognitive-services/speech-translation/)
 - Knowledge Mining on unstructured data (documents) with [Azure Cognitive Search](https://azure.microsoft.com/en-us/services/search/). 
 
 #### Specific prerequisites:
@@ -53,7 +52,8 @@ Nothing apart from generic prerequisites
 - [Microsoft PowerApps](https://azure.microsoft.com/en-us/services/logic-apps/)
 
 #### See the instructions here:
-- [Knowledge Mining Challenge ](https://github.com/onkelbrigitte/AzureHackathon/blob/master/Instructions/KnowledgeMining.md)
+- [Knowledge Mining Challenge](./Instructions/KnowledgeMining.md)
+- [Image Recognition Challenge](./Instructions/ImageRecognition.md)
 
 ## Showcase our brand-new Azure Kinect DK devices.
 

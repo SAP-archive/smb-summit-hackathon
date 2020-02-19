@@ -4,7 +4,7 @@
 
 In this scenario, we will use it's built-in AI capabilities to enrich and index unstructured data such as images, documents, etc. The use-case behind that scenario is that many companies struggle to identitify and (internally and externally) provide knowledge that is hidden in large collections of documents with its content hard to access from the outside and almost impossible to search with a consolidated knowledge base. Imaging a search machine such as Bing or Google on top of your documents.
 
-While it might be easy to extract text from a Word document and make it searchable, the harder part typically is to enrich raw information with usefull data such as:
+While it might be easy to extract text from a Word document and make it searchable, the harder part typically is to enrich raw or binary information with usefull data such as:
 - What objects are on images, what persons, locations, etc.?
 - What text is on scans of paper documents, in what language is it writtern and what are the key phrases?
 - Where did the employee that left the company 2 years ago store the instructions on how to defuse the bomb in the kitchen (we certainly need to cut the red wire, right)?
@@ -36,7 +36,7 @@ Now, we will build something more sophisticated.
 ## Build our own pipeline for indexing texts from book scans
 
 So this scenario is about getting content out of book pages that have been scanned and saved as .JPG files. To get knowledge out of that scans, we will 
-- run a OCR (optical character recognition) on the images 
+- run a OCR job (optical character recognition) on the images 
 - determine the language of the text
 - extract key phrases
 - translate text into your favorite language
@@ -45,6 +45,7 @@ So this scenario is about getting content out of book pages that have been scann
 
 Ready? Let's go.
 
+Ah, wait. One more thing: We will provide a solution to that scenario, it is available as a Jupyter notebook [here](./Annex/KnowledgeMiningSolution.ipynb). But just copy & paste our code is considered cheating. So use with caution. 
 #### Data preparation
 
 1. Download the scans from [this URL](https://sapsmbinnovationsummit.blob.core.windows.net/samples/Scans.zip) and extract them on your machine. 
