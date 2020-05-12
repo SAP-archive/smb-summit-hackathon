@@ -8,7 +8,7 @@ For the hackathon we prepared 2 samples for Alexa to communicate with SAP Busine
 
 ## Prerequisites
 * [Amazon developer account](https://developer.amazon.com/)
-* [Configure your SAP Cloud Platform enviroment](https://developers.sap.com/uk/tutorials/hcp-cf-getting-started.html)
+* [Configure your SAP Cloud Platform enviroment](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
 ## Samples
 * [Integration with SAP Business One](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa/b1AlexaSample)
