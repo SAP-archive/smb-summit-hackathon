@@ -4,7 +4,8 @@
 Cloud Foundry is an open source cloud application platform, providing a choice of clouds, developer frameworks, and application services. Cloud Foundry makes it faster and easier to build, test, deploy, and scale applications. It is an open source project and is available through a variety of private cloud distributions and public cloud instances. This is the platform used to deploy applications in the SAP Cloud Platform.
 
 ## Prerequisites
-* [Configure your SAP Cloud Platform Cloud Foundry enviroment](https://developers.sap.com/uk/tutorials/hcp-cf-getting-started.html)
+* [Configure your SAP Cloud Platform Cloud Foundry enviroment](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
+* [Install the Cloud Foundry Command Line Interface (CLI)] (https://developers.sap.com/tutorials/cp-cf-download-cli.html)
 
 ## Samples
 * [Cloud Foundry Sample with SAP Business One](https://github.com/B1SA/scp-b1.git)
@@ -13,6 +14,7 @@ Cloud Foundry is an open source cloud application platform, providing a choice o
 
 ## Tutorials
 * [How to Create Your First SAP Business One Loosely Coupled Solution in the SAP Cloud Platform](https://blogs.sap.com/2018/06/04/how-to-create-your-sap-business-one-loosely-coupled-solution-in-the-sap-cloud-platform/)
+* [Start Developing on SAP Cloud Platform](https://developers.sap.com/mission.scp-1-start-developing.html)
 * [Create Your First App on Cloud Foundry](https://developers.sap.com/group.scp-3-first-app.html)
 * [Hands On Exercise](https://github.com/Ralphive/cf-12-factor/blob/master/HandsOn_cf12factors_guide.pdf)
 
