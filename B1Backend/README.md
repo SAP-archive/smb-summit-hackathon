@@ -36,10 +36,3 @@ Instead you should build a prototype that takes advantage of a [loosely coupled 
 ## Author
 * [Eddy Neveux](https://twitter.com/eddy_nev)
 * [Darius Heydarian](https://twitter.com/dariusheydarian)
-
-
-License
--------
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](../LICENSE).
