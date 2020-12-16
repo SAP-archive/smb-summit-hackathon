@@ -11,8 +11,8 @@ For the hackathon we prepared 2 samples for Alexa to communicate with SAP Busine
 * [Configure your SAP Cloud Platform enviroment](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
 ## Samples
-* [Integration with SAP Business One](https://github.com/B1SA/hackathon/tree/master/AmazonAlexa/b1AlexaSample)
-* [Integration with SAP Business ByDesign](https://github.com/murthyvsap/ByD-Alexa-Hackathon)
+* [Integration with SAP Business One](https://github.com/SAP-samples/b1-assistant-lite)
+* [Integration with SAP Business ByDesign](https://github.com/SAP-samples/byd-assistant)
 
 ## Tutorials
 * [How to build an Alexa Skill step by step](https://medium.com/crowdbotics/how-to-build-a-custom-amazon-alexa-skill-step-by-step-my-favorite-chess-player-dcc0edae53fb)
