@@ -1,4 +1,5 @@
 ![SAP](https://i.imgur.com/MGVbjQZ.png)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/smb-summit-hackathon)](https://api.reuse.software/info/github.com/SAP-samples/smb-summit-hackathon)
 
 SAP SMB Innovation Summit Hackathon
 =======================
