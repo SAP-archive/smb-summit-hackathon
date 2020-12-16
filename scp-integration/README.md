@@ -54,8 +54,4 @@ Want to know about the latest and greatest product updates and features enhancem
 - [SAP Cloud Platform Integration Youtube academy](https://www.youtube.com/playlist?list=PLkzo92owKnVwUoypV34RbxBZihYqi6eE3)
 
 ## Author
-* [MARTINEZ GEA, Maria Trinidad](https://github.com/TrinidadMG)
-
-## License
-This repository is released under the terms of the MIT license. 
-<br>See [LICENSE](https://github.com/B1SA/hackathon/blob/master/LICENSE) for more information or see https://opensource.org/licenses/MIT.
+* [Trinidad Martinez](https://github.com/TrinidadMG)
