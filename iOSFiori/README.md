@@ -29,9 +29,3 @@ Follow the steps of [this blog post](https://blogs.sap.com/2019/02/06/fiori-ios-
 
 ## Author
 - [Thiago Mendes](https://twitter.com/mendesthix?lang=en-gb)
-
-License
--------
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](../LICENSE).
