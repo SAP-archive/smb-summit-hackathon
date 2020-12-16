@@ -63,10 +63,3 @@ You find an overview of the complete ByD API portfolio in the SAP Community blog
 * [Knut Heusermann](https://people.sap.com/knut.heusermann#overview)
 * [Murthy V](https://people.sap.com/murthy.v#overview)
 * [Tesfaldet Negash](https://people.sap.com/tesfaldet.negash#overview)
-
-
-License
--------
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](../LICENSE).
