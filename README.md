@@ -33,7 +33,7 @@ Your team will have approximately 7 hours to develop a prototype and present it 
 The [Judgement Criteria is in the FAQ](https://github.com/B1SA/hackathon/wiki/FAQ#what-are-the-judgement-criteria) and your final presentation should be of 5 minutes. The three best prototypes will be chosen and the winner announced on Finn Backer's Keynote in the next morning.
 
 
-Prerequisites
+Requirements
 -------------
 #### Cloud Environment
 
@@ -95,10 +95,10 @@ FAQ
 
 Make sure to check the [FAQ on our Wiki](https://github.com/B1SA/hackathon/wiki/FAQ)
 
+## Support and Contributions  
+This repository is provided "as-is". With no Warranty or support
+
 License
 -------
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](LICENSE).
-
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
 
