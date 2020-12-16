@@ -17,9 +17,8 @@ What will we do in particular:
 
 We will connect a MCU (Microcontroller Unit) with onboard sensors, LCDs and other things to the [Azure Cloud](https://azure.microsoft.com/en-us/services/iot-hub/). With that setup, we will collect environmental data and run some analytics on top of that including a custom trained AI model.
 
-#### Specific prerequisites:
-
-Go [here](https://github.com/raepple/azure-iot-hackathon/blob/master/README.md#prerequisites) for the list of prerequisites.
+## Samples and Instructions:
+* [Microsoft Azure Hackathon @ SAP SMB Innovation Summit 2020](https://github.com/onkelbrigitte/AzureHackathon)
 
 #### Used services:
 
@@ -29,36 +28,5 @@ Go [here](https://github.com/raepple/azure-iot-hackathon/blob/master/README.md#p
 - [Azure Storage](https://azure.microsoft.com/en-us/services/storage/)
 - [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)
 
-#### See the instructions here: 
-- https://github.com/raepple/azure-iot-hackathon/blob/master/README.md
-
-
-## Infuse our apps with AI using Azure Cognitive Services
-
-We will use Cognitive Services to implement several scenarios:
-
-- Object Detection on images with our [Custom Vision API](https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/) and a PowerApp that will provide a convenient interface to train a Custom Vision model and classify objects. 
-- Knowledge Mining on unstructured data (documents) with [Azure Cognitive Search](https://azure.microsoft.com/en-us/services/search/). 
-
-#### Specific prerequisites:
-Nothing apart from generic prerequisites
-
-#### Used services:
-- [Azure Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/)
-- [Azure Cognitive Search](https://azure.microsoft.com/en-us/services/search/)
-- [Azure Logic Apps](https://azure.microsoft.com/en-us/services/logic-apps/)
-- [Azure Storage](https://azure.microsoft.com/en-us/services/storage/)
-- [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)
-- [Microsoft PowerApps](https://azure.microsoft.com/en-us/services/logic-apps/)
-
-#### See the instructions here:
-- [Knowledge Mining Challenge](./Instructions/KnowledgeMining.md)
-- [Image Recognition Challenge](./Instructions/ImageRecognition.md)
-
-## Showcase our brand-new Azure Kinect DK devices.
-
-[Azure Kinect DK](https://azure.microsoft.com/en-us/services/kinect-dk/) is a developer kit with advanced AI sensors for sophisticated computer vision and speech models. Designed for versatility, it combines an advanced depth sensor and spatial microphone array with a video camera and orientation sensor—with multiple modes, options, and SDKs.
-
-Although not yet available in Europe, we were able to get a few and will demo some scenarios. 
-
-If somebody has a specific scenario in mind and would like to try it in the wild: be our guest!
+## Build Block Authors
+* MS Azure Cloud Solution Architects
