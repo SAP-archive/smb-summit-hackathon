@@ -29,17 +29,11 @@ SAP Conversational AI is A collaborative end-to-end bot platform for developers,
 
 ## References
 ### Official Documentation
-[Create your chatbot](https://recast.ai/docs/concepts/create-builder-bot)
+* [Create your chatbot](https://recast.ai/docs/concepts/create-builder-bot)
 
 ### API References
-[API References](https://recast.ai/docs/api-reference/)
+* [API References](https://recast.ai/docs/api-reference/)
 
-## Author
-- Yatsea Li
-- Martin Du
-
-License
--------
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](../LICENSE).
+## Authors
+- [Yatsea Li](https://github.com/YatseaLi)
+- [Martin Du](https://github.com/martinambition)
