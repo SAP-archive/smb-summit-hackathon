@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: smb-summit-hackathon
 Upstream-Contact: Ralphive <>
-Source: https://github.com/B1SA/smb-summit-hackathon
+Source: https://github.com/SAP-Samples/smb-summit-hackathon
 
 # Sample paragraph, commented out:
 #
