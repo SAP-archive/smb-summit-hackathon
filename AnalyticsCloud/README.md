@@ -28,7 +28,3 @@ For the Hackathon we prepared one sample from SAP Analytics Cloud, where you com
 
 -   [Jeroen van de Waart](https://github.com/)
 -   [Andre Silveira](https://github.com/andresilveirajr)
-
-## License
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the  [LICENSE](https://github.com/B1SA/hackathon/blob/master/LICENSE).

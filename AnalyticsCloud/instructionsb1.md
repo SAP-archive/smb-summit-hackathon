@@ -26,12 +26,3 @@
 * You can take a copy of the story by selecting it, and pressing the "Copy To" button located on the top of the page;
 * You can then change the story / dashboard as you wish, connecting to the existing models, or to the new models you created in SAC;
 * You can also create new stories which will access the models from previous step by pressing the Create / Story button on the top of the SAC page.
-
-## Author
--   [Jeroen van de Waart](https://github.com/)
--   [Andre Silveira](https://github.com/andresilveirajr)
-
-
-## License
-
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This file repository licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the  [LICENSE](https://github.com/B1SA/hackathon/blob/master/LICENSE).
