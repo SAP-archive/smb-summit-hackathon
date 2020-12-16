@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: smb-summit-hackathon
+Upstream-Contact: Ralphive <>
+Source: https://github.com/B1SA/smb-summit-hackathon
+
+# Sample paragraph, commented out:
+#
+Files: * 
+Copyright: 2020 SAP SE or an SAP affiliate company and smb-summmit-hackathon contributors
+License: Apache-2.0
